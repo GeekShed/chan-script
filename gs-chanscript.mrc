@@ -321,6 +321,7 @@ menu status {
   Channel Management Menu
   .ChanServ
   ..Info:/cs info $$?="Enter the channel you want info (#channel)" all
+  ..Register:/cs register $$?="Enter the channel name you wish to register" $$?="Please enter a channel password" $$?="Please enter a channel Description:"
   .MemoServ
   ..List Memos:/ms list
   ..Send
