@@ -184,6 +184,23 @@ menu nicklist {
 menu channel {
   -
   Channel Management Menu
+  .Channel Settings
+  ..Change Founder:/cs set $$?="Enter channel:" founder $$?="Enter New Founder"
+  ..Change Successor:/cs set $$?="Enter channel:" successor $$?="Enter nick:"
+  ..Change Password:/cs set $$?="Enter channel:" passwd $$?*="Enter old password:" $$?*="Enter new password:"
+  ..Change Description:/cs set $$?="Enter channel:" desc $$?="Enter new description:"
+  .Channel Modes $+ $chr(58) $+ $chr(9) $+ $chan(#).mode
+  ..$iif(c isincs $gettok($chan(#).mode,1,32),$style(1)) No Colors:{ if (c isincs $gettok($chan(#).mode,1,32)) { mode # -c } | else { mode # +c } }
+  ..$iif(i isincs $gettok($chan(#).mode,1,32),$style(1)) Invite Only:{ if (i isincs $gettok($chan(#).mode,1,32)) { mode # -i } | else { mode # +i } }
+  ..$iif(M isincs $gettok($chan(#).mode,1,32),$style(1)) Only Registered Nicks Can Speak:{ if (M isincs $gettok($chan(#).mode,1,32)) { mode # -M } | else { mode # +M } }
+  ..$iif(m isincs $gettok($chan(#).mode,1,32),$style(1)) Moderated:{ if (m isincs $gettok($chan(#).mode,1,32)) { mode # -m } | else { mode # +m } }
+  ..$iif(n isincs $gettok($chan(#).mode,1,32),$style(1)) No External Messages:{ if (n isincs $gettok($chan(#).mode,1,32)) { mode # -n } | else { mode # +n } }
+  ..$iif(p isincs $gettok($chan(#).mode,1,32),$style(1)) Private:{ if (p isincs $gettok($chan(#).mode,1,32)) { mode # -p } | else { mode # +p } }
+  ..$iif(R isincs $gettok($chan(#).mode,1,32),$style(1)) Registered Nicks Only:{ if (R isincs $gettok($chan(#).mode,1,32)) { mode # -R } | else { mode # +R } }
+  ..$iif(s isincs $gettok($chan(#).mode,1,32),$style(1)) Secret:{ if (s isincs $gettok($chan(#).mode,1,32)) { mode # -s } | else { mode # +s } }
+  ..$iif(t isincs $gettok($chan(#).mode,1,32),$style(1)) Only Ops Set Topic:{ if (t isincs $gettok($chan(#).mode,1,32)) { mode # -t } | else { mode # +t } }
+  ..$iif(l isincs $gettok($chan(#).mode,1,32),$style(1) User Limit $+ $chr(58) $chan(#).limit,User Limit):{ if (l isincs $gettok($chan(#).mode,1,32)) { mode # -l } | else { mode # +l $$?"Maximum number of users allowed in # $+ :" } }
+  ..$iif(k isincs $gettok($chan(#).mode,1,32),$style(1) Key $+ $chr(58) $chan(#).key,Key):{ if (k isincs $gettok($chan(#).mode,1,32)) { mode # -k $chan(#).key } | else { mode # +k $$?"Enter key for # $+ :" } }
   .Discipline
   ..Kick
   ...Kick (No Reason):/kick $chan $$?="Enter the nick you wish to kick"
@@ -328,6 +345,7 @@ menu channel {
   ....NoMail:
   .NickServ
   ..Whois:/whois $$?="Enter the nick you want to whois"
+  ..Whois (Idle):/set -u3 %tempwhois $$?="Please enter the nick you want to whois" | .timer 1 1 whois %tempnick %tempnick
   ..Info:/ns info $$?="Enter the nick you want info"
   ..Change Nick:/nick $$?="Enter your new nick"
   ..Group:/ns group $$?="Enter your main nick" $$?="Enter your password"
@@ -374,7 +392,7 @@ menu status {
   ....NoMail:
   .NickServ
   ..Whois:/whois $$?="Enter the nick you want to whois"
-  ..Whois (Idle):/set -u3 %whoistemp $$?="Please enter the nick you want to whois" | /whois %whoistemp %whoistemp
+  ..Whois (Idle):/set -u3 %whoistemp $$?="Please enter the nick you want to whois" | .timer 1 1 whois %whoistemp %whoistemp
   ..Info:/ns info $$?="Enter the nick you want info"
   ..Change Nick:/nick $$?="Enter your new nick"
   ..Group:/ns group $$?="Enter your main nick" $$?="Enter your password"
