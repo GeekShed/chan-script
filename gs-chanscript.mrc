@@ -1,19 +1,18 @@
-::::::::::::::::::::::::::::::::::::::
-::GeekShed Channel Management Script::
-::Concept by Zetacon                ::
-::Input/Modifications by Phil       ::
-::All Rights Reserved               ::
-::::::::::::::::::::::::::::::::::::::
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;GeekShed Channel Management Script;;
+;;Concept by Zetacon                ;;
+;;Input/Modifications by Phil       ;;
+;;All Rights Reserved               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;---------------------------Variables---------------------------
 
-on *:JOIN:#:{
+on 1:START:{
   set %gs.w.attitude Your attitude is not conducive to the desired environment.
   set %gs.w.hatespeech Hate Speech is not tolerated on GeekShed.
   set %gs.w.harassment Harassing Users is prohibited on GeekShed.
   set %gs.w.botnet Botnetting is strictly prohibited on GeekShed.
   set %gs.w.msgsnoperm You may not PM/DCC/Notice/Query/CTCP users without their expressed permission.
-  set %gs.w.malware You may not spam your Virus/Trojan horse.
   set %gs.w.hack Hacking/Cracking/Piracy is not permitted.
   set %gs.w.language Please watch your language. We want everyone to feel welcome here.
   set %gs.w.flood Haven't you heard? Flooding is lame as any idiot can do it!
@@ -23,39 +22,34 @@ on *:JOIN:#:{
   set %gs.w.oswars Operating system (OS) wars are not tolerated here.
   set %gs.w.caps Talking in caps is considered yelling, annoying, and rude. Please turn them off. Thanks.
   set %gs.w.persattack Personal attacks are not tolerated here.
-  set %gs.w.banevade Ban evasion is considered a serious infraction and only results in a longer ban!
   set %gs.w.nick Please change your nick.
   set %gs.w.illegal Illegal activities are not discussed here.
 
   set %gs.hn.commands a list of GeekShed commands can be found at: http://www.geekshed.net/commands
   set %gs.hn.getchat get a chat for your website by visiting http://geekshed.net/getchat
   set %gs.hn.news read the latest GeekShed News! http://www.geekshed.net/news/
-  set %gs.hn.help this channel is for IRC related help only. If you need help with your computer, please visit #Geekstogo, #bleepingcomputer, or #chris.
+  set %gs.hn.help this channel is for IRC related help only. If you need help with your computer, please visit #geekstogo, #bleepingcomputer, or #chris.
   set %gs.hn.limits view a list of all of our limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
   set %gs.hn.regchan registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
-  set %gs.hn.regnick to register your nick, type: /ns register password email. Replace "password" with a unique password and "email" with a valid e-mail address.
+  set %gs.hn.regnick for instructions on registering your nick, see: http://www.geekshed.net/2009/11/why-should-i-register-my-nickname-and-how-do-i-do-it/
   set %gs.hn.extendbans to learn how to use extended ban types, please see the following tutorial: http://www.geekshed.net/2009/11/extended-bans-tutorial/
   set %gs.hn.ask please ask your question so we may try and help you.
   set %gs.hn.helpguidelines please read the #Help Guidelines: http://www.geekshed.net/2009/11/guidelines-for-help-channel/
   set %gs.hn.founders to learn how to set more than one channel founder by visiting: http://www.geekshed.net/2009/11/can-my-geekshed-channel-have-more-than-one-founder/
   set %gs.hn.sslcertficate learn about our certificate authority through this link: http://www.geekshed.net/2009/10/geekshed-certificate-authority/
   set %gs.hn.userbadge visit our User Count Badge generator: http://www.geekshed.net/2009/10/user-count-badges/
-  set %gs.hn.tos please read the GeekShed Terms of Service: http://www.geekshed.net/tos/ 
-
-  set %gs.h.commands A list of GeekShed commands can be found at: http://www.geekshed.net/commands
-  set %gs.h.getchat Get a chat for your website by visiting http://geekshed.net/getchat
-  set %gs.h.news Read the latest GeekShed News! http://www.geekshed.net/news/
-  set %gs.h.help This channel is for IRC related help only. If you need help with your computer, please visit #Geekstogo, #bleepingcomputer, or #chris.
-  set %gs.h.limits View a list of all of our limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
-  set %gs.h.regchan Registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
-  set %gs.h.regnick To register your nick, type: /ns register password email. Replace "password" with a unique password and "email" with a valid e-mail address.
-  set %gs.h.extendbans To learn how to use extended ban types, please see the following tutorial: http://www.geekshed.net/2009/11/extended-bans-tutorial/
-  set %gs.h.ask Please ask your question so we may try and help you.
-  set %gs.h.helpguidelines Please read the #Help Guidelines: http://www.geekshed.net/2009/11/guidelines-for-help-channel/
-  set %gs.h.founders To learn how to set more than one channel founder by visiting: http://www.geekshed.net/2009/11/can-my-geekshed-channel-have-more-than-one-founder/
-  set %gs.h.sslcertficate Learn about our certificate authority through this link: http://www.geekshed.net/2009/10/geekshed-certificate-authority/
-  set %gs.h.userbadge Visit our User Count Badge generator: http://www.geekshed.net/2009/10/user-count-badges/
-  set %gs.h.tos Please read the GeekShed Terms of Service: http://www.geekshed.net/tos/
+  set %gs.hn.tos please read the GeekShed Terms of Service: http://www.geekshed.net/tos/
+  set %gs.hn.ports to see the ports you can use to connect to GeekShed, see: http://www.geekshed.net/2010/01/what-ports-can-i-use-to-connect-to-geekshed/
+  set %gs.hn.owner you can see who owns GeekShed at: http://www.geekshed.net/2009/12/who-owns-geekshed-irc/
+  set %gs.hn.clients a list of IRC clients can be found at: http://www.geekshed.net/2009/12/irc-clients/
+  set %gs.hn.qdb the GeekShed quote database can be found at: http://www.geekshed.net/qdb/
+  set %gs.hn.access a tutorial for using the access system can be found at http://www.geekshed.net/2009/12/access-system-tutorial/
+  set %gs.hn.bots for instructions adding a botserv bot to your channel and for a list of bots see: http://www.geekshed.net/2009/11/how-do-i-add-a-botserv-bot-to-my-channel/ and http://www.geekshed.net/2009/11/can-i-make-my-own-botserv-bot/
+  set %gs.hn.ipv6 GeekShed does have IPv6 support. See http://www.geekshed.net/2009/11/does-geekshed-have-ipv6-support/ for info
+  set %gs.hn.flood for instructions on setting flood protection in your channel see: http://www.geekshed.net/2009/11/channel-flood-protection-tutorial/
+  set %gs.hn.oper if you're interested in becoming an IRCOp on GeekShed see: http://www.geekshed.net/2009/11/can-i-be-an-oper-on-geekshed/
+  set %gs.hn.link if you want to link a server to GeekShed see http://www.geekshed.net/2009/11/can-i-link-a-server-to-geekshed/ for information
+  set %gs.hn.vhost if you would like a GeekShed vhost, join #vhosts and read http://www.geekshed.net/2009/11/can-i-have-a-vhost-on-geekshed/
 }
 
 ;---------------------------Aliases---------------------------
@@ -63,14 +57,18 @@ on *:JOIN:#:{
 alias kb {
   if ($1 ison $chan) { 
     mode $chan +b $address($1,2)
-    kick $chan $1 $2-
+    kick $chan $1-
+  }
+  else {
+    echo -a $1 is not on $chan
   }
 }
 
 alias founder {
   cs SET $chan XOP OFF
   cs ACCESS $chan ADD $1 9999
-  cs SET $chan XOP ON
+  
+  echo -a $1 has been set as founder of $chan $+ . They must now cycle it and rejoin it. XOP has been turned OFF! This means that you must now use the access system. For help doing this, visit http://www.geekshed.net/2009/12/access-system-tutorial/
 }
 
 alias permsop {
