@@ -333,7 +333,11 @@ menu channel {
   ...No Read Receipt:/ms SEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
   ...Read Receipt:/ms RSEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
   ..Delete
+  ...All:/ms DEL $chan ALL
+  ...Last:/ms DEL $chan LAST
+  ...Number:/ms DEL $chan $$?="Enter the Memo number to delete (ex: '1','2-5','7-9')"
   ..Read
+  ...
   ..Settings
   ...Info:
   ...Limit:/ms SET LIMIT $$?="Enter the Memo Limit (Maximum of 20)"
