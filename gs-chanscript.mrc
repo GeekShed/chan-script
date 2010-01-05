@@ -1,9 +1,10 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;GeekShed Channel Management Script           ;;
-;;Concept by Zetacon                           ;;
-;;Input/Modifications by Phil, GrimReaper      ;;
-;;All Rights Reserved                          ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; GeekShed Management Script                   ;;
+;; Version 1.0                                  ;;
+;; Concept by Zetacon                           ;;
+;; Input/Modifications by Phil, GrimReaper      ;;
+;; All Rights Reserved                          ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;---------------------------Variables---------------------------
 
@@ -104,7 +105,7 @@ alias tempsop {
 
 menu nicklist {
   -
-  Channel Management Menu
+  GeekShed Management Script
   .Discipline
   ..Warn
   ..Kick
@@ -183,7 +184,7 @@ menu nicklist {
 
 menu channel {
   -
-  Channel Management Menu
+  GeekShed Management Script
   .Channel Settings
   ..Change Founder:/cs set $$?="Enter channel:" founder $$?="Enter New Founder"
   ..Change Successor:/cs set $$?="Enter channel:" successor $$?="Enter nick:"
@@ -357,7 +358,7 @@ menu channel {
 
 menu status {
   -
-  Channel Management Menu
+  GeekShed Management Script
   .ChanServ
   ..Info:/cs info $$?="Enter the channel you want info (#channel)" all
   ..Register:/cs register $$?="Enter the channel name you wish to register" $$?="Please enter a channel password" $$?="Please enter a channel Description:"
