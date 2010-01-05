@@ -67,7 +67,7 @@ alias kb {
 alias founder {
   cs SET $chan XOP OFF
   cs ACCESS $chan ADD $1 9999
-  
+
   echo -a $1 has been set as founder of $chan $+ . They must now cycle it and rejoin it. XOP has been turned OFF! This means that you must now use the access system. For help doing this, visit http://www.geekshed.net/2009/12/access-system-tutorial/
 }
 
@@ -339,6 +339,7 @@ menu status {
   ....NoMail:
   .NickServ
   ..Whois:/whois $$?="Enter the nick you want to whois"
+  ..Whois (Idle):/set -u3 %whoistemp $$?="Please enter the nick you want to whois" | /whois %whoistemp %whoistemp
   ..Info:/ns info $$?="Enter the nick you want info"
   ..Change Nick:/nick $$?="Enter your new nick"
   ..Group:/ns group $$?="Enter your main nick" $$?="Enter your password"
