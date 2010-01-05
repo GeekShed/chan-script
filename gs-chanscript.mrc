@@ -1,9 +1,9 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;GeekShed Channel Management Script;;
-;;Concept by Zetacon                ;;
-;;Input/Modifications by Phil       ;;
-;;All Rights Reserved               ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;GeekShed Channel Management Script           ;;
+;;Concept by Zetacon                           ;;
+;;Input/Modifications by Phil, GrimReaper      ;;
+;;All Rights Reserved                          ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;---------------------------Variables---------------------------
 
