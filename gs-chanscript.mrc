@@ -7,7 +7,7 @@
 
 ;---------------------------Variables---------------------------
 
-on 1:START:{
+on *:JOIN:#:{
   set %gs.w.attitude Your attitude is not conducive to the desired environment.
   set %gs.w.hatespeech Hate Speech is not tolerated on GeekShed.
   set %gs.w.harassment Harassing Users is prohibited on GeekShed.
@@ -27,18 +27,35 @@ on 1:START:{
   set %gs.w.nick Please change your nick.
   set %gs.w.illegal Illegal activities are not discussed here.
 
-  set %gs.h.commands a list of GeekShed commands can be found at: http://www.geekshed.net/commands
-  set %gs.h.getchat get a chat for your website by visiting http://geekshed.net/getchat
-  set %gs.h.news read the latest GeekShed News! http://www.geekshed.net/news/
-  set %gs.h.help this channel is for IRC related help only. If you need help with your computer, please visit #Geekstogo, #bleepingcomputer, or #chris.
-  set %gs.h.limits view a list of all of our limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
-  set %gs.h.regchan registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
-  set %gs.h.extendbans to learn how to use extended ban types, please see the following tutorial: http://www.geekshed.net/2009/11/extended-bans-tutorial/
-  set %gs.h.ask please ask your question so we may try and help you.
-  set %gs.h.helpguidelines please read the #Help Guidelines: http://www.geekshed.net/2009/11/guidelines-for-help-channel/
-  set %gs.h.founders to learn how to set more than one channel founder by visiting: http://www.geekshed.net/2009/11/can-my-geekshed-channel-have-more-than-one-founder/
-  set %gs.h.sslcertficate learn about our certificate authority through this link: http://www.geekshed.net/2009/10/geekshed-certificate-authority/
-  set %gs.h.userbadge visit our User Count Badge generator: http://www.geekshed.net/2009/10/user-count-badges/ 
+  set %gs.hn.commands a list of GeekShed commands can be found at: http://www.geekshed.net/commands
+  set %gs.hn.getchat get a chat for your website by visiting http://geekshed.net/getchat
+  set %gs.hn.news read the latest GeekShed News! http://www.geekshed.net/news/
+  set %gs.hn.help this channel is for IRC related help only. If you need help with your computer, please visit #Geekstogo, #bleepingcomputer, or #chris.
+  set %gs.hn.limits view a list of all of our limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
+  set %gs.hn.regchan registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
+  set %gs.hn.regnick to register your nick, type: /ns register password email. Replace "password" with a unique password and "email" with a valid e-mail address.
+  set %gs.hn.extendbans to learn how to use extended ban types, please see the following tutorial: http://www.geekshed.net/2009/11/extended-bans-tutorial/
+  set %gs.hn.ask please ask your question so we may try and help you.
+  set %gs.hn.helpguidelines please read the #Help Guidelines: http://www.geekshed.net/2009/11/guidelines-for-help-channel/
+  set %gs.hn.founders to learn how to set more than one channel founder by visiting: http://www.geekshed.net/2009/11/can-my-geekshed-channel-have-more-than-one-founder/
+  set %gs.hn.sslcertficate learn about our certificate authority through this link: http://www.geekshed.net/2009/10/geekshed-certificate-authority/
+  set %gs.hn.userbadge visit our User Count Badge generator: http://www.geekshed.net/2009/10/user-count-badges/
+  set %gs.hn.tos please read the GeekShed Terms of Service: http://www.geekshed.net/tos/ 
+
+  set %gs.h.commands A list of GeekShed commands can be found at: http://www.geekshed.net/commands
+  set %gs.h.getchat Get a chat for your website by visiting http://geekshed.net/getchat
+  set %gs.h.news Read the latest GeekShed News! http://www.geekshed.net/news/
+  set %gs.h.help This channel is for IRC related help only. If you need help with your computer, please visit #Geekstogo, #bleepingcomputer, or #chris.
+  set %gs.h.limits View a list of all of our limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
+  set %gs.h.regchan Registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
+  set %gs.h.regnick To register your nick, type: /ns register password email. Replace "password" with a unique password and "email" with a valid e-mail address.
+  set %gs.h.extendbans To learn how to use extended ban types, please see the following tutorial: http://www.geekshed.net/2009/11/extended-bans-tutorial/
+  set %gs.h.ask Please ask your question so we may try and help you.
+  set %gs.h.helpguidelines Please read the #Help Guidelines: http://www.geekshed.net/2009/11/guidelines-for-help-channel/
+  set %gs.h.founders To learn how to set more than one channel founder by visiting: http://www.geekshed.net/2009/11/can-my-geekshed-channel-have-more-than-one-founder/
+  set %gs.h.sslcertficate Learn about our certificate authority through this link: http://www.geekshed.net/2009/10/geekshed-certificate-authority/
+  set %gs.h.userbadge Visit our User Count Badge generator: http://www.geekshed.net/2009/10/user-count-badges/
+  set %gs.h.tos Please read the GeekShed Terms of Service: http://www.geekshed.net/tos/
 }
 
 ;---------------------------Aliases---------------------------
@@ -46,12 +63,46 @@ on 1:START:{
 alias kb {
   if ($1 ison $chan) { 
     mode $chan +b $address($1,2)
-    kick $chan $1
+    kick $chan $1 $2-
+  }
+}
+
+alias founder {
+  cs SET $chan XOP OFF
+  cs ACCESS $chan ADD $1 9999
+  cs SET $chan XOP ON
+}
+
+alias permsop {
+  cs sop $chan add $1
+  mode $chan +ao $1 $1
+}
+
+alias permaop {
+  cs aop $chan add $1
+  mode $chan +o $1
+}
+
+alias permhop {
+  cs hop $chan add $1
+  mode $chan +h $1
+}
+
+alias permvop {
+  cs vop $chan add $1
+  mode $chan +v $1
+}
+
+alias tempsop {
+  if ($1 ison $chan) {
+    mode $chan +ao $1 $1
   }
 }
 
 
-;---------------------------Menu---------------------------
+
+
+;---------------------------Nicklist Menu---------------------------
 
 menu nicklist {
   -
@@ -91,12 +142,36 @@ menu nicklist {
   ....Personal Attacks:/kb $$1 %gs.w.persattack
   ....Spamming:/kb $$1 %gs.w.spam
   .Help
-  ..Commands List:/say $$1 $+ , %gs.h.commands
-  ..Flash Client:/say $$1 $+ , %gs.h.getchat
-  ..Latest News:/say $$1 $+ , %gs.h.news
-  ..Computer Help:/say $$1 $+ , %gs.h.help
-  ..Ask Question:/say $$1 $+ , set %gs.h.ask
-  ..Limitations:/say $$1 $+ , %gs.h.limits
+  ..Ask Question:/say $$1 $+ , %gs.hn.ask
+  ..Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
+  ..Channel Registration: /say $$1 $+ , %gs.hn.regchan
+  ..Commands List:/say $$1 $+ , %gs.hn.commands
+  ..Computer Help:/say $$1 $+ , %gs.hn.help
+  ..Extended Bans:/say $$1 $+ , %gs.hn.extendbans
+  ..Flash Client:/say $$1 $+ , %gs.hn.getchat
+  ..Founders:/say $$1 $+ , %gs.hn.founders
+  ..Help Guidelines:/say $$1 , %gs.hn.helpguidelines
+  ..Latest News:/say $$1 $+ , %gs.hn.news
+  ..Limitations:/say $$1 $+ , %gs.hn.limits
+  ..Nick Registration:/say $$1 $+ , %gs.hn.regnick
+  ..Terms of Service:/say $$1 $+ , %gs.hn.tos
+  ..User Badge:/say $$1 $+ , %gs.hn.userbadge
+  .ChanServ
+  ..Status
+  ...Permanent
+  ....QOP:/founder $$1 
+  ....SOP:/permsop $$1 
+  ....AOP:/permaop $$1 
+  ....HOP:/permhop $$1 
+  ....VOP:/permvop $$1
+  ...Temporary
+  ....SOP:/tempsop $$1 
+  ....AOP:/mode $chan +o $$1 
+  ....HOP:/mode $chan +h $$1 
+  ....VOP:/mode $chan +v $$1
+  .NickServ
+  ..Info:/ns info $$1 all
+  ..Whois:/whois $$1
 }
 
 
@@ -135,4 +210,138 @@ menu channel {
   ....No PMs:/kb $$?="Enter the nick you wish to kick" %gs.w.msgsnoperm
   ....Personal Attacks:/kb $$?="Enter the nick you wish to kick" %gs.w.persattack
   ....Spamming:/kb $$?="Enter the nick you wish to kick" %gs.w.spam
+  .Help
+  ..Ask Question:/say %gs.h.ask
+  ..Certificate Authority:/say %gs.h.sslcertficate
+  ..Channel Registration: /say %gs.h.regchan
+  ..Commands List:/say %gs.h.commands
+  ..Computer Help:/say %gs.h.help
+  ..Extended Bans:/say %gs.h.extendbans
+  ..Flash Client:/say %gs.h.getchat
+  ..Founders:/say %gs.h.founders
+  ..Help Guidelines:/say %gs.h.helpguidelines
+  ..Latest News:/say %gs.h.news
+  ..Limitations:/say %gs.h.limits
+  ..Terms of Service:/say %gs.h.tos
+  ..User Badge:/say %gs.h.userbadge
+  .BotServ
+  ..Assign:/bs ASSIGN $chan $$?="Enter the desired Services bot"
+  ..Unassign:/bs UNASSIGN $chan $$?="Enter the Services bot you wish to unassign"
+  ..List:/bs botlist
+  ..Say:/bs say $chan $$?="Enter what you wish the Service bot to say"
+  ..Act:/bs act $chan $$?="Enter what you wish the Service bot to act"
+  .ChanServ
+  ..Info:/cs info $$?="Enter the channel you want info (#channel)" all
+  ..Join:/join $$?="Enter the channel(s) you wish to join (#chan1,#chan2,#chan3)"
+  ..Part:/part $$?="Enter the channel(s) you wish to part (#chan1,#chan2,#chan3)"
+  ..Modes
+  ...Moderate
+  ....On:/mode $chan +m
+  ....Off:/mode $chan -m
+  ...Invite-Only
+  ....On:/mode $chan +i
+  ....Off:/mode $chan -i
+  ...ANSI Color Block
+  ....On:/mode $chan +c
+  ....Off:/mode $chan -c
+  ...CTCP Blocker
+  ....On:/mode $chan +C
+  ....Off:/mode $chan -C
+  ...Nick change blocker
+  ....On:/mode $chan +N
+  ....Off:/mode $chan -N
+  ...Foul Language Filter
+  ....On:/mode $chan +G
+  ....Off:/mode $chan -G
+  ...Secret Channel
+  ....On:/mode $chan +s
+  ....Off:/mode $chan -s
+  ...Set Topic (Op Only)
+  ....On:/mode $chan +t
+  ....Off:/mode $chan -t
+  ...Color Stripper
+  ....On:/mode $chan +S
+  ....Off:/mode $chan -S
+  ...No Outside Messages
+  ....On:/mode $chan +n
+  ....Off:/mode $chan -n
+  ...No Notices
+  ....On:/mode $chan +T
+  ....Off:/mode $chan -T
+  ...Private Channel
+  ....On:/mode $chan +p
+  ....Off:/mode $chan -p
+  ...Strip Formatting
+  ....On:/mode $chan +U
+  ....Off:/mode $chan -U
+  ...Invite Not Allowed
+  ....On:/mode $chan +V
+  ....Off:/mode $chan -V
+  ...SSL Connection Only
+  ....On:/mode $chan +z
+  ....Off:/mode $chan -z
+  ...Registered Nicks Only
+  ....On:/mode $chan +R
+  ....Off:/mode $chan -R
+  ..Channel Status
+  ...Permanent
+  ....QOP:/founder $$?="Enter the nick you wish to set as a founder"
+  ....SOP:/permsop $$?="Enter the nick you wish to set as admin"
+  ....AOP:/permaop $$?="Enter the nick you wish to set as op" 
+  ....HOP:/permhop $$?="Enter the nick you wish to set as half-op"
+  ....VOP:/permvop $$?="Enter the nick you wish to set as voice"
+  ...Temporary
+  ....SOP:/tempsop $$?="Enter the nick you wish to set as temporary admin"
+  ....AOP:/mode $chan +o $$?="Enter the nick you wish to set as temporary op"
+  ....HOP:/mode $chan +h $$?="Enter the nick you wish to set as temporary half-op"
+  ....VOP:/mode $chan +v $$?="Enter the nick you wish to set as a temporary voice"
+  .MemoServ
+  ..List Memos:/msg MemoServ list
+  ..Send
+  ...No Read Receipt:/ms SEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
+  ...Read Receipt:/ms RSEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
+  ..Delete
+  ..Read
+  ..Settings
+  ...Info:
+  ...Limit:/ms SET LIMIT $$?="Enter the Memo Limit (Maximum of 20)"
+  ...Notify
+  ....On:
+  ....Off:
+  ....Logon:
+  ....Mail:
+  ....NoMail:
+  .NickServ
+  ..Whois:/whois $$?="Enter the nick you want to whois"
+  ..Info:/ns info $$?="Enter the nick you want info"
+  ..Change Nick:/nick $$?="Enter your new nick"
+  ..Group:/ns group $$?="Enter your main nick" $$?="Enter your password"
+}
+
+menu status {
+  -
+  Channel Management Menu
+  .ChanServ
+  ..Info:/cs info $$?="Enter the channel you want info (#channel)" all
+  .MemoServ
+  ..List Memos:/msg MemoServ list
+  ..Send
+  ...No Read Receipt:/ms SEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
+  ...Read Receipt:/ms RSEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
+  ..Delete
+  ..Read
+  ..Settings
+  ...Info:
+  ...Limit:/ms SET LIMIT $$?="Enter the Memo Limit (Maximum of 20)"
+  ...Notify
+  ....On:
+  ....Off:
+  ....Logon:
+  ....Mail:
+  ....NoMail:
+  .NickServ
+  ..Whois:/whois $$?="Enter the nick you want to whois"
+  ..Info:/ns info $$?="Enter the nick you want info"
+  ..Change Nick:/nick $$?="Enter your new nick"
+  ..Group:/ns group $$?="Enter your main nick" $$?="Enter your password"
 }
