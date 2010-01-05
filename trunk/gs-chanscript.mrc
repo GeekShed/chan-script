@@ -294,7 +294,7 @@ menu channel {
   ....HOP:/mode $chan +h $$?="Enter the nick you wish to set as temporary half-op"
   ....VOP:/mode $chan +v $$?="Enter the nick you wish to set as a temporary voice"
   .MemoServ
-  ..List Memos:/msg MemoServ list
+  ..List Memos:/ms list
   ..Send
   ...No Read Receipt:/ms SEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
   ...Read Receipt:/ms RSEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
@@ -322,7 +322,7 @@ menu status {
   .ChanServ
   ..Info:/cs info $$?="Enter the channel you want info (#channel)" all
   .MemoServ
-  ..List Memos:/msg MemoServ list
+  ..List Memos:/ms list
   ..Send
   ...No Read Receipt:/ms SEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
   ...Read Receipt:/ms RSEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
