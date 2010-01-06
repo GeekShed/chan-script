@@ -108,22 +108,22 @@ menu nicklist {
   GeekShed Management Script
   .Discipline
   ..Warn
-  ...Amsg/Ame's:/say $$1 %gs.w.amsg
-  ...Attitude:/say $$1 %gs.w.attitude
-  ...Botnetting:/say $$1 %gs.w.botnet
-  ...Caps:/say $$1 %gs.w.caps
-  ...Change Nick:/say $$1 %gs.w.nick
-  ...Copyright/Privacy:/say $$1 %gs.w.privacy 
-  ...Flooding:/say $$1 %gs.w.flood
-  ...Hacking:/say $$1 %gs.w.hack
-  ...Hate Speech:/say $$1 %gs.w.hatespeech
-  ...Harassment:/say $$1 %gs.w.harassment
-  ...Illegal:/say $$1 %gs.w.illegal
-  ...Language:/say $$1 %gs.w.language
-  ...No PMs:/say $$1 %gs.w.msgsnoperm
-  ...OS Wars:/say $$1 %gs.w.oswars
-  ...Spamming:/say $$1 %gs.w.spam
-  ...Personal Attacks:/say $$1 %gs.w.persattack
+  ...Amsg/Ame's:/say $$1 $+ , %gs.w.amsg
+  ...Attitude:/say $$1 $+ , %gs.w.attitude
+  ...Botnetting:/say $$1 $+ , %gs.w.botnet
+  ...Caps:/say $$1 $+ , %gs.w.caps
+  ...Change Nick:/say $$1 $+ , %gs.w.nick
+  ...Copyright/Privacy:/say $$1 $+ , %gs.w.privacy 
+  ...Flooding:/say $$1 $+ , %gs.w.flood
+  ...Hacking:/say $$1 $+ , %gs.w.hack
+  ...Hate Speech:/say $$1 $+ , %gs.w.hatespeech
+  ...Harassment:/say $$1 $+ , %gs.w.harassment
+  ...Illegal:/say $$1 $+ , %gs.w.illegal
+  ...Language:/say $$1 $+ , %gs.w.language
+  ...No PMs:/say $$1 $+ , %gs.w.msgsnoperm
+  ...OS Wars:/say $$1 $+ , %gs.w.oswars
+  ...Spamming:/say $$1 $+ , %gs.w.spam
+  ...Personal Attacks:/say $$1 $+ , %gs.w.persattack
   ..Kick
   ...Kick (No Reason):/kick $chan $$1
   ...Kick (Custom):/kick $chan $$1 $$?="Enter a reason"
