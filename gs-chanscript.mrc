@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GeekShed Management Script                   ;;
-;; Version 1.0                                  ;;
+;; Version 1.1                                  ;;
 ;; Concept by Zetacon                           ;;
 ;; Input/Modifications by Phil, GrimReaper      ;;
 ;; All Rights Reserved                          ;;
@@ -108,6 +108,22 @@ menu nicklist {
   GeekShed Management Script
   .Discipline
   ..Warn
+  ...Amsg/Ame's:/say $$1 %gs.w.amsg
+  ...Attitude:/say $$1 %gs.w.attitude
+  ...Botnetting:/say $$1 %gs.w.botnet
+  ...Caps:/say $$1 %gs.w.caps
+  ...Change Nick:/say $$1 %gs.w.nick
+  ...Copyright/Privacy:/say $$1 %gs.w.privacy 
+  ...Flooding:/say $$1 %gs.w.flood
+  ...Hacking:/say $$1 %gs.w.hack
+  ...Hate Speech:/say $$1 %gs.w.hatespeech
+  ...Harassment:/say $$1 %gs.w.harassment
+  ...Illegal:/say $$1 %gs.w.illegal
+  ...Language:/say $$1 %gs.w.language
+  ...No PMs:/say $$1 %gs.w.msgsnoperm
+  ...OS Wars:/say $$1 %gs.w.oswars
+  ...Spamming:/say $$1 %gs.w.spam
+  ...Personal Attacks:/say $$1 %gs.w.persattack
   ..Kick
   ...Kick (No Reason):/kick $chan $$1
   ...Kick (Custom):/kick $chan $$1 $$?="Enter a reason"
@@ -331,23 +347,18 @@ menu channel {
   .MemoServ
   ..List Memos:/ms list
   ..Send
-  ...No Read Receipt:/ms SEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
-  ...Read Receipt:/ms RSEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
+  ...No Read Receipt:/ms SEND $chan $$?="Enter the message for the Memo"
+  ...Read Receipt:/ms RSEND $chan $$?="Enter the message for the Memo"
   ..Delete
   ...All:/ms DEL $chan ALL
   ...Last:/ms DEL $chan LAST
   ...Number:/ms DEL $chan $$?="Enter the Memo number to delete (ex: '1','2-5','7-9')"
   ..Read
-  ...
+  ...New:/ms READ $chan NEW
+  ...Last:/ms READ $chan LAST
+  ...Number:/ms READ $chan $$?="Enter the Memo number to read (ex: '1','2-5','7-9')"
   ..Settings
-  ...Info:
-  ...Limit:/ms SET LIMIT $$?="Enter the Memo Limit (Maximum of 20)"
-  ...Notify
-  ....On:
-  ....Off:
-  ....Logon:
-  ....Mail:
-  ....NoMail:
+  ...Info:/ms INFO $chan
   .NickServ
   ..Whois:/whois $$?="Enter the nick you want to whois"
   ..Whois (Idle):/set -u3 %tempwhois $$?="Please enter the nick you want to whois" | .timer 1 1 whois %tempnick %tempnick
@@ -382,19 +393,26 @@ menu status {
   .MemoServ
   ..List Memos:/ms list
   ..Send
-  ...No Read Receipt:/ms SEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
-  ...Read Receipt:/ms RSEND nick $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
+  ...No Read Receipt:/ms SEND $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
+  ...Read Receipt:/ms RSEND $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
   ..Delete
+  ...All:/ms DEL ALL
+  ...Last:/ms DEL LAST
+  ...Number:/ms DEL $$?="Enter the Memo number to delete (ex: '1','2-5','7-9')"
   ..Read
+  ...New:/ms READ NEW
+  ...Last:/ms READ LAST
+  ...Number:/ms READ $$?="Enter the Memo number to read (ex: '1','2-5','7-9')"
   ..Settings
-  ...Info:
+  ...Info:/ms INFO
   ...Limit:/ms SET LIMIT $$?="Enter the Memo Limit (Maximum of 20)"
   ...Notify
-  ....On:
-  ....Off:
-  ....Logon:
-  ....Mail:
-  ....NoMail:
+  ....On:/ms SET NOTIFY ON
+  ....Off:/ms SET NOTIFY OFF
+  ....New:/ms SET NOTIFY NEW
+  ....Logon:/ms SET NOTIFY LOGON
+  ....Mail:/ms SET NOTIFY MAIL
+  ....NoMail:/ms SET NOTIFY NOMAIL
   .NickServ
   ..Whois:/whois $$?="Enter the nick you want to whois"
   ..Whois (Idle):/set -u3 %whoistemp $$?="Please enter the nick you want to whois" | .timer 1 1 whois %whoistemp %whoistemp
