@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GeekShed Management Script                   ;;
-;; Version 1.1                                  ;;
+;; Version 1.2                                  ;;
 ;; Concept by Zetacon                           ;;
 ;; Input/Modifications by Phil, GrimReaper      ;;
 ;; All Rights Reserved                          ;;
