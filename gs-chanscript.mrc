@@ -423,46 +423,7 @@ menu status {
 
 on *:unload:{  
   echo Removing gs-chanscript.mrc variables, please wait...
-  unset %gs.w.attitude
-  unset %gs.w.hatespeech 
-  unset %gs.w.harassment 
-  unset %gs.w.botnet 
-  unset %gs.w.msgsnoperm 
-  unset %gs.w.hack 
-  unset %gs.w.language 
-  unset %gs.w.flood 
-  unset %gs.w.amsg 
-  unset %gs.w.spam 
-  unset %gs.w.privacy 
-  unset %gs.w.oswars 
-  unset %gs.w.caps 
-  unset %gs.w.persattack 
-  unset %gs.w.nick 
-  unset %gs.w.illegal 
-  unset %gs.hn.commands 
-  unset %gs.hn.getchat 
-  unset %gs.hn.news 
-  unset %gs.hn.help
-  unset %gs.hn.limits
-  unset %gs.hn.regchan 
-  unset %gs.hn.regnick 
-  unset %gs.hn.extendbans
-  unset %gs.hn.ask
-  unset %gs.hn.helpguidelines
-  unset %gs.hn.founders
-  unset %gs.hn.sslcertficate 
-  unset %gs.hn.userbadge 
-  unset %gs.hn.tos 
-  unset %gs.hn.ports 
-  unset %gs.hn.owner
-  unset %gs.hn.clients 
-  unset %gs.hn.qdb 
-  unset %gs.hn.access 
-  unset %gs.hn.bots 
-  unset %gs.hn.ipv6 
-  unset %gs.hn.flood 
-  unset %gs.hn.oper 
-  unset %gs.hn.link 
-  unset %gs.hn.vhost
+  unset %gs.w.*
+  unset %gs.hn.*
   echo Variable removal complete
 }
