@@ -344,6 +344,10 @@ menu channel {
   ....AOP:/mode $chan +o $$?="Enter the nick you wish to set as temporary op"
   ....HOP:/mode $chan +h $$?="Enter the nick you wish to set as temporary half-op"
   ....VOP:/mode $chan +v $$?="Enter the nick you wish to set as a temporary voice"
+  .HostServ
+  ..On:/hs on
+  ..Off:/hs off
+  ..Group:/hs group
   .MemoServ
   ..List Memos:/ms list
   ..Send
@@ -365,6 +369,28 @@ menu channel {
   ..Info:/ns info $$?="Enter the nick you want info"
   ..Change Nick:/nick $$?="Enter your new nick"
   ..Group:/ns group $$?="Enter your main nick" $$?="Enter your password"
+  .User Modes
+  ..PM Block
+  ...On:/umode2 +D
+  ...Off:/umode -D
+  ..Invisible
+  ...On:/umode2 +i
+  ...Off:/umode2 -i
+  ..Hide Channels
+  ...On:/umode2 +p
+  ...Off:/umode2 -p
+  ..Wallop Msg Block
+  ...On:/umode2 +w
+  ...Off:/umode2 -w
+  ..Censored Filter
+  ...On:/umode2 +G
+  ...Off:/umode2 -G
+  ..PM/Notices from +r Users
+  ...On:/umode2 +R
+  ...Off:/umode2 -R
+  ..CTCPs Block
+  ...On:/umode2 +T
+  ...Off:/umode2 -T
 }
 
 menu status {
