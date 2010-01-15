@@ -195,6 +195,14 @@ menu nicklist {
   .NickServ
   ..Info:/ns info $$1 all
   ..Whois:/whois $$1
+  User Mode
+  ..$iif(D isincs $gettok($usermode,1,32),$style(1)) PM Block:{ if (D isincs $gettok($usermode,1,32)) { umode2 -D } | else { umode2 +D } }
+  ..$iif(i isincs $gettok($usermode,1,32),$style(1)) Invisible:{ if (i isincs $gettok($usermode,1,32)) { umode2 -i } | else { umode2 +i } }
+  ..$iif(p isincs $gettok($usermode,1,32),$style(1)) Hide Channels:{ if (p isincs $gettok($usermode,1,32)) { umode -p } | else { umode2 +p } }
+  ..$iif(w isincs $gettok($usermode,1,32),$style(1)) Wallop Msg Block:{ if (w isincs $gettok($usermode,1,32)) { umode2 -w } | else { umode2 +w } }
+  ..$iif(G isincs $gettok($usermode,1,32),$style(1)) Censored Filter:{ if (G isincs $gettok($usermode,1,32)) { umode2 -G } | else { umode2 +G } }
+  ..$iif(R isincs $gettok($usermode,1,32),$style(1)) PM/Notices from +r Users:{ if (R isincs $gettok($usermode,1,32)) { umode2 -R } | else { umode2 +R } }
+  ..$iif(T isincs $gettok($usermode,1,32),$style(1)) CTCPs Block:{ if (T isincs $gettok($usermode,1,32)) { umode2 -T } | else { umode2 +T } }
 }
 
 
@@ -371,7 +379,7 @@ menu channel {
   ..Group:/ns group $$?="Enter your main nick" $$?="Enter your password"
   .User Modes
   ..PM Block
-  ...On:/umode2 +D
+  ...On:/umode +D
   ...Off:/umode -D
   ..Invisible
   ...On:/umode2 +i
