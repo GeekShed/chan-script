@@ -51,6 +51,7 @@ on 1:START:{
   set %gs.hn.oper if you're interested in becoming an IRCOp on GeekShed see: http://www.geekshed.net/2009/11/can-i-be-an-oper-on-geekshed/
   set %gs.hn.link if you want to link a server to GeekShed see http://www.geekshed.net/2009/11/can-i-link-a-server-to-geekshed/ for information
   set %gs.hn.vhost if you would like a GeekShed vhost, join #vhosts and read http://www.geekshed.net/2009/11/can-i-have-a-vhost-on-geekshed/
+  set %gs.hn.malwarehelp please read the following instructions for information on removing malware from your computer: http://www.geekstogo.com/forum/Malware-Spyware-Cleaning-Guide-t2852.html
 }
 
 ;---------------------------Aliases---------------------------
@@ -172,10 +173,11 @@ menu nicklist {
   ..ipv6 Support:/say $$1 , %gs.hn.ipv6
   ..Latest News:/say $$1 $+ , %gs.hn.news
   ..Limitations:/say $$1 $+ , %gs.hn.limits
-  ..Server Linking:/say $$1 $+ , %gs.hn.link
+  ..Malware Guide:/say $$1 $+ , %gs.hn.malwarehelp
   ..Nick Registration:/say $$1 $+ , %gs.hn.regnick
   ..Oper Info:/say $$1 $+ , %gs.hn.oper
   ..Quote Database:/say $$1 $+ , %gs.hn.qdb
+  ..Server Linking:/say $$1 $+ , %gs.hn.link
   ..Terms of Service:/say $$1 $+ , %gs.hn.tos
   ..User Badge:/say $$1 $+ , %gs.hn.userbadge
   ..vHosts:/say $$1 $+ , %gs.hn.vhost
@@ -274,10 +276,11 @@ menu channel {
   ..ipv6 Support:/say %gs.hn.ipv6
   ..Latest News:/say %gs.hn.news
   ..Limitations:/say %gs.hn.limits
-  ..Server Linking:/say %gs.hn.link
+  ..Malware Guide:/say %gs.hn.malwarehelp
   ..Nick Registration:/say %gs.hn.regnick
   ..Oper Info:/say %gs.hn.oper
   ..Quote Database:/say %gs.hn.qdb
+  ..Server Linking:/say %gs.hn.link
   ..Terms of Service:/say %gs.hn.tos
   ..User Badge:/say %gs.hn.userbadge
   ..vHosts:/say %gs.hn.vhost
