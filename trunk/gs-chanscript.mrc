@@ -169,8 +169,8 @@ menu nicklist {
   ..Flash Client:/say $$1 $+ , %gs.hn.getchat
   ..Flood Protection:/say $$1 $+ , %gs.hn.flood
   ..Founders:/say $$1 $+ , %gs.hn.founders
-  ..Help Guidelines:/say $$1 , %gs.hn.helpguidelines
-  ..ipv6 Support:/say $$1 , %gs.hn.ipv6
+  ..Help Guidelines:/say $$1 $+ , %gs.hn.helpguidelines
+  ..ipv6 Support:/say $$1 $+ , %gs.hn.ipv6
   ..Latest News:/say $$1 $+ , %gs.hn.news
   ..Limitations:/say $$1 $+ , %gs.hn.limits
   ..Malware Guide:/say $$1 $+ , %gs.hn.malwarehelp
