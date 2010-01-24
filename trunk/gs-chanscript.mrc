@@ -197,7 +197,7 @@ menu nicklist {
   .NickServ
   ..Info:/ns info $$1 all
   ..Whois:/whois $$1
-  User Mode
+  User Mode $+ $chr(58) $gettok($usermode,1,32)
   ..$iif(D isincs $gettok($usermode,1,32),$style(1)) PM Block:{ if (D isincs $gettok($usermode,1,32)) { umode2 -D } | else { umode2 +D } }
   ..$iif(i isincs $gettok($usermode,1,32),$style(1)) Invisible:{ if (i isincs $gettok($usermode,1,32)) { umode2 -i } | else { umode2 +i } }
   ..$iif(p isincs $gettok($usermode,1,32),$style(1)) Hide Channels:{ if (p isincs $gettok($usermode,1,32)) { umode -p } | else { umode2 +p } }
@@ -226,8 +226,8 @@ menu channel {
   ..$iif(R isincs $gettok($chan(#).mode,1,32),$style(1)) Registered Nicks Only:{ if (R isincs $gettok($chan(#).mode,1,32)) { mode # -R } | else { mode # +R } }
   ..$iif(s isincs $gettok($chan(#).mode,1,32),$style(1)) Secret:{ if (s isincs $gettok($chan(#).mode,1,32)) { mode # -s } | else { mode # +s } }
   ..$iif(t isincs $gettok($chan(#).mode,1,32),$style(1)) Only Ops Set Topic:{ if (t isincs $gettok($chan(#).mode,1,32)) { mode # -t } | else { mode # +t } }
-  ..$iif(l isincs $gettok($chan(#).mode,1,32),$style(1) User Limit $+ $chr(58) $chan(#).limit,User Limit):{ if (l isincs $gettok($chan(#).mode,1,32)) { mode # -l } | else { mode # +l $$?"Maximum number of users allowed in # $+ :" } }
-  ..$iif(k isincs $gettok($chan(#).mode,1,32),$style(1) Key $+ $chr(58) $chan(#).key,Key):{ if (k isincs $gettok($chan(#).mode,1,32)) { mode # -k $chan(#).key } | else { mode # +k $$?"Enter key for # $+ :" } }
+  ..$iif(l isincs $gettok($chan(#).mode,1,32),$style(1)) User Limit $+ $chr(58) $chan(#).limit,User Limit):{ if (l isincs $gettok($chan(#).mode,1,32)) { mode # -l } | else { mode # +l $$?"Maximum number of users allowed in # $+ :" } }
+  ..$iif(k isincs $gettok($chan(#).mode,1,32),$style(1)) Key $+ $chr(58) $chan(#).key,Key):{ if (k isincs $gettok($chan(#).mode,1,32)) { mode # -k $chan(#).key } | else { mode # +k $$?"Enter key for # $+ :" } }
   .Discipline
   ..Kick
   ...Kick (No Reason):/kick $chan $$?="Enter the nick you wish to kick"
@@ -296,53 +296,26 @@ menu channel {
   ..Part:/part $$?="Enter the channel(s) you wish to part (#chan1,#chan2,#chan3)"
   ..Modes
   ...Moderate
-  ....On:/mode $chan +m
-  ....Off:/mode $chan -m
-  ...Invite-Only
-  ....On:/mode $chan +i
-  ....Off:/mode $chan -i
-  ...ANSI Color Block
-  ....On:/mode $chan +c
-  ....Off:/mode $chan -c
-  ...CTCP Blocker
-  ....On:/mode $chan +C
-  ....Off:/mode $chan -C
-  ...Nick change blocker
-  ....On:/mode $chan +N
-  ....Off:/mode $chan -N
-  ...Foul Language Filter
-  ....On:/mode $chan +G
-  ....Off:/mode $chan -G
-  ...Secret Channel
-  ....On:/mode $chan +s
-  ....Off:/mode $chan -s
-  ...Set Topic (Op Only)
-  ....On:/mode $chan +t
-  ....Off:/mode $chan -t
-  ...Color Stripper
-  ....On:/mode $chan +S
-  ....Off:/mode $chan -S
-  ...No Outside Messages
-  ....On:/mode $chan +n
-  ....Off:/mode $chan -n
+  ....On:/mode # +m
+  ....Off:/mode # -m
   ...No Notices
-  ....On:/mode $chan +T
-  ....Off:/mode $chan -T
+  ....On:/mode # +T
+  ....Off:/mode # -T
   ...Private Channel
-  ....On:/mode $chan +p
-  ....Off:/mode $chan -p
+  ....On:/mode # +p
+  ....Off:/mode # -p
   ...Strip Formatting
-  ....On:/mode $chan +U
-  ....Off:/mode $chan -U
+  ....On:/mode # +U
+  ....Off:/mode # -U
   ...Invite Not Allowed
-  ....On:/mode $chan +V
-  ....Off:/mode $chan -V
+  ....On:/mode # +V
+  ....Off:/mode # -V
   ...SSL Connection Only
-  ....On:/mode $chan +z
-  ....Off:/mode $chan -z
+  ....On:/mode # +z
+  ....Off:/mode # -z
   ...Registered Nicks Only
-  ....On:/mode $chan +R
-  ....Off:/mode $chan -R
+  ....On:/mode # +R
+  ....Off:/mode # -R
   ..Channel Status
   ...Permanent
   ....QOP:/founder $$?="Enter the nick you wish to set as a founder"
@@ -380,53 +353,27 @@ menu channel {
   ..Info:/ns info $$?="Enter the nick you want info"
   ..Change Nick:/nick $$?="Enter your new nick"
   ..Group:/ns group $$?="Enter your main nick" $$?="Enter your password"
-  .User Modes
-  ..PM Block
-  ...On:/umode +D
-  ...Off:/umode -D
-  ..Invisible
-  ...On:/umode2 +i
-  ...Off:/umode2 -i
-  ..Hide Channels
-  ...On:/umode2 +p
-  ...Off:/umode2 -p
-  ..Wallop Msg Block
-  ...On:/umode2 +w
-  ...Off:/umode2 -w
-  ..Censored Filter
-  ...On:/umode2 +G
-  ...Off:/umode2 -G
-  ..PM/Notices from +r Users
-  ...On:/umode2 +R
-  ...Off:/umode2 -R
-  ..CTCPs Block
-  ...On:/umode2 +T
-  ...Off:/umode2 -T
+  User Modes $+ $chr(58) $gettok($usermode,1,32)
+  ..$iif(D isincs $gettok($usermode,1,32),$style(1)) PM Block:{ if (D isincs $gettok($usermode,1,32)) { umode2 -D } | else { umode2 +D } }
+  ..$iif(i isincs $gettok($usermode,1,32),$style(1)) Invisible:{ if (i isincs $gettok($usermode,1,32)) { umode2 -i } | else { umode2 +i } }
+  ..$iif(p isincs $gettok($usermode,1,32),$style(1)) Hide Channels:{ if (p isincs $gettok($usermode,1,32)) { umode -p } | else { umode2 +p } }
+  ..$iif(w isincs $gettok($usermode,1,32),$style(1)) Wallop Msg Block:{ if (w isincs $gettok($usermode,1,32)) { umode2 -w } | else { umode2 +w } }
+  ..$iif(G isincs $gettok($usermode,1,32),$style(1)) Censored Filter:{ if (G isincs $gettok($usermode,1,32)) { umode2 -G } | else { umode2 +G } }
+  ..$iif(R isincs $gettok($usermode,1,32),$style(1)) PM/Notices from +r Users:{ if (R isincs $gettok($usermode,1,32)) { umode2 -R } | else { umode2 +R } }
+  ..$iif(T isincs $gettok($usermode,1,32),$style(1)) CTCPs Block:{ if (T isincs $gettok($usermode,1,32)) { umode2 -T } | else { umode2 +T } }
 }
 
 menu status {
   -
   GeekShed Management Script
-  .ChanServ
-  ..Info:/cs info $$?="Enter the channel you want info (#channel)" all
-  ..Register:/cs register $$?="Enter the channel name you wish to register" $$?="Please enter a channel password" $$?="Please enter a channel Description:"
-  ..Channel Settings
-  ...Change Founder:/cs set $$?="Enter channel:" founder $$?="Enter New Founder"
-  ...Change Successor:/cs set $$?="Enter channel:" successor $$?="Enter nick:"
-  ...Change Password:/cs set $$?="Enter channel:" passwd $$?*="Enter old password:" $$?*="Enter new password:"
-  ...Change Description:/cs set $$?="Enter channel:" desc $$?="Enter new description:"
-  ..Channel Modes $+ $chr(58) $+ $chr(9) $+ $chan(#).mode
-  ...$iif(c isincs $gettok($chan(#).mode,1,32),$style(1)) No Colors:{ if (c isincs $gettok($chan(#).mode,1,32)) { mode # -c } | else { mode # +c } }
-  ...$iif(i isincs $gettok($chan(#).mode,1,32),$style(1)) Invite Only:{ if (i isincs $gettok($chan(#).mode,1,32)) { mode # -i } | else { mode # +i } }
-  ...$iif(M isincs $gettok($chan(#).mode,1,32),$style(1)) Only Registered Nicks Can Speak:{ if (M isincs $gettok($chan(#).mode,1,32)) { mode # -M } | else { mode # +M } }
-  ...$iif(m isincs $gettok($chan(#).mode,1,32),$style(1)) Moderated:{ if (m isincs $gettok($chan(#).mode,1,32)) { mode # -m } | else { mode # +m } }
-  ...$iif(n isincs $gettok($chan(#).mode,1,32),$style(1)) No External Messages:{ if (n isincs $gettok($chan(#).mode,1,32)) { mode # -n } | else { mode # +n } }
-  ...$iif(p isincs $gettok($chan(#).mode,1,32),$style(1)) Private:{ if (p isincs $gettok($chan(#).mode,1,32)) { mode # -p } | else { mode # +p } }
-  ...$iif(R isincs $gettok($chan(#).mode,1,32),$style(1)) Registered Nicks Only:{ if (R isincs $gettok($chan(#).mode,1,32)) { mode # -R } | else { mode # +R } }
-  ...$iif(s isincs $gettok($chan(#).mode,1,32),$style(1)) Secret:{ if (s isincs $gettok($chan(#).mode,1,32)) { mode # -s } | else { mode # +s } }
-  ...$iif(t isincs $gettok($chan(#).mode,1,32),$style(1)) Only Ops Set Topic:{ if (t isincs $gettok($chan(#).mode,1,32)) { mode # -t } | else { mode # +t } }
-  ...$iif(l isincs $gettok($chan(#).mode,1,32),$style(1) User Limit $+ $chr(58) $chan(#).limit,User Limit):{ if (l isincs $gettok($chan(#).mode,1,32)) { mode # -l } | else { mode # +l $$?"Maximum number of users allowed in # $+ :" } }
-  ...$iif(k isincs $gettok($chan(#).mode,1,32),$style(1) Key $+ $chr(58) $chan(#).key,Key):{ if (k isincs $gettok($chan(#).mode,1,32)) { mode # -k $chan(#).key } | else { mode # +k $$?"Enter key for # $+ :" } }
+  .User Mode $+ $chr(58) $gettok($usermode,1,32)
+  ...$iif(D isincs $gettok($usermode,1,32),$style(1)) PM Block:{ if (D isincs $gettok($usermode,1,32)) { umode2 -D } | else { umode2 +D } }
+  ...$iif(i isincs $gettok($usermode,1,32),$style(1)) Invisible:{ if (i isincs $gettok($usermode,1,32)) { umode2 -i } | else { umode2 +i } }
+  ...$iif(p isincs $gettok($usermode,1,32),$style(1)) Hide Channels:{ if (p isincs $gettok($usermode,1,32)) { umode -p } | else { umode2 +p } }
+  ...$iif(w isincs $gettok($usermode,1,32),$style(1)) Wallop Msg Block:{ if (w isincs $gettok($usermode,1,32)) { umode2 -w } | else { umode2 +w } }
+  ...$iif(G isincs $gettok($usermode,1,32),$style(1)) Censored Filter:{ if (G isincs $gettok($usermode,1,32)) { umode2 -G } | else { umode2 +G } }
+  ...$iif(R isincs $gettok($usermode,1,32),$style(1)) PM/Notices from +r Users:{ if (R isincs $gettok($usermode,1,32)) { umode2 -R } | else { umode2 +R } }
+  ...$iif(T isincs $gettok($usermode,1,32),$style(1)) CTCPs Block:{ if (T isincs $gettok($usermode,1,32)) { umode2 -T } | else { umode2 +T } }
   .MemoServ
   ..List Memos:/ms list
   ..Send
