@@ -228,6 +228,9 @@ menu channel {
   ..$iif(t isincs $gettok($chan(#).mode,1,32),$style(1)) Only Ops Set Topic:{ if (t isincs $gettok($chan(#).mode,1,32)) { mode # -t } | else { mode # +t } }
   ..$iif(l isincs $gettok($chan(#).mode,1,32),$style(1)) User Limit $+ $chr(58) $chan(#).limit,User Limit):{ if (l isincs $gettok($chan(#).mode,1,32)) { mode # -l } | else { mode # +l $$?"Maximum number of users allowed in # $+ :" } }
   ..$iif(k isincs $gettok($chan(#).mode,1,32),$style(1)) Key $+ $chr(58) $chan(#).key,Key):{ if (k isincs $gettok($chan(#).mode,1,32)) { mode # -k $chan(#).key } | else { mode # +k $$?"Enter key for # $+ :" } }
+  ..$iif(U isincs $gettok($chan(#).mode,1,32),$style(1)) No Formatting Codes:{ if (V isincs $gettok($chan(#).mode,1,32)) { mode # -U } | else { mode # +U } }
+  ..$iif(V isincs $gettok($chan(#).mode,1,32),$style(1)) No Invite:{ if (V isincs $gettok($chan(#).mode,1,32)) { mode # -V } | else { mode # +V } }
+  ..$iif(z isincs $gettok($chan(#).mode,1,32),$style(1)) SSL Clients Only:{ if (z isincs $gettok($chan(#).mode,1,32)) { mode # -z } | else { mode # +z } }
   .Discipline
   ..Kick
   ...Kick (No Reason):/kick $chan $$?="Enter the nick you wish to kick"
@@ -294,28 +297,6 @@ menu channel {
   ..Info:/cs info $$?="Enter the channel you want info (#channel)" all
   ..Join:/join $$?="Enter the channel(s) you wish to join (#chan1,#chan2,#chan3)"
   ..Part:/part $$?="Enter the channel(s) you wish to part (#chan1,#chan2,#chan3)"
-  ..Modes
-  ...Moderate
-  ....On:/mode # +m
-  ....Off:/mode # -m
-  ...No Notices
-  ....On:/mode # +T
-  ....Off:/mode # -T
-  ...Private Channel
-  ....On:/mode # +p
-  ....Off:/mode # -p
-  ...Strip Formatting
-  ....On:/mode # +U
-  ....Off:/mode # -U
-  ...Invite Not Allowed
-  ....On:/mode # +V
-  ....Off:/mode # -V
-  ...SSL Connection Only
-  ....On:/mode # +z
-  ....Off:/mode # -z
-  ...Registered Nicks Only
-  ....On:/mode # +R
-  ....Off:/mode # -R
   ..Channel Status
   ...Permanent
   ....QOP:/founder $$?="Enter the nick you wish to set as a founder"
@@ -406,7 +387,7 @@ menu status {
 }
 
 on *:unload:{  
-  echo Removing gs-chanscript.mrc variables, please wait...
+  echo Removing $script variables, please wait...
   unset %gs.w.*
   unset %gs.hn.*
   echo Variable removal complete
