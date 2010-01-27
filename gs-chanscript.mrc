@@ -6,6 +6,9 @@
 ;; All Rights Reserved                          ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;---------------------------Version Info CTCP-------------------
+ctcp 1:gscsver:ctcpreply $nick gscsver GeekShed.net management script version 1.3
+
 ;---------------------------Variables---------------------------
 
 on 1:START:{
