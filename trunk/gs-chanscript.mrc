@@ -286,7 +286,7 @@ menu channel {
   ..Founders:/say %gs.hn.founders
   ..Help Guidelines:/say %gs.hn.helpguidelines
   ..IPv6 Support:/say %gs.hn.ipv6
-  ..IRC Clients:/say $$1 $+ , %gs.hn.ircclients
+  ..IRC Clients:/say %gs.hn.ircclients
   ..Latest News:/say %gs.hn.news
   ..Limitations:/say %gs.hn.limits
   ..Malware Guide:/say %gs.hn.malwarehelp
