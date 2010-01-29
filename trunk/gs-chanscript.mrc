@@ -57,6 +57,7 @@ on 1:START:{
   set %gs.hn.malwarehelp please read the following instructions for information on removing malware from your computer: http://www.geekstogo.com/forum/Malware-Spyware-Cleaning-Guide-t2852.html
   set %gs.hn.unrealanopeunix see http://www.tutorialnut.com/index.php/2009/01/01/creating-an-unrealircd-and-anope-irc-server-on-a-unix-based-system/ for help setting up UnrealIRCD and Anope on a UNIX based system
   set %gs.hn.unrealanopewin see http://www.tutorialnut.com/index.php/2009/01/02/creating-an-unrealircd-and-anope-irc-server-on-a-windows-system/ for help setting up UnrealIRCD and Anope on a Windows based system
+  set %gs.hn.ircclients see http://www.geekshed.net/2009/12/irc-clients/ for a list of the IRC clients you can use to connect to GeekShed with
 }
 
 ;---------------------------Aliases---------------------------
@@ -175,7 +176,8 @@ menu nicklist {
   ..Flood Protection:/say $$1 $+ , %gs.hn.flood
   ..Founders:/say $$1 $+ , %gs.hn.founders
   ..Help Guidelines:/say $$1 $+ , %gs.hn.helpguidelines
-  ..ipv6 Support:/say $$1 $+ , %gs.hn.ipv6
+  ..IPv6 Support:/say $$1 $+ , %gs.hn.ipv6
+  ..IRC Clients:/say $$1 $+ , %gs.hn.ircclients
   ..Latest News:/say $$1 $+ , %gs.hn.news
   ..Limitations:/say $$1 $+ , %gs.hn.limits
   ..Malware Guide:/say $$1 $+ , %gs.hn.malwarehelp
@@ -283,7 +285,8 @@ menu channel {
   ..Flood Protection:/say %gs.hn.flood
   ..Founders:/say %gs.hn.founders
   ..Help Guidelines:/say %gs.hn.helpguidelines
-  ..ipv6 Support:/say %gs.hn.ipv6
+  ..IPv6 Support:/say %gs.hn.ipv6
+  ..IRC Clients:/say $$1 $+ , %gs.hn.ircclients
   ..Latest News:/say %gs.hn.news
   ..Limitations:/say %gs.hn.limits
   ..Malware Guide:/say %gs.hn.malwarehelp
