@@ -58,6 +58,7 @@ on 1:START:{
   set %gs.hn.unrealanopeunix see http://www.tutorialnut.com/index.php/2009/01/01/creating-an-unrealircd-and-anope-irc-server-on-a-unix-based-system/ for help setting up UnrealIRCD and Anope on a UNIX based system
   set %gs.hn.unrealanopewin see http://www.tutorialnut.com/index.php/2009/01/02/creating-an-unrealircd-and-anope-irc-server-on-a-windows-system/ for help setting up UnrealIRCD and Anope on a Windows based system
   set %gs.hn.ircclients see http://www.geekshed.net/2009/12/irc-clients/ for a list of the IRC clients you can use to connect to GeekShed with
+  set %gs.hn.quitmsgs view a list of quit messages and what they mean by visiting: http://www.geekshed.net/2010/01/quit-messages-and-what-they-mean/
 }
 
 ;---------------------------Aliases---------------------------
@@ -183,6 +184,7 @@ menu nicklist {
   ..Malware Guide:/say $$1 $+ , %gs.hn.malwarehelp
   ..Nick Registration:/say $$1 $+ , %gs.hn.regnick
   ..Oper Info:/say $$1 $+ , %gs.hn.oper
+  ..Quit Messages:/say $$1 $+ , %gs.hn.quitmsgs
   ..Quote Database:/say $$1 $+ , %gs.hn.qdb
   ..Server Linking:/say $$1 $+ , %gs.hn.link
   ..Terms of Service:/say $$1 $+ , %gs.hn.tos
@@ -292,6 +294,7 @@ menu channel {
   ..Malware Guide:/say %gs.hn.malwarehelp
   ..Nick Registration:/say %gs.hn.regnick
   ..Oper Info:/say %gs.hn.oper
+  ..Quit Messages:/say %gs.hn.quitmsgs
   ..Quote Database:/say %gs.hn.qdb
   ..Server Linking:/say %gs.hn.link
   ..Terms of Service:/say %gs.hn.tos
