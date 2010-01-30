@@ -168,7 +168,7 @@ menu nicklist {
   ..Adding BotServ:/say $$1 $+ , %gs.hn.bots
   ..Ask Question:/say $$1 $+ , %gs.hn.ask
   ..Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
-  ..Channel Registration: /say $$1 $+ , %gs.hn.regchan
+  ..Channel Registration:/say $$1 $+ , %gs.hn.regchan
   ..Commands List:/say $$1 $+ , %gs.hn.commands
   ..Computer Help:/say $$1 $+ , %gs.hn.help
   ..Extended Bans:/say $$1 $+ , %gs.hn.extendbans
