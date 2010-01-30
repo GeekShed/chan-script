@@ -32,7 +32,7 @@ on 1:START:{
   set %gs.hn.commands a list of GeekShed commands can be found at: http://www.geekshed.net/commands
   set %gs.hn.getchat get a chat for your website by visiting http://geekshed.net/getchat
   set %gs.hn.news read the latest GeekShed News! http://www.geekshed.net/news/
-  set %gs.hn.help this channel is for IRC related help only. If you need help with your computer, please visit #geekstogo, #bleepingcomputer, or #chris.
+  set %gs.hn.help this channel is for IRC help only. If you need help with your computer, please visit #geekstogo, #bleepingcomputer, or #chris.
   set %gs.hn.limits view a list of all of our limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
   set %gs.hn.regchan registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
   set %gs.hn.regnick for instructions on registering your nick, see: http://www.geekshed.net/2009/11/why-should-i-register-my-nickname-and-how-do-i-do-it/
