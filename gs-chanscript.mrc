@@ -176,6 +176,7 @@ menu nicklist {
   ..Flash Client:/say $$1 $+ , %gs.hn.getchat
   ..Flood Protection:/say $$1 $+ , %gs.hn.flood
   ..Founders:/say $$1 $+ , %gs.hn.founders
+  ..GeekShed Owners:/say $$1 $+ , %gs.hn.owner
   ..Help Guidelines:/say $$1 $+ , %gs.hn.helpguidelines
   ..IPv6 Support:/say $$1 $+ , %gs.hn.ipv6
   ..IRC Clients:/say $$1 $+ , %gs.hn.ircclients
@@ -184,6 +185,7 @@ menu nicklist {
   ..Malware Guide:/say $$1 $+ , %gs.hn.malwarehelp
   ..Nick Registration:/say $$1 $+ , %gs.hn.regnick
   ..Oper Info:/say $$1 $+ , %gs.hn.oper
+  ..Ports:/say $$1 $+ , %gs.hn.ports
   ..Quit Messages:/say $$1 $+ , %gs.hn.quitmsgs
   ..Quote Database:/say $$1 $+ , %gs.hn.qdb
   ..Server Linking:/say $$1 $+ , %gs.hn.link
@@ -279,13 +281,14 @@ menu channel {
   ..Adding BotServ:/say %gs.hn.bots
   ..Ask Question:/say %gs.hn.ask
   ..Certificate Authority:/say %gs.hn.sslcertficate
-  ..Channel Registration: /say %gs.hn.regchan
+  ..Channel Registration:/say %gs.hn.regchan
   ..Commands List:/say %gs.hn.commands
   ..Computer Help:/say %gs.hn.help
   ..Extended Bans:/say %gs.hn.extendbans
   ..Flash Client:/say %gs.hn.getchat
   ..Flood Protection:/say %gs.hn.flood
   ..Founders:/say %gs.hn.founders
+  ..GeekShed Owners:/say %gs.hn.owner
   ..Help Guidelines:/say %gs.hn.helpguidelines
   ..IPv6 Support:/say %gs.hn.ipv6
   ..IRC Clients:/say %gs.hn.ircclients
@@ -294,6 +297,7 @@ menu channel {
   ..Malware Guide:/say %gs.hn.malwarehelp
   ..Nick Registration:/say %gs.hn.regnick
   ..Oper Info:/say %gs.hn.oper
+  ..Ports:/say %gs.hn.ports
   ..Quit Messages:/say %gs.hn.quitmsgs
   ..Quote Database:/say %gs.hn.qdb
   ..Server Linking:/say %gs.hn.link
