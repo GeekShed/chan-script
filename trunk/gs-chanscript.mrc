@@ -59,6 +59,7 @@ on 1:START:{
   set %gs.hn.unrealanopewin see http://www.tutorialnut.com/index.php/2009/01/02/creating-an-unrealircd-and-anope-irc-server-on-a-windows-system/ for help setting up UnrealIRCD and Anope on a Windows based system
   set %gs.hn.ircclients see http://www.geekshed.net/2009/12/irc-clients/ for a list of the IRC clients you can use to connect to GeekShed with
   set %gs.hn.quitmsgs view a list of quit messages and what they mean by visiting: http://www.geekshed.net/2010/01/quit-messages-and-what-they-mean/
+  set %gs.hn.chanscript obtain the latest version of the GeekShed Management Script by visiting: http://www.geekshed.net/gs-script/
 }
 
 ;---------------------------Aliases---------------------------
@@ -183,6 +184,7 @@ menu nicklist {
   ..Latest News:/say $$1 $+ , %gs.hn.news
   ..Limitations:/say $$1 $+ , %gs.hn.limits
   ..Malware Guide:/say $$1 $+ , %gs.hn.malwarehelp
+  ..Management Script:/say $$1 $+ , %gs.hn.chanscript
   ..Nick Registration:/say $$1 $+ , %gs.hn.regnick
   ..Oper Info:/say $$1 $+ , %gs.hn.oper
   ..Ports:/say $$1 $+ , %gs.hn.ports
@@ -295,6 +297,7 @@ menu channel {
   ..Latest News:/say %gs.hn.news
   ..Limitations:/say %gs.hn.limits
   ..Malware Guide:/say %gs.hn.malwarehelp
+  ..Management Script:/say %gs.hn.chanscript
   ..Nick Registration:/say %gs.hn.regnick
   ..Oper Info:/say %gs.hn.oper
   ..Ports:/say %gs.hn.ports
