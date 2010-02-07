@@ -12,6 +12,10 @@ ctcp 1:gscsver:ctcpreply $nick gscsver GeekShed.net management script version 1.
 ;---------------------------Variables---------------------------
 
 on 1:START:{
+  gs.cs.setvars
+}
+
+alias gs.cs.setvars {
   set %gs.w.attitude Your attitude is not conducive to the desired environment.
   set %gs.w.hatespeech Hate Speech is not tolerated on GeekShed.
   set %gs.w.harassment Harassing Users is prohibited on GeekShed.
