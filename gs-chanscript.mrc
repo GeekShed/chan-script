@@ -65,6 +65,8 @@ alias gs.cs.setvars {
   set %gs.hn.quitmsgs view a list of quit messages and what they mean by visiting: http://www.geekshed.net/2010/01/quit-messages-and-what-they-mean/
   set %gs.hn.chanscript obtain the latest version of the GeekShed Management Script by visiting: http://www.geekshed.net/gs-script/
   set %gs.hn.chanlist a channel list can be found at: http://www.geekshed.net/chat/chat-rooms/
+  set %gs.hn.accounts GeekShed has a policy of absolute transparency. You can view our accounts by visiting: http://www.geekshed.net/donate/accounts/
+  set %gs.hn.supporters view a list of GeekShed's supporters by visiting: http://www.geekshed.net/donate/supporters/
 }
 
 ;---------------------------Aliases---------------------------
@@ -172,6 +174,7 @@ menu nicklist {
   ....Spamming:/kb $$1 %gs.w.spam
   .Help
   ..Access System:/say $$1 $+ , %gs.hn.access
+  ..Accounts:/say $$1 $+ , %gs.hn.accounts
   ..Adding BotServ:/say $$1 $+ , %gs.hn.bots
   ..Ask Question:/say $$1 $+ , %gs.hn.ask
   ..Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
@@ -197,6 +200,7 @@ menu nicklist {
   ..Quit Messages:/say $$1 $+ , %gs.hn.quitmsgs
   ..Quote Database:/say $$1 $+ , %gs.hn.qdb
   ..Server Linking:/say $$1 $+ , %gs.hn.link
+  ..Supporters:/say $$1 $+ , %gs.hn.supporters
   ..Terms of Service:/say $$1 $+ , %gs.hn.tos
   ..Unreal/Anope Tutorial Unix:/say $$1 $+ , %gs.hn.unrealanopeunix
   ..Unreal/Anope Tutorial Windows:/say $$1 $+ , %gs.hn.unrealanopewin
@@ -286,6 +290,7 @@ menu channel {
   ....Spamming:/kb $$?="Enter the nick you wish to kick" %gs.w.spam
   .Help
   ..Access System:/say %gs.hn.access
+  ..Accounts:/say %gs.hn.accounts
   ..Adding BotServ:/say %gs.hn.bots
   ..Ask Question:/say %gs.hn.ask
   ..Certificate Authority:/say %gs.hn.sslcertficate
@@ -311,6 +316,7 @@ menu channel {
   ..Quit Messages:/say %gs.hn.quitmsgs
   ..Quote Database:/say %gs.hn.qdb
   ..Server Linking:/say %gs.hn.link
+  ..Supporters:/say %gs.hn.supporters
   ..Terms of Service:/say %gs.hn.tos
   ..Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
   ..Unreal/Anope Tutorial Windows:/say %gs.hn.unrealanopewin
