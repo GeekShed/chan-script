@@ -37,15 +37,15 @@ alias gs.cs.setvars {
   set %gs.hn.getchat get a chat for your website by visiting http://geekshed.net/getchat
   set %gs.hn.news read the latest GeekShed News! http://www.geekshed.net/news/
   set %gs.hn.help this channel is for GeekShed related help only. If you need help with your computer, please visit #247fixes, #atribune, #geekstogo, #livechat, #ethernet or #bleepingcomputer
-  set %gs.hn.limits view a list of all of our limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
+  set %gs.hn.limits view a list of all of the GeekShed network limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
   set %gs.hn.regchan registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
   set %gs.hn.regnick for instructions on registering your nick, see: http://www.geekshed.net/2009/11/why-should-i-register-my-nickname-and-how-do-i-do-it/
   set %gs.hn.extendbans to learn how to use extended ban types, please see the following tutorial: http://www.geekshed.net/2009/11/extended-bans-tutorial/
   set %gs.hn.ask please ask your question so we may try and help you.
   set %gs.hn.helpguidelines please read the #Help Guidelines: http://www.geekshed.net/2009/11/guidelines-for-help-channel/
-  set %gs.hn.founders to learn how to set more than one channel founder by visiting: http://www.geekshed.net/2009/11/can-my-geekshed-channel-have-more-than-one-founder/
-  set %gs.hn.sslcertficate learn about our certificate authority through this link: http://www.geekshed.net/2009/10/geekshed-certificate-authority/
-  set %gs.hn.userbadge visit our User Count Badge generator: http://www.geekshed.net/2009/10/user-count-badges/
+  set %gs.hn.founders learn how to set more than one channel founder by visiting: http://www.geekshed.net/2009/11/can-my-geekshed-channel-have-more-than-one-founder/
+  set %gs.hn.sslcertficate learn about the GeekShed certificate authority through this link: http://www.geekshed.net/2009/10/geekshed-certificate-authority/
+  set %gs.hn.userbadge generate user count badges for your site at: http://www.geekshed.net/2009/10/user-count-badges/
   set %gs.hn.tos please read the GeekShed Terms of Service: http://www.geekshed.net/tos/
   set %gs.hn.ports to see the ports you can use to connect to GeekShed, see: http://www.geekshed.net/2010/01/what-ports-can-i-use-to-connect-to-geekshed/
   set %gs.hn.owner you can see who owns GeekShed at: http://www.geekshed.net/2009/12/who-owns-geekshed-irc/
@@ -63,9 +63,9 @@ alias gs.cs.setvars {
   set %gs.hn.unrealanopewin see http://www.tutorialnut.com/index.php/2009/01/02/creating-an-unrealircd-and-anope-irc-server-on-a-windows-system/ for help setting up UnrealIRCD and Anope on a Windows based system
   set %gs.hn.ircclients see http://www.geekshed.net/2009/12/irc-clients/ for a list of the IRC clients you can use to connect to GeekShed with
   set %gs.hn.quitmsgs view a list of quit messages and what they mean by visiting: http://www.geekshed.net/2010/01/quit-messages-and-what-they-mean/
-  set %gs.hn.chanscript obtain the latest version of the GeekShed Management Script by visiting: http://www.geekshed.net/gs-script/
+  set %gs.hn.chanscript obtain the latest version of the GeekShed Management Script by visiting: http://www.geekshed.net/2010/01/geekshed-management-script/
   set %gs.hn.chanlist a channel list can be found at: http://www.geekshed.net/chat/chat-rooms/
-  set %gs.hn.accounts GeekShed has a policy of absolute transparency. You can view our accounts by visiting: http://www.geekshed.net/donate/accounts/
+  set %gs.hn.accounts GeekShed has a policy of absolute transparency. You can view the financial accounts by visiting: http://www.geekshed.net/donate/accounts/
   set %gs.hn.supporters view a list of GeekShed's supporters by visiting: http://www.geekshed.net/donate/supporters/
 }
 
