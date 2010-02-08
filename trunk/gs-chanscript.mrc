@@ -64,6 +64,7 @@ alias gs.cs.setvars {
   set %gs.hn.ircclients see http://www.geekshed.net/2009/12/irc-clients/ for a list of the IRC clients you can use to connect to GeekShed with
   set %gs.hn.quitmsgs view a list of quit messages and what they mean by visiting: http://www.geekshed.net/2010/01/quit-messages-and-what-they-mean/
   set %gs.hn.chanscript obtain the latest version of the GeekShed Management Script by visiting: http://www.geekshed.net/gs-script/
+  set %gs.hn.chanlist a channel list can be found at: http://www.geekshed.net/chat/chat-rooms/
 }
 
 ;---------------------------Aliases---------------------------
@@ -174,6 +175,7 @@ menu nicklist {
   ..Adding BotServ:/say $$1 $+ , %gs.hn.bots
   ..Ask Question:/say $$1 $+ , %gs.hn.ask
   ..Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
+  ..Channel List:/say $$1 $+ , %gs.hn.chanlist
   ..Channel Registration:/say $$1 $+ , %gs.hn.regchan
   ..Commands List:/say $$1 $+ , %gs.hn.commands
   ..Computer Help:/say $$1 $+ , %gs.hn.help
@@ -287,6 +289,7 @@ menu channel {
   ..Adding BotServ:/say %gs.hn.bots
   ..Ask Question:/say %gs.hn.ask
   ..Certificate Authority:/say %gs.hn.sslcertficate
+  ..Channel List:/say %gs.hn.chanlist
   ..Channel Registration:/say %gs.hn.regchan
   ..Commands List:/say %gs.hn.commands
   ..Computer Help:/say %gs.hn.help
