@@ -222,7 +222,7 @@ menu nicklist {
   .NickServ
   ..Info:/ns info $$1 all
   ..Whois:/whois $$1
-  User Mode $+ $chr(58) $gettok($usermode,1,32)
+  .User Mode $+ $chr(58) $gettok($usermode,1,32)
   ..$iif(D isincs $gettok($usermode,1,32),$style(1)) PM Block:{ if (D isincs $gettok($usermode,1,32)) { umode2 -D } | else { umode2 +D } }
   ..$iif(i isincs $gettok($usermode,1,32),$style(1)) Invisible:{ if (i isincs $gettok($usermode,1,32)) { umode2 -i } | else { umode2 +i } }
   ..$iif(p isincs $gettok($usermode,1,32),$style(1)) Hide Channels:{ if (p isincs $gettok($usermode,1,32)) { umode -p } | else { umode2 +p } }
@@ -369,7 +369,55 @@ menu channel {
   ..Info:/ns info $$?="Enter the nick you want info"
   ..Change Nick:/nick $$?="Enter your new nick"
   ..Group:/ns group $$?="Enter your main nick" $$?="Enter your password"
-  User Modes $+ $chr(58) $gettok($usermode,1,32)
+  .User Modes $+ $chr(58) $gettok($usermode,1,32)
+  ..$iif(D isincs $gettok($usermode,1,32),$style(1)) PM Block:{ if (D isincs $gettok($usermode,1,32)) { umode2 -D } | else { umode2 +D } }
+  ..$iif(i isincs $gettok($usermode,1,32),$style(1)) Invisible:{ if (i isincs $gettok($usermode,1,32)) { umode2 -i } | else { umode2 +i } }
+  ..$iif(p isincs $gettok($usermode,1,32),$style(1)) Hide Channels:{ if (p isincs $gettok($usermode,1,32)) { umode -p } | else { umode2 +p } }
+  ..$iif(w isincs $gettok($usermode,1,32),$style(1)) Wallop Msg Block:{ if (w isincs $gettok($usermode,1,32)) { umode2 -w } | else { umode2 +w } }
+  ..$iif(G isincs $gettok($usermode,1,32),$style(1)) Censored Filter:{ if (G isincs $gettok($usermode,1,32)) { umode2 -G } | else { umode2 +G } }
+  ..$iif(R isincs $gettok($usermode,1,32),$style(1)) PM/Notices from +r Users:{ if (R isincs $gettok($usermode,1,32)) { umode2 -R } | else { umode2 +R } }
+  ..$iif(T isincs $gettok($usermode,1,32),$style(1)) CTCPs Block:{ if (T isincs $gettok($usermode,1,32)) { umode2 -T } | else { umode2 +T } }
+}
+
+
+menu query {
+  -
+  GeekShed Management Script
+  .Help
+  ..Access System:/say %gs.hn.access
+  ..Accounts:/say %gs.hn.accounts
+  ..Adding BotServ:/say %gs.hn.bots
+  ..Ask Question:/say %gs.hn.ask
+  ..Certificate Authority:/say %gs.hn.sslcertficate
+  ..Channel List:/say %gs.hn.chanlist
+  ..Channel Registration:/say %gs.hn.regchan
+  ..Commands List:/say %gs.hn.commands
+  ..Computer Help:/say %gs.hn.help
+  ..Extended Bans:/say %gs.hn.extendbans
+  ..Flash Client:/say %gs.hn.getchat
+  ..Flood Protection:/say %gs.hn.flood
+  ..Founders:/say %gs.hn.founders
+  ..GeekShed Owners:/say %gs.hn.owner
+  ..Help Guidelines:/say %gs.hn.helpguidelines
+  ..IPv6 Support:/say %gs.hn.ipv6
+  ..IRC Clients:/say %gs.hn.ircclients
+  ..Latest News:/say %gs.hn.news
+  ..Limitations:/say %gs.hn.limits
+  ..Malware Guide:/say %gs.hn.malwarehelp
+  ..Management Script:/say %gs.hn.chanscript
+  ..Nick Registration:/say %gs.hn.regnick
+  ..Oper Info:/say %gs.hn.oper
+  ..Ports:/say %gs.hn.ports
+  ..Quit Messages:/say %gs.hn.quitmsgs
+  ..Quote Database:/say %gs.hn.qdb
+  ..Server Linking:/say %gs.hn.link
+  ..Supporters:/say %gs.hn.supporters
+  ..Terms of Service:/say %gs.hn.tos
+  ..Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
+  ..Unreal/Anope Tutorial Windows:/say %gs.hn.unrealanopewin
+  ..User Badge:/say %gs.hn.userbadge
+  ..vHosts:/say %gs.hn.vhost
+  .User Modes $+ $chr(58) $gettok($usermode,1,32)
   ..$iif(D isincs $gettok($usermode,1,32),$style(1)) PM Block:{ if (D isincs $gettok($usermode,1,32)) { umode2 -D } | else { umode2 +D } }
   ..$iif(i isincs $gettok($usermode,1,32),$style(1)) Invisible:{ if (i isincs $gettok($usermode,1,32)) { umode2 -i } | else { umode2 +i } }
   ..$iif(p isincs $gettok($usermode,1,32),$style(1)) Hide Channels:{ if (p isincs $gettok($usermode,1,32)) { umode -p } | else { umode2 +p } }
