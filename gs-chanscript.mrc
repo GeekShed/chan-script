@@ -67,6 +67,7 @@ alias gs.cs.setvars {
   set %gs.hn.chanlist a channel list can be found at: http://www.geekshed.net/chat/chat-rooms/
   set %gs.hn.accounts GeekShed has a policy of absolute transparency. You can view the financial accounts by visiting: http://www.geekshed.net/donate/accounts/
   set %gs.hn.supporters view a list of GeekShed's supporters by visiting: http://www.geekshed.net/donate/supporters/
+  set %gs.hn.serverlist to obtain the best connection, you should generally use the server closest to you. A list of servers can be found at http://www.geekshed.net/servers/
 }
 
 ;---------------------------Aliases---------------------------
@@ -200,6 +201,7 @@ menu nicklist {
   ..Quit Messages:/say $$1 $+ , %gs.hn.quitmsgs
   ..Quote Database:/say $$1 $+ , %gs.hn.qdb
   ..Server Linking:/say $$1 $+ , %gs.hn.link
+  ..Server List:/say $$1 $+ , %gs.hn.serverlist
   ..Supporters:/say $$1 $+ , %gs.hn.supporters
   ..Terms of Service:/say $$1 $+ , %gs.hn.tos
   ..Unreal/Anope Tutorial Unix:/say $$1 $+ , %gs.hn.unrealanopeunix
@@ -316,6 +318,7 @@ menu channel {
   ..Quit Messages:/say %gs.hn.quitmsgs
   ..Quote Database:/say %gs.hn.qdb
   ..Server Linking:/say %gs.hn.link
+  ..Server List:/say %gs.hn.serverlist
   ..Supporters:/say %gs.hn.supporters
   ..Terms of Service:/say %gs.hn.tos
   ..Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
@@ -411,6 +414,7 @@ menu query {
   ..Quit Messages:/say %gs.hn.quitmsgs
   ..Quote Database:/say %gs.hn.qdb
   ..Server Linking:/say %gs.hn.link
+  ..Server List:/say %gs.hn.serverlist
   ..Supporters:/say %gs.hn.supporters
   ..Terms of Service:/say %gs.hn.tos
   ..Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
