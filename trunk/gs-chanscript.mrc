@@ -6,8 +6,10 @@
 ;; All Rights Reserved                            ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
 ;---------------------------Version Info CTCP-------------------
 ctcp 1:gscsver:ctcpreply $nick gscsver GeekShed.net management script version 1.6
+
 
 ;---------------------------Variables---------------------------
 
@@ -70,6 +72,7 @@ alias gs.cs.setvars {
   set %gs.hn.serverlist to obtain the best connection, you should generally use the server closest to you. A list of servers can be found at http://www.geekshed.net/servers/
 }
 
+
 ;---------------------------Aliases---------------------------
 
 alias kb {
@@ -116,9 +119,7 @@ alias tempsop {
 }
 
 
-
-
-;---------------------------Nicklist Menu---------------------------
+;---------------------------Menus---------------------------
 
 menu nicklist {
   -
@@ -233,7 +234,6 @@ menu nicklist {
   ..$iif(R isincs $gettok($usermode,1,32),$style(1)) PM/Notices from +r Users:{ if (R isincs $gettok($usermode,1,32)) { umode2 -R } | else { umode2 +R } }
   ..$iif(T isincs $gettok($usermode,1,32),$style(1)) CTCPs Block:{ if (T isincs $gettok($usermode,1,32)) { umode2 -T } | else { umode2 +T } }
 }
-
 
 menu channel {
   -
@@ -381,7 +381,6 @@ menu channel {
   ..$iif(R isincs $gettok($usermode,1,32),$style(1)) PM/Notices from +r Users:{ if (R isincs $gettok($usermode,1,32)) { umode2 -R } | else { umode2 +R } }
   ..$iif(T isincs $gettok($usermode,1,32),$style(1)) CTCPs Block:{ if (T isincs $gettok($usermode,1,32)) { umode2 -T } | else { umode2 +T } }
 }
-
 
 menu query {
   -
