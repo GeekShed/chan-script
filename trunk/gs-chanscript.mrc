@@ -59,7 +59,7 @@ alias gs.cs.setvars {
   set %gs.hn.flood for instructions on setting flood protection in your channel see: http://www.geekshed.net/2009/11/channel-flood-protection-tutorial/
   set %gs.hn.oper if you're interested in becoming an IRCOp on GeekShed see: http://www.geekshed.net/2009/11/can-i-be-an-oper-on-geekshed/
   set %gs.hn.link if you want to link a server to GeekShed see http://www.geekshed.net/2009/11/can-i-link-a-server-to-geekshed/ for information.
-  set %gs.hn.vhost if you would like a GeekShed vhost, join #vhosts and read http://www.geekshed.net/2009/11/can-i-have-a-vhost-on-geekshed/
+  set %gs.hn.vhost if you would like a GeekShed vhost,please read http://www.geekshed.net/2009/11/can-i-have-a-vhost-on-geekshed/
   set %gs.hn.malwarehelp please read the following instructions for information on removing malware from your computer: http://www.geekstogo.com/forum/Malware-Spyware-Cleaning-Guide-t2852.html
   set %gs.hn.unrealanopeunix see http://www.tutorialnut.com/index.php/2009/01/01/creating-an-unrealircd-and-anope-irc-server-on-a-unix-based-system/ for help setting up UnrealIRCD and Anope on a UNIX based system.
   set %gs.hn.unrealanopewin see http://www.tutorialnut.com/index.php/2009/01/02/creating-an-unrealircd-and-anope-irc-server-on-a-windows-system/ for help setting up UnrealIRCD and Anope on a Windows based system.
