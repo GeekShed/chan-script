@@ -71,6 +71,7 @@ alias gs.cs.setvars {
   set %gs.hn.accounts GeekShed has a policy of absolute transparency. You can view the financial accounts by visiting: http://www.geekshed.net/donate/accounts/
   set %gs.hn.supporters view a list of GeekShed's supporters by visiting: http://www.geekshed.net/donate/supporters/
   set %gs.hn.serverlist to obtain the best connection, you should generally use the server closest to you. A list of servers can be found at http://www.geekshed.net/servers/
+  set %gs.hn.ipaddress you cannot see users' IP addresses on GeekShed. For more information, visit: http://www.geekshed.net/2010/02/can-people-on-geekshed-see-my-ip-address/
 }
 
 
@@ -191,6 +192,7 @@ menu nicklist {
   ..Founders:/say $$1 $+ , %gs.hn.founders
   ..GeekShed Owners:/say $$1 $+ , %gs.hn.owner
   ..Help Guidelines:/say $$1 $+ , %gs.hn.helpguidelines
+  ..IP Address:/say $$1 $+ , $gs.hn.ipaddress
   ..IPv6 Support:/say $$1 $+ , %gs.hn.ipv6
   ..IRC Clients:/say $$1 $+ , %gs.hn.ircclients
   ..Latest News:/say $$1 $+ , %gs.hn.news
@@ -307,6 +309,7 @@ menu channel {
   ..Founders:/say %gs.hn.founders
   ..GeekShed Owners:/say %gs.hn.owner
   ..Help Guidelines:/say %gs.hn.helpguidelines
+  ..IP Address:/say %gs.hn.ipaddress
   ..IPv6 Support:/say %gs.hn.ipv6
   ..IRC Clients:/say %gs.hn.ircclients
   ..Latest News:/say %gs.hn.news
@@ -419,6 +422,7 @@ menu query {
   ..Founders:/say %gs.hn.founders
   ..GeekShed Owners:/say %gs.hn.owner
   ..Help Guidelines:/say %gs.hn.helpguidelines
+  ..IP Address:/say $gs.hn.ipaddress
   ..IPv6 Support:/say %gs.hn.ipv6
   ..IRC Clients:/say %gs.hn.ircclients
   ..Latest News:/say %gs.hn.news
