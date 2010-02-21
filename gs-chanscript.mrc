@@ -176,6 +176,33 @@ menu nicklist {
   ....No PMs:/kb $$1 %gs.w.msgsnoperm
   ....Personal Attacks:/kb $$1 %gs.w.persattack
   ....Spamming:/kb $$1 %gs.w.spam
+  ..TimedKickBan
+  ...TimedKickBan (No Reason):/kb $$1
+  ...TimedKickBan (Custom):/kb $$1 $$?="Enter a reason"
+  ...TimedKickban (Minutes) (Scripted)
+  ....Attitude:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.attitude | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
+  ....AMSG/AME:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.amsg | .timer 1 $calc(%gstkbtime* 60) mode $chan -b $address($1,2)
+  ....Caps:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.caps | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
+  ....Flooding:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.flood | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
+  ....Hate Speech:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.hatespeech | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
+  ....Illegal:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.illegal | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
+  ....Change Nick:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.nick | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
+  ....Foul Language:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.language | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
+  ....No PMs:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.msgsnoperm | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
+  ....Personal Attacks:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.persattack | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
+  ....Spamming:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.spam | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
+  ...TimedKickban (Hours) (Scripted)
+  ....Attitude:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.attitude | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
+  ....AMSG/AME:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.amsg | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
+  ....Caps:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.caps | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
+  ....Flooding:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.flood | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
+  ....Hate Speech:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.hatespeech | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
+  ....Illegal:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.illegal | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
+  ....Change Nick:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.nick | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
+  ....Foul Language:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.language | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
+  ....No PMs:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.msgsnoperm | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
+  ....Personal Attacks:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.persattack | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
+  ....Spamming:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.spam | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
   .Help
   ..Access System:/say $$1 $+ , %gs.hn.access
   ..Accounts:/say $$1 $+ , %gs.hn.accounts
