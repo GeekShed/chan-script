@@ -161,10 +161,10 @@ menu nicklist {
   ....Spamming:/kick $chan $$1 %gs.w.spam
   ..Ban:/mode $chan +b $address($$1,2)
   ..Mute:/mode $chan +bb ~q: $+ $address($$1,2) ~n: $+ $address($$1,2)
-  ..KickBan
-  ...KickBan (No Reason):/kb $$1
-  ...KickBan (Custom):/kb $$1 $$?="Enter a reason"
-  ...Kickban (Scripted)
+  ..Kick & Ban
+  ...Kick & Ban (No Reason):/kb $$1
+  ...Kick & Ban (Custom):/kb $$1 $$?="Enter a reason"
+  ...Kick & Ban (Scripted)
   ....Attitude:/kb $$1 %gs.w.attitude
   ....AMSG/AME:/kb $$1 %gs.w.amsg
   ....Caps:/kb $$1 %gs.w.caps
@@ -176,10 +176,10 @@ menu nicklist {
   ....No PMs:/kb $$1 %gs.w.msgsnoperm
   ....Personal Attacks:/kb $$1 %gs.w.persattack
   ....Spamming:/kb $$1 %gs.w.spam
-  ..TimedKickBan
-  ...TimedKickBan (No Reason):/kb $$1
-  ...TimedKickBan (Custom):/kb $$1 $$?="Enter a reason"
-  ...TimedKickban (Minutes) (Scripted)
+  ..Timed Kick & Ban
+  ...Timed Kick & Ban (No Reason):/kb $$1
+  ...Timed Kick & Ban (Custom):/kb $$1 $$?="Enter a reason"
+  ...Timed Kick & Ban (Minutes) (Scripted)
   ....Attitude:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.attitude | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
   ....AMSG/AME:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.amsg | .timer 1 $calc(%gstkbtime* 60) mode $chan -b $address($1,2)
   ....Caps:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.caps | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
@@ -191,7 +191,7 @@ menu nicklist {
   ....No PMs:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.msgsnoperm | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
   ....Personal Attacks:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.persattack | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
   ....Spamming:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.spam | .timer 1 $calc(%gstkbtime * 60) mode $chan -b $address($1,2)
-  ...TimedKickban (Hours) (Scripted)
+  ...Timed Kick & Ban (Hours) (Scripted)
   ....Attitude:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.attitude | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
   ....AMSG/AME:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.amsg | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
   ....Caps:/set %gstkbtime $$?="Please Enter A Ban Time:" | /kb $$1 %gs.w.caps | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
@@ -305,10 +305,10 @@ menu channel {
   ....Personal Attacks:/kick $chan $$?="Enter the nick you wish to kick" %gs.w.persattack
   ....Spamming:/kick $chan $$?="Enter the nick you wish to kick" %gs.w.spam
   ..Ban:/mode $chan +b $address($$?="Enter the nick that you wish to ban (Will retrieve the host)",2)
-  ..KickBan
-  ...KickBan (No Reason):/kb $$?="Enter the nick you wish to kick"
-  ...KickBan (Custom):/kb $$?="Enter the nick you wish to kick" $$?="Enter a reason"
-  ...Kickban (Scripted)
+  ..Kick & Ban
+  ...Kick & Ban (No Reason):/kb $$?="Enter the nick you wish to kick"
+  ...Kick & Ban (Custom):/kb $$?="Enter the nick you wish to kick" $$?="Enter a reason"
+  ...Kick & Ban (Scripted)
   ....Attitude:/kb $$?="Enter the nick you wish to kick" %gs.w.attitude
   ....AMSG/AME:/kb $$?="Enter the nick you wish to kick" %gs.w.amsg
   ....Caps:/kb $$?="Enter the nick you wish to kick" %gs.w.caps
