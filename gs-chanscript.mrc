@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GeekShed Management Script                     ;;
-;; Version 1.6                                    ;;
+;; Version 1.7                                    ;;
 ;; Concept by Zetacon                             ;;
 ;; Input/Modifications by:                        ;;
 ;; Phil, GrimReaper, Ryan, Freekie                ;;
@@ -9,7 +9,7 @@
 
 
 ;---------------------------Version Info CTCP-------------------
-ctcp 1:gscsver:ctcpreply $nick gscsver GeekShed.net management script version 1.6
+ctcp 1:gscsver:ctcpreply $nick gscsver GeekShed.net management script version 1.7
 
 
 ;---------------------------Variables---------------------------
