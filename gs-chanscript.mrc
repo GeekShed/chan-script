@@ -393,6 +393,13 @@ menu channel {
   ..Info:/cs info $$?="Enter the channel you want info (#channel)" all
   ..Join:/join $$?="Enter the channel(s) you wish to join (#chan1,#chan2,#chan3)"
   ..Part:/part $$?="Enter the channel(s) you wish to part (#chan1,#chan2,#chan3)"
+  ..Set
+  ...Private
+  ....On:/cs set $chan PRIVATE on
+  ....Off:/cs set $chan PRIVATE off
+  ...Restricted
+  ....On:/cs set $chan RESTRICTED on
+  ....Off:/cs set $chan RESTRICTED off
   ..Channel Status
   ...Permanent
   ....QOP:/founder $$?="Enter the nick you wish to set as a founder"
@@ -425,6 +432,11 @@ menu channel {
   ..Settings
   ...Info:/ms INFO $chan
   .NickServ
+  ..Auto-Join
+  ...Add:/ns AJOIN add $chan
+  ...Del:/ns AJOIN del $chan
+  ...List:/ns AJOIN list
+  ...Clear Auto-Join:/ns AJOIN clear
   ..Whois:/whois $$?="Enter the nick you want to whois"
   ..Whois (Idle):/set -u3 %tempwhois $$?="Please enter the nick you want to whois" | .timer 1 1 whois %tempnick %tempnick
   ..Info:/ns info $$?="Enter the nick you want info"
@@ -517,6 +529,8 @@ menu status {
   ...$iif(G isincs $gettok($usermode,1,32),$style(1)) Censored Filter:{ if (G isincs $gettok($usermode,1,32)) { umode2 -G } | else { umode2 +G } }
   ...$iif(R isincs $gettok($usermode,1,32),$style(1)) PM/Notices from +r Users:{ if (R isincs $gettok($usermode,1,32)) { umode2 -R } | else { umode2 +R } }
   ...$iif(T isincs $gettok($usermode,1,32),$style(1)) CTCPs Block:{ if (T isincs $gettok($usermode,1,32)) { umode2 -T } | else { umode2 +T } }
+  .ChanServ
+  ..Unban:/cs unban $$?="Enter the channel (You must have op status in channel for this to work)"
   .MemoServ
   ..List Memos:/ms list
   ..Send
@@ -541,6 +555,11 @@ menu status {
   ....Mail:/ms SET NOTIFY MAIL
   ....NoMail:/ms SET NOTIFY NOMAIL
   .NickServ
+  ..Auto-Join
+  ...Add:/ns AJOIN add $$?="Enter a channel to add (#channel)"
+  ...Del:/ns AJOIN del $$?="Enter a channel to delete (#channel)"
+  ...List:/ns AJOIN list
+  ...Clear Auto-Join:/ns AJOIN clear
   ..Whois:/whois $$?="Enter the nick you want to whois"
   ..Whois (Idle):/set -u3 %whoistemp $$?="Please enter the nick you want to whois" | .timer 1 1 whois %whoistemp %whoistemp
   ..Info:/ns info $$?="Enter the nick you want info"
