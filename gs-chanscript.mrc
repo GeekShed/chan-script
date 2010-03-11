@@ -73,6 +73,7 @@ alias gs.cs.setvars {
   set %gs.hn.serverlist to obtain the best connection, you should generally use the server closest to you. A list of servers can be found at http://www.geekshed.net/servers/
   set %gs.hn.ipaddress you cannot see users' IP addresses on GeekShed. For more information, visit: http://www.geekshed.net/2010/02/can-people-on-geekshed-see-my-ip-address/
   set %gs.hn.linkchannels to learn how to link two channels together, please read: http://www.geekshed.net/2010/03/can-i-link-two-channels/
+  set %gs.hn.chrisbans if you wish to appeal a ban from #chris please see this link http://www.geekshed.net/forums/chris-ban-appeals-f6.html
 }
 
 
@@ -212,6 +213,7 @@ menu nicklist {
   ..Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
   ..Channel List:/say $$1 $+ , %gs.hn.chanlist
   ..Channel Registration:/say $$1 $+ , %gs.hn.regchan
+  ..#Chris Bans:/say $$1 $+ , %gs.hn.chrisbans
   ..Commands List:/say $$1 $+ , %gs.hn.commands
   ..Computer Help:/say $$1 $+ , %gs.hn.help
   ..Extended Bans:/say $$1 $+ , %gs.hn.extendbans
@@ -357,6 +359,7 @@ menu channel {
   ..Certificate Authority:/say %gs.hn.sslcertficate
   ..Channel List:/say %gs.hn.chanlist
   ..Channel Registration:/say %gs.hn.regchan
+  ..#Chris Bans:/say %gs.hn.chrisbans
   ..Commands List:/say %gs.hn.commands
   ..Computer Help:/say %gs.hn.help
   ..Extended Bans:/say %gs.hn.extendbans
@@ -483,6 +486,7 @@ menu query {
   ..Certificate Authority:/say %gs.hn.sslcertficate
   ..Channel List:/say %gs.hn.chanlist
   ..Channel Registration:/say %gs.hn.regchan
+  ..#Chris Bans:/say $$1 $+ , %gs.hn.chrisbans
   ..Commands List:/say %gs.hn.commands
   ..Computer Help:/say %gs.hn.help
   ..Extended Bans:/say %gs.hn.extendbans
