@@ -73,6 +73,7 @@ alias gs.cs.setvars {
   set %gs.hn.serverlist to obtain the best connection, you should generally use the server closest to you. A list of servers can be found at http://www.geekshed.net/servers/
   set %gs.hn.ipaddress you cannot see users' IP addresses on GeekShed. For more information, visit: http://www.geekshed.net/2010/02/can-people-on-geekshed-see-my-ip-address/
   set %gs.hn.linkchannels to learn how to link two channels together, please read: http://www.geekshed.net/2010/03/can-i-link-two-channels/
+  set %gs.hn.chanmodes a list of channel modes can be found here: http://www.geekshed.net/commands/channel-modes/
 }
 
 
@@ -211,6 +212,7 @@ menu nicklist {
   ..Ask Question:/say $$1 $+ , %gs.hn.ask
   ..Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
   ..Channel List:/say $$1 $+ , %gs.hn.chanlist
+  ..Channel Modes:/say $$1 $+ , %gs.hn.chanmodes
   ..Channel Registration:/say $$1 $+ , %gs.hn.regchan
   ..Commands List:/say $$1 $+ , %gs.hn.commands
   ..Computer Help:/say $$1 $+ , %gs.hn.help
@@ -356,6 +358,7 @@ menu channel {
   ..Ask Question:/say %gs.hn.ask
   ..Certificate Authority:/say %gs.hn.sslcertficate
   ..Channel List:/say %gs.hn.chanlist
+  ..Channel Modes:/say %gs.hn.chanmodes
   ..Channel Registration:/say %gs.hn.regchan
   ..Commands List:/say %gs.hn.commands
   ..Computer Help:/say %gs.hn.help
@@ -482,6 +485,7 @@ menu query {
   ..Ask Question:/say %gs.hn.ask
   ..Certificate Authority:/say %gs.hn.sslcertficate
   ..Channel List:/say %gs.hn.chanlist
+  ..Channel Modes:/say %gs.hn.chanmodes
   ..Channel Registration:/say %gs.hn.regchan
   ..Commands List:/say %gs.hn.commands
   ..Computer Help:/say %gs.hn.help
