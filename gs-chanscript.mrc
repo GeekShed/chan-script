@@ -215,18 +215,6 @@ menu nicklist {
   ...Flood Protection:/say $$1 $+ , %gs.hn.flood
   ...Multiple Founders:/say $$1 $+ , %gs.hn.founders  
   ...Registration:/say $$1 $+ , %gs.hn.regchan
-  ..Nicknames
-  ...Grouping:/say $$1 $+ , %gs.hn.groupnick
-  ...Quit Messages:/say $$1 $+ , %gs.hn.quitmsgs
-  ...Registration:/say $$1 $+ , %gs.hn.regnick
-  ..Servers
-  ...IPv6 Support:/say $$1 $+ , %gs.hn.ipv6
-  ...Linking to GeekShed:/say $$1 $+ , %gs.hn.link
-  ...Ports:/say $$1 $+ , %gs.hn.ports  
-  ...Server List:/say $$1 $+ , %gs.hn.serverlist
-  ...Service Limitations:/say $$1 $+ , %gs.hn.limits
-  ...SSL Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
-  ...Who Can See My IP Address?:/say $$1 $+ , $gs.hn.ipaddress
   ..Donations
   ...Accounts:/say $$1 $+ , %gs.hn.accounts
   ...Donate:/say $$1 $+ , %gs.hn.donate
@@ -246,6 +234,18 @@ menu nicklist {
   ...IRC Clients:/say $$1 $+ , %gs.hn.ircclients
   ...Unreal/Anope Tutorial Unix:/say $$1 $+ , %gs.hn.unrealanopeunix
   ...Unreal/Anope Tutorial Windows:/say $$1 $+ , %gs.hn.unrealanopewin
+  ..Nicknames
+  ...Grouping:/say $$1 $+ , %gs.hn.groupnick
+  ...Quit Messages:/say $$1 $+ , %gs.hn.quitmsgs
+  ...Registration:/say $$1 $+ , %gs.hn.regnick
+  ..Servers
+  ...IPv6 Support:/say $$1 $+ , %gs.hn.ipv6
+  ...Linking to GeekShed:/say $$1 $+ , %gs.hn.link
+  ...Ports:/say $$1 $+ , %gs.hn.ports  
+  ...Server List:/say $$1 $+ , %gs.hn.serverlist
+  ...Service Limitations:/say $$1 $+ , %gs.hn.limits
+  ...SSL Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
+  ...Who Can See My IP Address?:/say $$1 $+ , $gs.hn.ipaddress
   ..Websites
   ...Flash Client:/say $$1 $+ , %gs.hn.getchat
   ...Usercount Badge:/say $$1 $+ , %gs.hn.userbadge
@@ -367,18 +367,6 @@ menu channel {
   ...Flood Protection:/say %gs.hn.flood
   ...Multiple Founders:/say %gs.hn.founders  
   ...Registration:/say %gs.hn.regchan
-  ..Nicknames
-  ...Grouping:/say %gs.hn.groupnick
-  ...Quit Messages:/say %gs.hn.quitmsgs
-  ...Registration:/say %gs.hn.regnick
-  ..Servers
-  ...IPv6 Support:/say %gs.hn.ipv6
-  ...Linking to GeekShed:/say %gs.hn.link
-  ...Ports:/say %gs.hn.ports  
-  ...Server List:/say %gs.hn.serverlist
-  ...Service Limitations:/say %gs.hn.limits
-  ...SSL Certificate Authority:/say %gs.hn.sslcertficate
-  ...Who Can See My IP Address?:/say $gs.hn.ipaddress
   ..Donations
   ...Accounts:/say %gs.hn.accounts
   ...Donate:/say %gs.hn.donate
@@ -398,6 +386,18 @@ menu channel {
   ...IRC Clients:/say %gs.hn.ircclients
   ...Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
   ...Unreal/Anope Tutorial Windows:/say %gs.hn.unrealanopewin
+  ..Nicknames
+  ...Grouping:/say %gs.hn.groupnick
+  ...Quit Messages:/say %gs.hn.quitmsgs
+  ...Registration:/say %gs.hn.regnick
+  ..Servers
+  ...IPv6 Support:/say %gs.hn.ipv6
+  ...Linking to GeekShed:/say %gs.hn.link
+  ...Ports:/say %gs.hn.ports  
+  ...Server List:/say %gs.hn.serverlist
+  ...Service Limitations:/say %gs.hn.limits
+  ...SSL Certificate Authority:/say %gs.hn.sslcertficate
+  ...Who Can See My IP Address?:/say $gs.hn.ipaddress
   ..Websites
   ...Flash Client:/say %gs.hn.getchat
   ...Usercount Badge:/say %gs.hn.userbadge
@@ -500,18 +500,6 @@ menu query {
   ...Flood Protection:/say %gs.hn.flood
   ...Multiple Founders:/say %gs.hn.founders  
   ...Registration:/say %gs.hn.regchan
-  ..Nicknames
-  ...Grouping:/say %gs.hn.groupnick
-  ...Quit Messages:/say %gs.hn.quitmsgs
-  ...Registration:/say %gs.hn.regnick
-  ..Servers
-  ...IPv6 Support:/say %gs.hn.ipv6
-  ...Linking to GeekShed:/say %gs.hn.link
-  ...Ports:/say %gs.hn.ports  
-  ...Server List:/say %gs.hn.serverlist
-  ...Service Limitations:/say %gs.hn.limits
-  ...SSL Certificate Authority:/say %gs.hn.sslcertficate
-  ...Who Can See My IP Address?:/say $gs.hn.ipaddress
   ..Donations
   ...Accounts:/say %gs.hn.accounts
   ...Donate:/say %gs.hn.donate
@@ -531,6 +519,18 @@ menu query {
   ...IRC Clients:/say %gs.hn.ircclients
   ...Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
   ...Unreal/Anope Tutorial Windows:/say %gs.hn.unrealanopewin
+  ..Nicknames
+  ...Grouping:/say %gs.hn.groupnick
+  ...Quit Messages:/say %gs.hn.quitmsgs
+  ...Registration:/say %gs.hn.regnick
+  ..Servers
+  ...IPv6 Support:/say %gs.hn.ipv6
+  ...Linking to GeekShed:/say %gs.hn.link
+  ...Ports:/say %gs.hn.ports  
+  ...Server List:/say %gs.hn.serverlist
+  ...Service Limitations:/say %gs.hn.limits
+  ...SSL Certificate Authority:/say %gs.hn.sslcertficate
+  ...Who Can See My IP Address?:/say $gs.hn.ipaddress
   ..Websites
   ...Flash Client:/say %gs.hn.getchat
   ...Usercount Badge:/say %gs.hn.userbadge
