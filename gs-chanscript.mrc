@@ -73,6 +73,7 @@ alias gs.cs.setvars {
   set %gs.hn.linkchannels to learn how to link two channels together, please read: http://www.geekshed.net/2010/03/can-i-link-two-channels/
   set %gs.hn.chanmodes a list of channel modes can be found here: http://www.geekshed.net/commands/channel-modes/
   set %gs.hn.groupnick to learn how to group your nicknames and preserve permissions between them visit: http://www.geekshed.net/2010/03/grouping-a-nick-why-and-how/
+  set %gs.hn.donate GeekShed depends solely on financial support from users. You can donate to GeekShed at http://www.geekshed.net/donate/
 }
 
 
@@ -205,44 +206,49 @@ menu nicklist {
   ....Personal Attacks:/set %gstkbtime $$?="Please Enter A Ban Time (In Hours):" | /kb $$1 %gs.w.persattack | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
   ....Spamming:/set %gstkbtime $$?="Please Enter A Ban Time (In Hours):" | /kb $$1 %gs.w.spam | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
   .Help
-  ..ChanServ & Help
+  ..Channels
   ...Access System:/say $$1 $+ , %gs.hn.access
   ...Adding BotServ:/say $$1 $+ , %gs.hn.bots
   ...Channel List:/say $$1 $+ , %gs.hn.chanlist
   ...Channel Modes:/say $$1 $+ , %gs.hn.chanmodes
-  ...Channel Registration:/say $$1 $+ , %gs.hn.regchan
-  ...Commands List:/say $$1 $+ , %gs.hn.commands
   ...Extended Bans:/say $$1 $+ , %gs.hn.extendbans
   ...Flood Protection:/say $$1 $+ , %gs.hn.flood
-  ...Founders:/say $$1 $+ , %gs.hn.founders
-  ...Grouping Nicknames:/say $$1 $+ , %gs.hn.groupnick
-  ...Limitations:/say $$1 $+ , %gs.hn.limits
-  ...Nick Registration:/say $$1 $+ , %gs.hn.regnick
+  ...Multiple Founders:/say $$1 $+ , %gs.hn.founders  
+  ...Registration:/say $$1 $+ , %gs.hn.regchan
+  ..Nicknames
+  ...Grouping:/say $$1 $+ , %gs.hn.groupnick
   ...Quit Messages:/say $$1 $+ , %gs.hn.quitmsgs
-  ..GeekShed Info
-  ...Accounts:/say $$1 $+ , %gs.hn.accounts
-  ...Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
-  ...Flash Client:/say $$1 $+ , %gs.hn.getchat
-  ...GeekShed Owners:/say $$1 $+ , %gs.hn.owner
-  ...Help Guidelines:/say $$1 $+ , %gs.hn.helpguidelines
-  ...IP Address:/say $$1 $+ , $gs.hn.ipaddress
+  ...Registration:/say $$1 $+ , %gs.hn.regnick
+  ..Servers
   ...IPv6 Support:/say $$1 $+ , %gs.hn.ipv6
-  ...Management Script:/say $$1 $+ , %gs.hn.chanscript
-  ...Oper Info:/say $$1 $+ , %gs.hn.oper
-  ...Ports:/say $$1 $+ , %gs.hn.ports
-  ...Quote Database:/say $$1 $+ , %gs.hn.qdb 
-  ...Server Linking:/say $$1 $+ , %gs.hn.link
+  ...Linking to GeekShed:/say $$1 $+ , %gs.hn.link
+  ...Ports:/say $$1 $+ , %gs.hn.ports  
   ...Server List:/say $$1 $+ , %gs.hn.serverlist
+  ...Service Limitations:/say $$1 $+ , %gs.hn.limits
+  ...SSL Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
+  ...Who Can See My IP Address?:/say $$1 $+ , $gs.hn.ipaddress
+  ..Donations
+  ...Accounts:/say $$1 $+ , %gs.hn.accounts
+  ...Donate:/say $$1 $+ , %gs.hn.donate
   ...Supporters:/say $$1 $+ , %gs.hn.supporters
+  ..General GeekShed
+  ...Become IRCOp:/say $$1 $+ , %gs.hn.oper
+  ...Commands List:/say $$1 $+ , %gs.hn.commands
+  ...#help Guidelines:/say $$1 $+ , %gs.hn.helpguidelines
+  ...Management Script:/say $$1 $+ , %gs.hn.chanscript
+  ...Quote Database:/say $$1 $+ , %gs.hn.qdb 
   ...Terms of Service:/say $$1 $+ , %gs.hn.tos
   ...vHosts:/say $$1 $+ , %gs.hn.vhost
-  ..Other
+  ...Who Owns GS?:/say $$1 $+ , %gs.hn.owner
+  ..General User Stuff
   ...Ask Question:/say $$1 $+ , %gs.hn.ask
   ...Computer Help:/say $$1 $+ , %gs.hn.help
   ...IRC Clients:/say $$1 $+ , %gs.hn.ircclients
   ...Unreal/Anope Tutorial Unix:/say $$1 $+ , %gs.hn.unrealanopeunix
   ...Unreal/Anope Tutorial Windows:/say $$1 $+ , %gs.hn.unrealanopewin
-  ...User Badge:/say $$1 $+ , %gs.hn.userbadge
+  ..Websites
+  ...Flash Client:/say $$1 $+ , %gs.hn.getchat
+  ...Usercount Badge:/say $$1 $+ , %gs.hn.userbadge
   .ChanServ
   ..Status
   ...Permanent
@@ -352,44 +358,49 @@ menu channel {
   ....Personal Attacks:/set %gstkbtime $$?="Please Enter A Ban Time (In Hours):" | /set %gstkbnick $$?="Enter the nick you wish to kick" | /kb %gstkbnick %gs.w.persattack | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address(%gstkbnick,2)
   ....Spamming:/set %gstkbtime $$?="Please Enter A Ban Time (In Hours):" | /set %gstkbnick $$?="Enter the nick you wish to kick" | /kb %gstkbnick %gs.w.spam | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address(%gstkbnick,2)
   .Help
-  ..ChanServ & Help
+  ..Channels
   ...Access System:/say %gs.hn.access
   ...Adding BotServ:/say %gs.hn.bots
   ...Channel List:/say %gs.hn.chanlist
   ...Channel Modes:/say %gs.hn.chanmodes
-  ...Channel Registration:/say %gs.hn.regchan
-  ...Commands List:/say %gs.hn.commands
   ...Extended Bans:/say %gs.hn.extendbans
   ...Flood Protection:/say %gs.hn.flood
-  ...Founders:/say %gs.hn.founders
-  ...Grouping Nicknames:/say %gs.hn.groupnick
-  ...Limitations:/say %gs.hn.limits
-  ...Nick Registration:/say %gs.hn.regnick
+  ...Multiple Founders:/say %gs.hn.founders  
+  ...Registration:/say %gs.hn.regchan
+  ..Nicknames
+  ...Grouping:/say %gs.hn.groupnick
   ...Quit Messages:/say %gs.hn.quitmsgs
-  ..GeekShed Info
-  ...Accounts:/say %gs.hn.accounts
-  ...Certificate Authority:/say %gs.hn.sslcertficate
-  ...Flash Client:/say %gs.hn.getchat
-  ...GeekShed Owners:/say %gs.hn.owner
-  ...Help Guidelines:/say %gs.hn.helpguidelines
-  ...IP Address:/say $gs.hn.ipaddress
+  ...Registration:/say %gs.hn.regnick
+  ..Servers
   ...IPv6 Support:/say %gs.hn.ipv6
-  ...Management Script:/say %gs.hn.chanscript
-  ...Oper Info:/say %gs.hn.oper
-  ...Ports:/say %gs.hn.ports
-  ...Quote Database:/say %gs.hn.qdb 
-  ...Server Linking:/say %gs.hn.link
+  ...Linking to GeekShed:/say %gs.hn.link
+  ...Ports:/say %gs.hn.ports  
   ...Server List:/say %gs.hn.serverlist
+  ...Service Limitations:/say %gs.hn.limits
+  ...SSL Certificate Authority:/say %gs.hn.sslcertficate
+  ...Who Can See My IP Address?:/say $gs.hn.ipaddress
+  ..Donations
+  ...Accounts:/say %gs.hn.accounts
+  ...Donate:/say %gs.hn.donate
   ...Supporters:/say %gs.hn.supporters
+  ..General GeekShed
+  ...Become IRCOp:/say %gs.hn.oper
+  ...Commands List:/say %gs.hn.commands
+  ...#help Guidelines:/say %gs.hn.helpguidelines
+  ...Management Script:/say %gs.hn.chanscript
+  ...Quote Database:/say %gs.hn.qdb 
   ...Terms of Service:/say %gs.hn.tos
   ...vHosts:/say %gs.hn.vhost
-  ..Other
+  ...Who Owns GS?:/say %gs.hn.owner
+  ..General User Stuff
   ...Ask Question:/say %gs.hn.ask
   ...Computer Help:/say %gs.hn.help
   ...IRC Clients:/say %gs.hn.ircclients
   ...Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
   ...Unreal/Anope Tutorial Windows:/say %gs.hn.unrealanopewin
-  ...User Badge:/say %gs.hn.userbadge
+  ..Websites
+  ...Flash Client:/say %gs.hn.getchat
+  ...Usercount Badge:/say %gs.hn.userbadge
   .BotServ
   ..Assign:/bs ASSIGN $chan $$?="Enter the desired Services bot"
   ..Unassign:/bs UNASSIGN $chan $$?="Enter the Services bot you wish to unassign"
@@ -480,44 +491,49 @@ menu query {
   ..Spamming:/say $$1 $+ , %gs.w.spam
   ..Personal Attacks:/say $$1 $+ , %gs.w.persattack
   .Help
-  ..ChanServ & Help
+  ..Channels
   ...Access System:/say %gs.hn.access
   ...Adding BotServ:/say %gs.hn.bots
   ...Channel List:/say %gs.hn.chanlist
   ...Channel Modes:/say %gs.hn.chanmodes
-  ...Channel Registration:/say %gs.hn.regchan
-  ...Commands List:/say %gs.hn.commands
   ...Extended Bans:/say %gs.hn.extendbans
   ...Flood Protection:/say %gs.hn.flood
-  ...Founders:/say %gs.hn.founders
-  ...Grouping Nicknames:/say %gs.hn.groupnick
-  ...Limitations:/say %gs.hn.limits
-  ...Nick Registration:/say %gs.hn.regnick
+  ...Multiple Founders:/say %gs.hn.founders  
+  ...Registration:/say %gs.hn.regchan
+  ..Nicknames
+  ...Grouping:/say %gs.hn.groupnick
   ...Quit Messages:/say %gs.hn.quitmsgs
-  ..GeekShed Info
-  ...Accounts:/say %gs.hn.accounts
-  ...Certificate Authority:/say %gs.hn.sslcertficate
-  ...Flash Client:/say %gs.hn.getchat
-  ...GeekShed Owners:/say %gs.hn.owner
-  ...Help Guidelines:/say %gs.hn.helpguidelines
-  ...IP Address:/say $gs.hn.ipaddress
+  ...Registration:/say %gs.hn.regnick
+  ..Servers
   ...IPv6 Support:/say %gs.hn.ipv6
-  ...Management Script:/say %gs.hn.chanscript
-  ...Oper Info:/say %gs.hn.oper
-  ...Ports:/say %gs.hn.ports
-  ...Quote Database:/say %gs.hn.qdb 
-  ...Server Linking:/say %gs.hn.link
+  ...Linking to GeekShed:/say %gs.hn.link
+  ...Ports:/say %gs.hn.ports  
   ...Server List:/say %gs.hn.serverlist
+  ...Service Limitations:/say %gs.hn.limits
+  ...SSL Certificate Authority:/say %gs.hn.sslcertficate
+  ...Who Can See My IP Address?:/say $gs.hn.ipaddress
+  ..Donations
+  ...Accounts:/say %gs.hn.accounts
+  ...Donate:/say %gs.hn.donate
   ...Supporters:/say %gs.hn.supporters
+  ..General GeekShed
+  ...Become IRCOp:/say %gs.hn.oper
+  ...Commands List:/say %gs.hn.commands
+  ...#help Guidelines:/say %gs.hn.helpguidelines
+  ...Management Script:/say %gs.hn.chanscript
+  ...Quote Database:/say %gs.hn.qdb 
   ...Terms of Service:/say %gs.hn.tos
   ...vHosts:/say %gs.hn.vhost
-  ..Other
+  ...Who Owns GS?:/say %gs.hn.owner
+  ..General User Stuff
   ...Ask Question:/say %gs.hn.ask
   ...Computer Help:/say %gs.hn.help
   ...IRC Clients:/say %gs.hn.ircclients
   ...Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
   ...Unreal/Anope Tutorial Windows:/say %gs.hn.unrealanopewin
-  ...User Badge:/say %gs.hn.userbadge
+  ..Websites
+  ...Flash Client:/say %gs.hn.getchat
+  ...Usercount Badge:/say %gs.hn.userbadge
   .User Modes $+ $chr(58) $gettok($usermode,1,32)
   ..$iif(D isincs $gettok($usermode,1,32),$style(1)) PM Block:{ if (D isincs $gettok($usermode,1,32)) { umode2 -D } | else { umode2 +D } }
   ..$iif(i isincs $gettok($usermode,1,32),$style(1)) Invisible:{ if (i isincs $gettok($usermode,1,32)) { umode2 -i } | else { umode2 +i } }
