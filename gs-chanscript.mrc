@@ -74,6 +74,7 @@ alias gs.cs.setvars {
   set %gs.hn.ipaddress you cannot see users' IP addresses on GeekShed. For more information, visit: http://www.geekshed.net/2010/02/can-people-on-geekshed-see-my-ip-address/
   set %gs.hn.linkchannels to learn how to link two channels together, please read: http://www.geekshed.net/2010/03/can-i-link-two-channels/
   set %gs.hn.chanmodes a list of channel modes can be found here: http://www.geekshed.net/commands/channel-modes/
+  set %gs.hn.groupnick to learn how to group your nicknames and preserve permissions between them visit: http://www.geekshed.net/2010/03/grouping-a-nick-why-and-how/
 }
 
 
@@ -221,6 +222,7 @@ menu nicklist {
   ..Flood Protection:/say $$1 $+ , %gs.hn.flood
   ..Founders:/say $$1 $+ , %gs.hn.founders
   ..GeekShed Owners:/say $$1 $+ , %gs.hn.owner
+  ..Grouping Nicknames:/say $$1 $+ , %gs.hn.groupnick
   ..Help Guidelines:/say $$1 $+ , %gs.hn.helpguidelines
   ..IP Address:/say $$1 $+ , $gs.hn.ipaddress
   ..IPv6 Support:/say $$1 $+ , %gs.hn.ipv6
@@ -367,6 +369,7 @@ menu channel {
   ..Flood Protection:/say %gs.hn.flood
   ..Founders:/say %gs.hn.founders
   ..GeekShed Owners:/say %gs.hn.owner
+  ..Grouping Nicknames:/say %gs.hn.groupnick
   ..Help Guidelines:/say %gs.hn.helpguidelines
   ..IP Address:/say %gs.hn.ipaddress
   ..IPv6 Support:/say %gs.hn.ipv6
@@ -494,6 +497,7 @@ menu query {
   ..Flood Protection:/say %gs.hn.flood
   ..Founders:/say %gs.hn.founders
   ..GeekShed Owners:/say %gs.hn.owner
+  ..Grouping Nicknames:/say %gs.hn.groupnick
   ..Help Guidelines:/say %gs.hn.helpguidelines
   ..IP Address:/say $gs.hn.ipaddress
   ..IPv6 Support:/say %gs.hn.ipv6
