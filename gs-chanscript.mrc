@@ -38,8 +38,7 @@ alias gs.cs.setvars {
 
   set %gs.hn.commands a list of GeekShed commands can be found at: http://www.geekshed.net/commands
   set %gs.hn.getchat get a chat for your website by visiting http://geekshed.net/getchat
-  set %gs.hn.news read the latest GeekShed News! http://www.geekshed.net/news/
-  set %gs.hn.help this channel is for GeekShed related help only. If you need help with your computer, please visit #247fixes, #atribune, #geekstogo, #livechat, #ethernet or #bleepingcomputer
+  set %gs.hn.help if you need help with your computer, please visit #247fixes, #atribune, #geekstogo, #livechat, #ethernet or #bleepingcomputer
   set %gs.hn.limits view a list of all of the GeekShed network limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
   set %gs.hn.regchan registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
   set %gs.hn.regnick for instructions on registering your nick, see: http://www.geekshed.net/2009/11/why-should-i-register-my-nickname-and-how-do-i-do-it/
@@ -61,7 +60,6 @@ alias gs.cs.setvars {
   set %gs.hn.oper if you're interested in becoming an IRCOp on GeekShed see: http://www.geekshed.net/2009/11/can-i-be-an-oper-on-geekshed/
   set %gs.hn.link if you want to link a server to GeekShed see http://www.geekshed.net/2009/11/can-i-link-a-server-to-geekshed/ for information.
   set %gs.hn.vhost if you would like a GeekShed vhost,please read http://www.geekshed.net/2009/11/can-i-have-a-vhost-on-geekshed/
-  set %gs.hn.malwarehelp please read the following instructions for information on removing malware from your computer: http://www.geekstogo.com/forum/Malware-Spyware-Cleaning-Guide-t2852.html
   set %gs.hn.unrealanopeunix see http://www.tutorialnut.com/index.php/2009/01/01/creating-an-unrealircd-and-anope-irc-server-on-a-unix-based-system/ for help setting up UnrealIRCD and Anope on a UNIX based system.
   set %gs.hn.unrealanopewin see http://www.tutorialnut.com/index.php/2009/01/02/creating-an-unrealircd-and-anope-irc-server-on-a-windows-system/ for help setting up UnrealIRCD and Anope on a Windows based system.
   set %gs.hn.ircclients see http://www.geekshed.net/2009/12/irc-clients/ for a list of the IRC clients you can use to connect to GeekShed.
@@ -207,44 +205,44 @@ menu nicklist {
   ....Personal Attacks:/set %gstkbtime $$?="Please Enter A Ban Time (In Hours):" | /kb $$1 %gs.w.persattack | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
   ....Spamming:/set %gstkbtime $$?="Please Enter A Ban Time (In Hours):" | /kb $$1 %gs.w.spam | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address($1,2)
   .Help
-  ..Access System:/say $$1 $+ , %gs.hn.access
-  ..Accounts:/say $$1 $+ , %gs.hn.accounts
-  ..Adding BotServ:/say $$1 $+ , %gs.hn.bots
-  ..Ask Question:/say $$1 $+ , %gs.hn.ask
-  ..Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
-  ..Channel List:/say $$1 $+ , %gs.hn.chanlist
-  ..Channel Modes:/say $$1 $+ , %gs.hn.chanmodes
-  ..Channel Registration:/say $$1 $+ , %gs.hn.regchan
-  ..Commands List:/say $$1 $+ , %gs.hn.commands
-  ..Computer Help:/say $$1 $+ , %gs.hn.help
-  ..Extended Bans:/say $$1 $+ , %gs.hn.extendbans
-  ..Flash Client:/say $$1 $+ , %gs.hn.getchat
-  ..Flood Protection:/say $$1 $+ , %gs.hn.flood
-  ..Founders:/say $$1 $+ , %gs.hn.founders
-  ..GeekShed Owners:/say $$1 $+ , %gs.hn.owner
-  ..Grouping Nicknames:/say $$1 $+ , %gs.hn.groupnick
-  ..Help Guidelines:/say $$1 $+ , %gs.hn.helpguidelines
-  ..IP Address:/say $$1 $+ , $gs.hn.ipaddress
-  ..IPv6 Support:/say $$1 $+ , %gs.hn.ipv6
-  ..IRC Clients:/say $$1 $+ , %gs.hn.ircclients
-  ..Latest News:/say $$1 $+ , %gs.hn.news
-  ..Limitations:/say $$1 $+ , %gs.hn.limits
-  ..Linking Channels:/say $$1 $+ , %gs.hn.linkchannels
-  ..Malware Guide:/say $$1 $+ , %gs.hn.malwarehelp
-  ..Management Script:/say $$1 $+ , %gs.hn.chanscript
-  ..Nick Registration:/say $$1 $+ , %gs.hn.regnick
-  ..Oper Info:/say $$1 $+ , %gs.hn.oper
-  ..Ports:/say $$1 $+ , %gs.hn.ports
-  ..Quit Messages:/say $$1 $+ , %gs.hn.quitmsgs
-  ..Quote Database:/say $$1 $+ , %gs.hn.qdb
-  ..Server Linking:/say $$1 $+ , %gs.hn.link
-  ..Server List:/say $$1 $+ , %gs.hn.serverlist
-  ..Supporters:/say $$1 $+ , %gs.hn.supporters
-  ..Terms of Service:/say $$1 $+ , %gs.hn.tos
-  ..Unreal/Anope Tutorial Unix:/say $$1 $+ , %gs.hn.unrealanopeunix
-  ..Unreal/Anope Tutorial Windows:/say $$1 $+ , %gs.hn.unrealanopewin
-  ..User Badge:/say $$1 $+ , %gs.hn.userbadge
-  ..vHosts:/say $$1 $+ , %gs.hn.vhost
+  ..ChanServ & Help
+  ...Access System:/say $$1 $+ , %gs.hn.access
+  ...Adding BotServ:/say $$1 $+ , %gs.hn.bots
+  ...Channel List:/say $$1 $+ , %gs.hn.chanlist
+  ...Channel Modes:/say $$1 $+ , %gs.hn.chanmodes
+  ...Channel Registration:/say $$1 $+ , %gs.hn.regchan
+  ...Commands List:/say $$1 $+ , %gs.hn.commands
+  ...Extended Bans:/say $$1 $+ , %gs.hn.extendbans
+  ...Flood Protection:/say $$1 $+ , %gs.hn.flood
+  ...Founders:/say $$1 $+ , %gs.hn.founders
+  ...Grouping Nicknames:/say $$1 $+ , %gs.hn.groupnick
+  ...Limitations:/say $$1 $+ , %gs.hn.limits
+  ...Nick Registration:/say $$1 $+ , %gs.hn.regnick
+  ...Quit Messages:/say $$1 $+ , %gs.hn.quitmsgs
+  ..GeekShed Info
+  ...Accounts:/say $$1 $+ , %gs.hn.accounts
+  ...Certificate Authority:/say $$1 $+ , %gs.hn.sslcertficate
+  ...Flash Client:/say $$1 $+ , %gs.hn.getchat
+  ...GeekShed Owners:/say $$1 $+ , %gs.hn.owner
+  ...Help Guidelines:/say $$1 $+ , %gs.hn.helpguidelines
+  ...IP Address:/say $$1 $+ , $gs.hn.ipaddress
+  ...IPv6 Support:/say $$1 $+ , %gs.hn.ipv6
+  ...Management Script:/say $$1 $+ , %gs.hn.chanscript
+  ...Oper Info:/say $$1 $+ , %gs.hn.oper
+  ...Ports:/say $$1 $+ , %gs.hn.ports
+  ...Quote Database:/say $$1 $+ , %gs.hn.qdb 
+  ...Server Linking:/say $$1 $+ , %gs.hn.link
+  ...Server List:/say $$1 $+ , %gs.hn.serverlist
+  ...Supporters:/say $$1 $+ , %gs.hn.supporters
+  ...Terms of Service:/say $$1 $+ , %gs.hn.tos
+  ...vHosts:/say $$1 $+ , %gs.hn.vhost
+  ..Other
+  ...Ask Question:/say $$1 $+ , %gs.hn.ask
+  ...Computer Help:/say $$1 $+ , %gs.hn.help
+  ...IRC Clients:/say $$1 $+ , %gs.hn.ircclients
+  ...Unreal/Anope Tutorial Unix:/say $$1 $+ , %gs.hn.unrealanopeunix
+  ...Unreal/Anope Tutorial Windows:/say $$1 $+ , %gs.hn.unrealanopewin
+  ...User Badge:/say $$1 $+ , %gs.hn.userbadge
   .ChanServ
   ..Status
   ...Permanent
@@ -354,44 +352,44 @@ menu channel {
   ....Personal Attacks:/set %gstkbtime $$?="Please Enter A Ban Time (In Hours):" | /set %gstkbnick $$?="Enter the nick you wish to kick" | /kb %gstkbnick %gs.w.persattack | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address(%gstkbnick,2)
   ....Spamming:/set %gstkbtime $$?="Please Enter A Ban Time (In Hours):" | /set %gstkbnick $$?="Enter the nick you wish to kick" | /kb %gstkbnick %gs.w.spam | .timer 1 $calc(%gstkbtime * 3600) mode $chan -b $address(%gstkbnick,2)
   .Help
-  ..Access System:/say %gs.hn.access
-  ..Accounts:/say %gs.hn.accounts
-  ..Adding BotServ:/say %gs.hn.bots
-  ..Ask Question:/say %gs.hn.ask
-  ..Certificate Authority:/say %gs.hn.sslcertficate
-  ..Channel List:/say %gs.hn.chanlist
-  ..Channel Modes:/say %gs.hn.chanmodes
-  ..Channel Registration:/say %gs.hn.regchan
-  ..Commands List:/say %gs.hn.commands
-  ..Computer Help:/say %gs.hn.help
-  ..Extended Bans:/say %gs.hn.extendbans
-  ..Flash Client:/say %gs.hn.getchat
-  ..Flood Protection:/say %gs.hn.flood
-  ..Founders:/say %gs.hn.founders
-  ..GeekShed Owners:/say %gs.hn.owner
-  ..Grouping Nicknames:/say %gs.hn.groupnick
-  ..Help Guidelines:/say %gs.hn.helpguidelines
-  ..IP Address:/say %gs.hn.ipaddress
-  ..IPv6 Support:/say %gs.hn.ipv6
-  ..IRC Clients:/say %gs.hn.ircclients
-  ..Latest News:/say %gs.hn.news
-  ..Limitations:/say %gs.hn.limits
-  ..Linking Channels:/say %gs.hn.linkchannels
-  ..Malware Guide:/say %gs.hn.malwarehelp
-  ..Management Script:/say %gs.hn.chanscript
-  ..Nick Registration:/say %gs.hn.regnick
-  ..Oper Info:/say %gs.hn.oper
-  ..Ports:/say %gs.hn.ports
-  ..Quit Messages:/say %gs.hn.quitmsgs
-  ..Quote Database:/say %gs.hn.qdb
-  ..Server Linking:/say %gs.hn.link
-  ..Server List:/say %gs.hn.serverlist
-  ..Supporters:/say %gs.hn.supporters
-  ..Terms of Service:/say %gs.hn.tos
-  ..Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
-  ..Unreal/Anope Tutorial Windows:/say %gs.hn.unrealanopewin
-  ..User Badge:/say %gs.hn.userbadge
-  ..vHosts:/say %gs.hn.vhost
+  ..ChanServ & Help
+  ...Access System:/say %gs.hn.access
+  ...Adding BotServ:/say %gs.hn.bots
+  ...Channel List:/say %gs.hn.chanlist
+  ...Channel Modes:/say %gs.hn.chanmodes
+  ...Channel Registration:/say %gs.hn.regchan
+  ...Commands List:/say %gs.hn.commands
+  ...Extended Bans:/say %gs.hn.extendbans
+  ...Flood Protection:/say %gs.hn.flood
+  ...Founders:/say %gs.hn.founders
+  ...Grouping Nicknames:/say %gs.hn.groupnick
+  ...Limitations:/say %gs.hn.limits
+  ...Nick Registration:/say %gs.hn.regnick
+  ...Quit Messages:/say %gs.hn.quitmsgs
+  ..GeekShed Info
+  ...Accounts:/say %gs.hn.accounts
+  ...Certificate Authority:/say %gs.hn.sslcertficate
+  ...Flash Client:/say %gs.hn.getchat
+  ...GeekShed Owners:/say %gs.hn.owner
+  ...Help Guidelines:/say %gs.hn.helpguidelines
+  ...IP Address:/say $gs.hn.ipaddress
+  ...IPv6 Support:/say %gs.hn.ipv6
+  ...Management Script:/say %gs.hn.chanscript
+  ...Oper Info:/say %gs.hn.oper
+  ...Ports:/say %gs.hn.ports
+  ...Quote Database:/say %gs.hn.qdb 
+  ...Server Linking:/say %gs.hn.link
+  ...Server List:/say %gs.hn.serverlist
+  ...Supporters:/say %gs.hn.supporters
+  ...Terms of Service:/say %gs.hn.tos
+  ...vHosts:/say %gs.hn.vhost
+  ..Other
+  ...Ask Question:/say %gs.hn.ask
+  ...Computer Help:/say %gs.hn.help
+  ...IRC Clients:/say %gs.hn.ircclients
+  ...Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
+  ...Unreal/Anope Tutorial Windows:/say %gs.hn.unrealanopewin
+  ...User Badge:/say %gs.hn.userbadge
   .BotServ
   ..Assign:/bs ASSIGN $chan $$?="Enter the desired Services bot"
   ..Unassign:/bs UNASSIGN $chan $$?="Enter the Services bot you wish to unassign"
@@ -482,44 +480,44 @@ menu query {
   ..Spamming:/say $$1 $+ , %gs.w.spam
   ..Personal Attacks:/say $$1 $+ , %gs.w.persattack
   .Help
-  ..Access System:/say %gs.hn.access
-  ..Accounts:/say %gs.hn.accounts
-  ..Adding BotServ:/say %gs.hn.bots
-  ..Ask Question:/say %gs.hn.ask
-  ..Certificate Authority:/say %gs.hn.sslcertficate
-  ..Channel List:/say %gs.hn.chanlist
-  ..Channel Modes:/say %gs.hn.chanmodes
-  ..Channel Registration:/say %gs.hn.regchan
-  ..Commands List:/say %gs.hn.commands
-  ..Computer Help:/say %gs.hn.help
-  ..Extended Bans:/say %gs.hn.extendbans
-  ..Flash Client:/say %gs.hn.getchat
-  ..Flood Protection:/say %gs.hn.flood
-  ..Founders:/say %gs.hn.founders
-  ..GeekShed Owners:/say %gs.hn.owner
-  ..Grouping Nicknames:/say %gs.hn.groupnick
-  ..Help Guidelines:/say %gs.hn.helpguidelines
-  ..IP Address:/say $gs.hn.ipaddress
-  ..IPv6 Support:/say %gs.hn.ipv6
-  ..IRC Clients:/say %gs.hn.ircclients
-  ..Latest News:/say %gs.hn.news
-  ..Limitations:/say %gs.hn.limits
-  ..Linking Channels:/say %gs.hn.linkchannels
-  ..Malware Guide:/say %gs.hn.malwarehelp
-  ..Management Script:/say %gs.hn.chanscript
-  ..Nick Registration:/say %gs.hn.regnick
-  ..Oper Info:/say %gs.hn.oper
-  ..Ports:/say %gs.hn.ports
-  ..Quit Messages:/say %gs.hn.quitmsgs
-  ..Quote Database:/say %gs.hn.qdb
-  ..Server Linking:/say %gs.hn.link
-  ..Server List:/say %gs.hn.serverlist
-  ..Supporters:/say %gs.hn.supporters
-  ..Terms of Service:/say %gs.hn.tos
-  ..Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
-  ..Unreal/Anope Tutorial Windows:/say %gs.hn.unrealanopewin
-  ..User Badge:/say %gs.hn.userbadge
-  ..vHosts:/say %gs.hn.vhost
+  ..ChanServ & Help
+  ...Access System:/say %gs.hn.access
+  ...Adding BotServ:/say %gs.hn.bots
+  ...Channel List:/say %gs.hn.chanlist
+  ...Channel Modes:/say %gs.hn.chanmodes
+  ...Channel Registration:/say %gs.hn.regchan
+  ...Commands List:/say %gs.hn.commands
+  ...Extended Bans:/say %gs.hn.extendbans
+  ...Flood Protection:/say %gs.hn.flood
+  ...Founders:/say %gs.hn.founders
+  ...Grouping Nicknames:/say %gs.hn.groupnick
+  ...Limitations:/say %gs.hn.limits
+  ...Nick Registration:/say %gs.hn.regnick
+  ...Quit Messages:/say %gs.hn.quitmsgs
+  ..GeekShed Info
+  ...Accounts:/say %gs.hn.accounts
+  ...Certificate Authority:/say %gs.hn.sslcertficate
+  ...Flash Client:/say %gs.hn.getchat
+  ...GeekShed Owners:/say %gs.hn.owner
+  ...Help Guidelines:/say %gs.hn.helpguidelines
+  ...IP Address:/say $gs.hn.ipaddress
+  ...IPv6 Support:/say %gs.hn.ipv6
+  ...Management Script:/say %gs.hn.chanscript
+  ...Oper Info:/say %gs.hn.oper
+  ...Ports:/say %gs.hn.ports
+  ...Quote Database:/say %gs.hn.qdb 
+  ...Server Linking:/say %gs.hn.link
+  ...Server List:/say %gs.hn.serverlist
+  ...Supporters:/say %gs.hn.supporters
+  ...Terms of Service:/say %gs.hn.tos
+  ...vHosts:/say %gs.hn.vhost
+  ..Other
+  ...Ask Question:/say %gs.hn.ask
+  ...Computer Help:/say %gs.hn.help
+  ...IRC Clients:/say %gs.hn.ircclients
+  ...Unreal/Anope Tutorial Unix:/say %gs.hn.unrealanopeunix
+  ...Unreal/Anope Tutorial Windows:/say %gs.hn.unrealanopewin
+  ...User Badge:/say %gs.hn.userbadge
   .User Modes $+ $chr(58) $gettok($usermode,1,32)
   ..$iif(D isincs $gettok($usermode,1,32),$style(1)) PM Block:{ if (D isincs $gettok($usermode,1,32)) { umode2 -D } | else { umode2 +D } }
   ..$iif(i isincs $gettok($usermode,1,32),$style(1)) Invisible:{ if (i isincs $gettok($usermode,1,32)) { umode2 -i } | else { umode2 +i } }
