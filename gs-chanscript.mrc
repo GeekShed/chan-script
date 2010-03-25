@@ -1,11 +1,12 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GeekShed Management Script                     ;;
-;; Version 1.8                                    ;;
 ;; Concept by Zetacon                             ;;
 ;; Input/Modifications by:                        ;;
 ;; Phil, GrimReaper, Ryan, Freekie                ;;
 ;; All Rights Reserved                            ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; $Id$
 
 
 ;---------------------------Version Info CTCP-------------------
