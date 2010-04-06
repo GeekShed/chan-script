@@ -78,6 +78,8 @@ alias gs.cs.setvars {
   set %gs.hn.prefixes the signs before people's nicks mean: ~ for owners, & for admins, @ for full operators, % for half operators, + for voiced users.  For more info, see http://www.geekshed.net/2009/10/nick-prefixes-explained/
   set %gs.hn.mircsetup to learn how to setup mIRC to automatically connect to GeekShed with performs, visit: http://www.tutorialnut.com/index.php/2009/01/02/setting-up-mirc-to-auto-perform-geekshed/
   set %gs.hn.whatisssl to find out about SSL and how to use it with GeekShed, visit: http://www.geekshed.net/2010/03/what-is-ssl-what-benefits-does-it-offer-and-how-do-i-use-it/
+  set %gs.hn.topicrss to find out about the channel topics RSS feed and using it to put your topic on your website, visit: http://www.geekshed.net/2009/10/topic-rss/
+  set %gs.hn.userlist to find out about adding a list of your channel's users to your website, visit: http://www.geekshed.net/2010/04/how-to-add-a-list-of-users-in-your-geekshed-irc-channel-to-your-website/
 }
 
 
@@ -193,6 +195,8 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Who Can See My IP Address?, , $menu, $1))
   ..Websites
   ...$submenu($menuitemgen(Flash Client, %gs.hn.getchat, $menu, $1))
+  ...$submenu($menuitemgen(Topic RSS, %gs.hn.topicrss, $menu, $1))
+  ...$submenu($menuitemgen(User List, %gs.hn.userlist, $menu, $1))
   ...$submenu($menuitemgen(Usercount Badge, %gs.hn.userbadge, $menu, $1))
   .Warn
   ..$submenu($menuitemgen(Amsg/Ame's, %gs.w.amsg, $menu, $1))
