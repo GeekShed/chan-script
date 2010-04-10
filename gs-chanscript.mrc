@@ -324,6 +324,7 @@ menu channel {
   .Channel Modes $+ $chr(58) $+ $chr(9) $+ $chan(#).mode
   ..$iif(c isincs $gettok($chan(#).mode,1,32),$style(1)) No Colors:{ if (c isincs $gettok($chan(#).mode,1,32)) { mode # -c } | else { mode # +c } }
   ..$iif(i isincs $gettok($chan(#).mode,1,32),$style(1)) Invite Only:{ if (i isincs $gettok($chan(#).mode,1,32)) { mode # -i } | else { mode # +i } }
+  ..$iif(j isincs $gettok($chan(#).mode,1,32),$style(1)) Throttle Joins:{ if (j isincs $gettok($chan(#).mode,1,32)) { mode # -j } | else { mode # +j $$?="Please enter Total Joins and second's in <join:seconds> format:" } }
   ..$iif(M isincs $gettok($chan(#).mode,1,32),$style(1)) Only Registered Nicks Can Speak:{ if (M isincs $gettok($chan(#).mode,1,32)) { mode # -M } | else { mode # +M } }
   ..$iif(m isincs $gettok($chan(#).mode,1,32),$style(1)) Moderated:{ if (m isincs $gettok($chan(#).mode,1,32)) { mode # -m } | else { mode # +m } }
   ..$iif(n isincs $gettok($chan(#).mode,1,32),$style(1)) No External Messages:{ if (n isincs $gettok($chan(#).mode,1,32)) { mode # -n } | else { mode # +n } }
@@ -336,6 +337,16 @@ menu channel {
   ..$iif(U isincs $gettok($chan(#).mode,1,32),$style(1)) No Formatting Codes:{ if (V isincs $gettok($chan(#).mode,1,32)) { mode # -U } | else { mode # +U } }
   ..$iif(V isincs $gettok($chan(#).mode,1,32),$style(1)) No Invite:{ if (V isincs $gettok($chan(#).mode,1,32)) { mode # -V } | else { mode # +V } }
   ..$iif(z isincs $gettok($chan(#).mode,1,32),$style(1)) SSL Clients Only:{ if (z isincs $gettok($chan(#).mode,1,32)) { mode # -z } | else { mode # +z } }
+  ..$iif(C isincs $gettok($chan(#).mode,1,32),$style(1)) No CTCP's:{ if (C isincs $gettok($chan(#).mode,1,32)) { mode # -C } | else { mode # +C } }
+  ..$iif(G isincs $gettok($chan(#).mode,1,32),$style(1)) Bad Word Filter:{ if (G isincs $gettok($chan(#).mode,1,32)) { mode # -G } | else { mode # +G } }
+  ..$iif(K isincs $gettok($chan(#).mode,1,32),$style(1)) No Knocks $chr(40) $+ +i must be set first $+ $chr(41):{ if (K isincs $gettok($chan(#).mode,1,32)) { mode # -K } | else { mode # +K } }
+  ..$iif(L isincs $gettok($chan(#).mode,1,32),$style(1)) Channel Link $chr(40) $+ if +l is full $+ $chr(41):{ if (L isincs $gettok($chan(#).mode,1,32)) { mode # -L } | else { mode # +L $$?="Enter a link channel: (e.g. #TheShed)" } }
+  ..$iif(N isincs $gettok($chan(#).mode,1,32),$style(1)) No Nickname Changes:{ if (N isincs $gettok($chan(#).mode,1,32)) { mode # -N } | else { mode # +N } }
+  ..$iif(Q isincs $gettok($chan(#).mode,1,32),$style(1)) No Kicks Allowed:{ if (Q isincs $gettok($chan(#).mode,1,32)) { mode # -Q } | else { mode # +Q } }
+  ..$iif(S isincs $gettok($chan(#).mode,1,32),$style(1)) Strip mIRC Colors:{ if (S isincs $gettok($chan(#).mode,1,32)) { mode # -S } | else { mode # +S } }
+  ..$iif(T isincs $gettok($chan(#).mode,1,32),$style(1)) No Notices In The Channel:{ if (T isincs $gettok($chan(#).mode,1,32)) { mode # -T } | else { mode # +T } }
+  ..$iif(V isincs $gettok($chan(#).mode,1,32),$style(1)) No Invites In The channel:{ if (V isincs $gettok($chan(#).mode,1,32)) { mode # -V } | else { mode # +V } }
+  ..$iif(u isincs $gettok($chan(#).mode,1,32),$style(1)) Auditorium Mode:{ if (u isincs $gettok($chan(#).mode,1,32)) { mode # -u } | else { mode # +u } }
   .Discipline
   ..Kick
   ...Kick (No Reason):/kick $chan $$?="Enter the nick you wish to kick"
