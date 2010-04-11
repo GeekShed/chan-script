@@ -108,8 +108,18 @@ alias permsop {
   mode $chan +ao $1 $1
 }
 
+alias permacc10 {
+  cs access $chan add $1 10
+  mode $chan +ao $1 $1
+}
+
 alias permaop {
   cs aop $chan add $1
+  mode $chan +o $1
+}
+
+alias permacc5 {
+  cs access $chan add $1 5
   mode $chan +o $1
 }
 
@@ -118,8 +128,18 @@ alias permhop {
   mode $chan +h $1
 }
 
+alias permacc4 {
+  cs access $chan add $1 4
+  mode $chan +h $1
+}
+
 alias permvop {
   cs vop $chan add $1
+  mode $chan +v $1
+}
+
+alias permacc3 {
+  cs access $chan add $1 3
   mode $chan +v $1
 }
 
@@ -304,6 +324,10 @@ menu nicklist {
   ....AOP:/permaop $$1 
   ....HOP:/permhop $$1 
   ....VOP:/permvop $$1
+  ....Access 10:/permacc10 $$1
+  ....Access 5:/permacc5 $$1
+  ....Access 4:/permacc4 $$1
+  ....Access 3:/permacc3 $$1
   ...Temporary
   ....SOP:/tempsop $$1 
   ....AOP:/mode $chan +o $$1 
