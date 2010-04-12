@@ -88,7 +88,7 @@ alias gs.cs.setvars {
 
 alias kb {
   if ($1 ison $chan) { 
-    mode $chan +b $address($1,2)
+    mode $chan +b $address($1, 2)
     kick $chan $1-
   }
   else {
@@ -103,50 +103,14 @@ alias founder {
   echo -a $1 has been set as founder of $chan $+ . They must now cycle it and rejoin it. XOP has been turned OFF! This means that you must now use the access system. For help doing this, visit http://www.geekshed.net/2009/12/access-system-tutorial/
 }
 
-alias permsop {
-  cs sop $chan add $1
-  mode $chan +ao $1 $1
+alias permxop {
+  cs $1 $chan add $2
+  cs sync $chan
 }
 
-alias permacc10 {
-  cs access $chan add $1 10
-  mode $chan +ao $1 $1
-}
-
-alias permaop {
-  cs aop $chan add $1
-  mode $chan +o $1
-}
-
-alias permacc5 {
-  cs access $chan add $1 5
-  mode $chan +o $1
-}
-
-alias permhop {
-  cs hop $chan add $1
-  mode $chan +h $1
-}
-
-alias permacc4 {
-  cs access $chan add $1 4
-  mode $chan +h $1
-}
-
-alias permvop {
-  cs vop $chan add $1
-  mode $chan +v $1
-}
-
-alias permacc3 {
-  cs access $chan add $1 3
-  mode $chan +v $1
-}
-
-alias tempsop {
-  if ($1 ison $chan) {
-    mode $chan +ao $1 $1
-  }
+alias permacc {
+  cs access $chan add $2 $1
+  cs sync $chan
 }
 
 ; Syntax $menuitemgen(<menu name>, <message>, <menu type>, <num>)
@@ -319,17 +283,21 @@ menu nicklist {
   .ChanServ
   ..Status
   ...Permanent
-  ....QOP:/founder $$1 
-  ....SOP:/permsop $$1 
-  ....AOP:/permaop $$1 
-  ....HOP:/permhop $$1 
-  ....VOP:/permvop $$1
-  ....Access 10:/permacc10 $$1
-  ....Access 5:/permacc5 $$1
-  ....Access 4:/permacc4 $$1
-  ....Access 3:/permacc3 $$1
+  ....XOP
+  .....QOP:/founder $$1 
+  .....SOP:/permxop sop $$1 
+  .....AOP:/permxop aop $$1 
+  .....HOP:/permxop hop $$1 
+  .....VOP:/permxop vop $$1
+  ....Access
+  .....Level 9999:/permacc 9999 $$1
+  .....Level 10:/permacc 10 $$1
+  .....Access 5:/permacc 5 $$1
+  .....Access 4:/permacc 4 $$1
+  .....Access 3:/permacc 3 $$1
+  .....Access ?:/permacc $$?="Please Enter The Access Level" $$1
   ...Temporary
-  ....SOP:/tempsop $$1 
+  ....SOP:/mode $chan +ao $$1 $$1
   ....AOP:/mode $chan +o $$1 
   ....HOP:/mode $chan +h $$1 
   ....VOP:/mode $chan +v $$1
@@ -487,16 +455,24 @@ menu channel {
   ....Off:/cs set $chan RESTRICTED off
   ..Channel Status
   ...Permanent
-  ....QOP:/founder $$?="Enter the nick you wish to set as a founder"
-  ....SOP:/permsop $$?="Enter the nick you wish to set as admin"
-  ....AOP:/permaop $$?="Enter the nick you wish to set as op" 
-  ....HOP:/permhop $$?="Enter the nick you wish to set as half-op"
-  ....VOP:/permvop $$?="Enter the nick you wish to set as voice"
+  ....XOP
+  .....QOP:/founder $$?="Enter the nickname to change the status of"
+  .....SOP:/permxop sop $$?="Enter the nickname to change the status of"
+  .....AOP:/permxop aop $$?="Enter the nickname to change the status of"
+  .....HOP:/permxop hop $$?="Enter the nickname to change the status of"
+  .....VOP:/permxop vop $$?="Enter the nickname to change the status of"
+  ....Access
+  .....Level 9999 (Founder):/permacc 9999 $$?="Enter the nickname to change the status of"
+  .....Level 10:/permacc 10 $$?="Enter the nickname to change the status of"
+  .....Access 5:/permacc 5 $$?="Enter the nickname to change the status of"
+  .....Access 4:/permacc 4 $$?="Enter the nickname to change the status of"
+  .....Access 3:/permacc 3 $$?="Enter the nickname to change the status of"
+  .....Access ?:/permacc $$?="Please Enter The Access Level" $$?="Enter the nickname to change the status of"
   ...Temporary
-  ....SOP:/tempsop $$?="Enter the nick you wish to set as temporary admin"
-  ....AOP:/mode $chan +o $$?="Enter the nick you wish to set as temporary op"
-  ....HOP:/mode $chan +h $$?="Enter the nick you wish to set as temporary half-op"
-  ....VOP:/mode $chan +v $$?="Enter the nick you wish to set as a temporary voice"
+  ....SOP:set %gs.cs.sopnick $$?="Enter the nickname to change the status of" | /mode $chan +ao %gs.cs.sopnick %gs.cs.sopnick | unset %gs.cs.sopnick
+  ....AOP:/mode $chan +o $$?="Enter the nickname to change the status of" 
+  ....HOP:/mode $chan +h $$?="Enter the nickname to change the status of" 
+  ....VOP:/mode $chan +v $$?="Enter the nickname to change the status of" 
   .HostServ
   ..On:/hs on
   ..Off:/hs off
