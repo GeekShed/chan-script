@@ -436,6 +436,44 @@ menu channel {
   ..List:/bs botlist
   ..Say:/bs say $chan $$?="Enter what you wish the Service bot to say"
   ..Act:/bs act $chan $$?="Enter what you wish the Service bot to act"
+  ..Set
+  ...Don't Kick Ops
+  ....On:/bs set $chan DONTKICKOPS on
+  ....Off:/bs set $chan DONTKICKOPS off
+  ...Don't Kick Voices
+  ....On:/bs set $chan DONTKICKVOICES on
+  ....Off:/bs set $chan DONTKICKVOICES off
+  ...Fantasy
+  ....On:/bs set $chan FANTASY on
+  ....Off:/bs set $chan FANTASY off
+  ...Greet
+  ....On:/bs set $chan GREET on
+  ....Off:/bs set $chan GREET off
+  ..Kick
+  ...Bolds
+  ....On:/bs kick $chan BOLDS on $$?="Enter the number of kicks before a ban. (ttb = two kicks before ban)"
+  ....Off:/bs kick $chan BOLDS off
+  ...Badwords
+  ....On:/bs kick $chan BADWORDS on $$?="Enter the number of kicks before a ban. (ttb = two kicks before ban)"
+  ....Off:/bs kick $chan BADWORDS off
+  ...Caps
+  ....On:/bs kick $chan CAPS on $$?="Enter the number of kicks before a ban. (ttb = two kicks before ban)"
+  ....Off:/bs kick $chan CAPS off
+  ...Colors
+  ....On:/bs kick $chan COLORS on $$?="Enter the number of kicks before a ban. (ttb = two kicks before ban)"
+  ....Off:/bs kick $chan COLORS off
+  ...Flood
+  ....On:/bs kick $chan FLOOD on $$?="Enter the number of kicks before a ban. (ttb = two kicks before ban)"
+  ....Off:/bs kick $chan FLOOD off
+  ...Repeat
+  ....On:/bs kick $chan REPEAT on $$?="Enter the number of kicks before a ban. (ttb = two kicks before ban)"
+  ....Off:/bs kick $chan REPEAT off
+  ...Reverses
+  ....On:/bs kick $chan REVERSES on $$?="Enter the number of kicks before a ban. (ttb = two kicks before ban)"
+  ....Off:/bs kick $chan REVERSES off
+  ...Underlines
+  ....On:/bs kick $chan UNDERLINES on $$?="Enter the number of kicks before a ban. (ttb = two kicks before ban)"
+  ....Off:/bs kick $chan UNDERLINES off
   .ChanServ
   ..Info:/cs info $$?="Enter the channel you want info (#channel)" all
   ..Join:/join $$?="Enter the channel(s) you wish to join (#chan1,#chan2,#chan3)"
