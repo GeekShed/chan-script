@@ -81,6 +81,7 @@ alias gs.cs.setvars {
   set %gs.hn.topicrss to find out about the channel topics RSS feed and using it to put your topic on your website, visit: http://www.geekshed.net/2009/10/topic-rss/
   set %gs.hn.userlist to find out about adding a list of your channel's users to your website, visit: http://www.geekshed.net/2010/04/how-to-add-a-list-of-users-in-your-geekshed-irc-channel-to-your-website/
   set %gs.hn.tflashregister If your are using the new flash client to access Geekshed, You can register your nick from the "Options" menu at the top of the window
+  set %gs.hn.chanbanappeal if you need to appeal a ban from a channel please visit: http://www.geekshed.net/2010/04/ban-appeals/
 }
 
 
@@ -137,6 +138,7 @@ menu channel,query,nicklist {
   ..Channels
   ...$submenu($menuitemgen(Access System, %gs.hn.access, $menu, $1))
   ...$submenu($menuitemgen(Adding BotServ, %gs.hn.bots, $menu, $1))
+  ...$submenu($menuitemgen(Channel Ban Appeals, %gs.hn.chanbanappeal, $menu, $1))
   ...$submenu($menuitemgen(Channel List, %gs.hn.chanlist, $menu, $1))
   ...$submenu($menuitemgen(Channel Modes, %gs.hn.chanmodes, $menu, $1))
   ...$submenu($menuitemgen(Extended Bans, %gs.hn.extendbans, $menu, $1))
