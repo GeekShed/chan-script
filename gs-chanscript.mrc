@@ -81,7 +81,7 @@ alias gs.cs.setvars {
   set %gs.hn.topicrss to find out about the channel topics RSS feed and using it to put your topic on your website, visit: http://www.geekshed.net/2009/10/topic-rss/
   set %gs.hn.userlist to find out about adding a list of your channel's users to your website, visit: http://www.geekshed.net/2010/04/how-to-add-a-list-of-users-in-your-geekshed-irc-channel-to-your-website/
   set %gs.hn.tflashregister If your are using the new flash client to access Geekshed, You can register your nick from the "Options" menu at the top of the window
-  set %gs.hn.chanbanappeal if you need to appeal a ban from a channel please visit: http://www.geekshed.net/2010/04/ban-appeals/
+  set %gs.hn.chanbanappeal if you need to appeal a ban on another channel please visit: http://www.geekshed.net/chanban/
   set %gs.hn.setbanappeal learn how to set a ban appeal procedure for your channel by visiting: http://www.geekshed.net/2010/04/setting-a-ban-appeal-procedure-for-your-channel/
 }
 
