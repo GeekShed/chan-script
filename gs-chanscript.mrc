@@ -182,7 +182,7 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Service Limitations, %gs.hn.limits, $menu, $1))
   ...$submenu($menuitemgen(SSL Certificate Authority, %gs.hn.sslcertficate, $menu, $1))
   ...$submenu($menuitemgen(What is SSL and how do I use it?, %gs.hn.whatisssl, $menu, $1))
-  ...$submenu($menuitemgen(Who Can See My IP Address?, , $menu, $1))
+  ...$submenu($menuitemgen(Who Can See My IP Address?, %gs.hn.ipaddress, $menu, $1))
   ..Websites
   ...$submenu($menuitemgen(Flash Client, %gs.hn.getchat, $menu, $1))
   ...$submenu($menuitemgen(Topic RSS, %gs.hn.topicrss, $menu, $1))
