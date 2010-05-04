@@ -453,6 +453,9 @@ menu channel {
   ..Join:/join $$?="Enter the channel(s) you wish to join (#chan1,#chan2,#chan3)"
   ..Part:/part $$?="Enter the channel(s) you wish to part (#chan1,#chan2,#chan3)"
   ..Set
+  ...Ban Appeal Info
+  ....Set:/cs SET $$?="Enter your channel:" BANINFO $$?="Enter your ban appeal info:"
+  ....Remove:/cs set $$?="Enter your channel:" BANINFO  
   ...Entrymsg
   ....Set:/cs SET $$?="Enter your channel:" ENTRYMSG $$?="Enter an Entry Message for your channel:"
   ....Remove:/cs SET $$?="Enter your channel:" ENTRYMSG
