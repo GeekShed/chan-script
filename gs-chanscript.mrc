@@ -317,6 +317,8 @@ menu channel {
   ..Change Successor:/cs set $$?="Enter channel:" successor $$?="Enter nick:"
   ..Change Password:/cs set $$?="Enter channel:" passwd $$?*="Enter old password:" $$?*="Enter new password:"
   ..Change Description:/cs set $$?="Enter channel:" desc $$?="Enter new description:"
+  ..Change URL:/cs set $$?="Enter Channel:" URL $$?="Enter new URL:"
+  ..Change E-mail:/cs set $$?="Enter Channel:" email $$?="Enter new e-mail address:"
   .Channel Modes $+ $chr(58) $+ $chr(9) $+ $chan(#).mode
   ..$iif(c isincs $gettok($chan(#).mode,1,32),$style(1)) No Colors:{ if (c isincs $gettok($chan(#).mode,1,32)) { mode # -c } | else { mode # +c } }
   ..$iif(i isincs $gettok($chan(#).mode,1,32),$style(1)) Invite Only:{ if (i isincs $gettok($chan(#).mode,1,32)) { mode # -i } | else { mode # +i } }
@@ -451,6 +453,10 @@ menu channel {
   ..Join:/join $$?="Enter the channel(s) you wish to join (#chan1,#chan2,#chan3)"
   ..Part:/part $$?="Enter the channel(s) you wish to part (#chan1,#chan2,#chan3)"
   ..Set
+  ...Entrymsg
+  ....Set:/cs SET $$?="Enter your channel:" ENTRYMSG $$?="Enter an Entry Message for your channel:"
+  ....Remove:/cs SET $$?="Enter your channel:" ENTRYMSG
+  ...Mlock:/cs SET $$?="Enter your channel:" mlock $$?="Enter the modes to lock: (+ to set, - to remove)"
   ...Private
   ....On:/cs set $chan PRIVATE on
   ....Off:/cs set $chan PRIVATE off
