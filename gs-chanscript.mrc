@@ -491,6 +491,13 @@ menu channel {
   ..Off:/hs off
   ..Group:/hs group
   .MemoServ
+  ..MemoServ Dialog
+  ...Send Memo:memosend
+  ...Receive Memo:memorecv
+  ...Receive Options
+  ....$iif(%autoloadmemo == on,$style(1)) Auto-Load
+  .....$iif(%autoloadmemo == on,$style(2)) On:set %autoloadmemo on | echo -at * Auto-Load of MemoServ Dialog enabled.
+  .....$iif(%autoloadmemo == off,$style(2)) Off:set %autoloadmemo off | echo -at * Auto-Load of MemoServ Dialog disabled.
   ..List Memos:/ms list
   ..Send
   ...No Read Receipt:/ms SEND $chan $$?="Enter the message for the Memo"
@@ -523,6 +530,13 @@ menu status {
   .ChanServ
   ..Unban:/cs unban $$?="Enter the channel (You must have op status in channel for this to work)"
   .MemoServ
+  ..MemoServ Dialog
+  ...Send Memo:memosend
+  ...Receive Memo:memorecv
+  ...Receive Options
+  ....$iif(%autoloadmemo == on,$style(1)) Auto-Load
+  .....$iif(%autoloadmemo == on,$style(2)) On:set %autoloadmemo on | echo -at * Auto-Load of MemoServ Dialog enabled.
+  .....$iif(%autoloadmemo == off,$style(2)) Off:set %autoloadmemo off | echo -at * Auto-Load of MemoServ Dialog disabled.
   ..List Memos:/ms list
   ..Send
   ...No Read Receipt:/ms SEND $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
@@ -563,4 +577,204 @@ on *:unload:{
   unset %gs.w.*
   unset %gs.hn.*
   echo Variable removal complete
+}
+
+;--------MemoServ Dialog--------
+
+dialog memo_rec {
+  title "MemoServ"
+  size -1 -1 200 160
+  option dbu
+  edit "", 17, 4 22 191 119, read, sort, multi
+  button "Check", 31, 4 4 37 12
+  button "Ok", 18, 41 143 37 12, ok
+  button "Cancel", 19, 84 143 37 12, cancel
+  button "Delete", 20, 47 4 37 12
+  button "Read", 21, 92 4 37 12
+  edit "", 22, 137 5 10 10
+  button "Delete All", 23, 156 4 37 12
+  button "Clear All", 32, 127 143 37 12
+  menu "File", 24
+  item "Exit", 25, 24, ok
+  menu "Options", 26
+  item "Send", 27, 26
+  item "Recieve", 28, 26
+  menu "Help", 29
+  item "About", 30, 29
+}
+
+dialog MemoServ_Dia {
+  title "MemoServ"
+  size -1 -1 200 160
+  option dbu
+  text "To:", 1, 6 5 12 8
+  edit "", 3, 25 3 170 12
+  text "Message:", 5, 6 26 25 8
+  edit "", 6, 4 36 191 105, multi autovs
+  button "Send", 7, 41 143 37 12
+  button "Cancel", 8, 84 143 37 12, cancel
+  scroll "", 9, 187 37 8 103
+  button "Clear All", 31, 127 143 37 12
+  menu "File", 10
+  item "Exit", 11, 10, cancel
+  menu "Options", 12
+  item "Send", 13, 12
+  item "Receive", 14, 12
+  menu "Help", 15
+  item "About", 16, 15
+}
+
+dialog memo_cred {
+  title "MemoServ Credits"
+  size -1 -1 144 99
+  option dbu
+  text "Created by Zetacon, Phil and Danneh.", 33, 1 2 142 15
+  text "For use with the GeekShed Management Script", 34, 1 9 150 15
+  text "IRC", 35, 1 16 14 21
+  text "irc.GeekShed.net", 36, 15 16 55 8
+  text "#Zetacon, #Hell and #Phil", 37, 15 25 70 8
+  box "Thanks to:", 38, 0 38 144 47
+  edit "Special thanks for all GeekShed users for inspiring us to do what we do.", 39, 2 45 140 37, read multi
+  button "Exit", 40, 45 87 55 11, ok
+}
+
+on *:DIALOG:MemoServ_Dia:Sclick:*: {
+  if ($did == 31) {
+    did -r MemoServ_Dia 3
+    did -r MemoServ_Dia 6
+  }
+  if ($did == 8) {
+    dialog -x MemoServ_Dia MemoServ_Dia
+  }
+  if ($did == 7) {
+    if (!$did(3).text) { 
+      noop $input(No one entered to send memo to!,uwo,Error!)
+    }
+    elseif (!$did(6).text) {
+      noop $input(Please enter text to send.,uwo,Error!)
+    }
+    else {
+      .msg memoserv send $did(3).text $did(6).text
+    }
+  }
+}
+
+on *:DIALOG:MemoServ_Dia:menu:*: {
+  if ($did == 14) {
+    dialog -x MemoServ_Dia MemoServ_Dia
+    dialog -m memo_rec memo_rec
+  }
+  if ($did == 13) {
+    noop $input(The Send Dialog is currently open already.,uwo,Error!)
+  }
+  if ($did == 16) {
+    dialog -m memo_cred memo_cred
+  }
+}
+
+on *:DIALOG:memo_rec:Sclick:*: {
+  if ($did == 31) {
+    did -r memo_rec 17
+    .remove memotext.txt
+    .msg memoserv list
+  }
+  if ($did == 32) {
+    did -r memo_rec 17
+    did -r memo_rec 22
+  }
+  if ($did == 21) {
+    if ($did(22) == $null) { noop $input(Please enter a memo to read.,uwo,Error!) }
+    else {
+      did -r memo_rec 17
+      .remove memotext.txt
+      .msg memoserv read $did(22)
+    }
+  }
+  if ($did == 20) {
+    if ($did(22) == $null) { noop $input(Please enter a memo to delete.,uwo,Error!) }
+    else {
+      did -r memo_rec 17
+      .timer 1 1 .msg memoserv del $did(22)
+    }
+  }
+  if ($did == 23) {
+    did -r memo_rec 17
+    .msg memoserv del all
+  }
+  if ($did == 25) || ($did == 18) || ($did == 19) {
+    dialog -x memo_rec memo_rec
+  }
+}
+
+on *:DIALOG:memo_rec:menu:*: {
+  if ($did == 27) {
+    dialog -x memo_rec memo_rec
+    dialog -m MemoServ_Dia MemoServ_Dia
+  }
+  if ($did == 28) {
+    noop $input(The Recieve Dialog is currently open already.,uwo,Error!)
+  }
+  if ($did == 30) {
+    dialog -m memo_cred memo_cred
+  }
+}
+
+on ^*:NOTICE:*:*: {
+  if ($nick == MemoServ) {
+    if (You have no memos isin $1-) { 
+      if (!$dialog(memo_rec)) { HALT }
+      else {
+        HALTDEF
+        did -a memo_rec 17 No current memos available. 
+      }
+    }
+    elseif (All of your memos have been deleted. isincs $1-) {
+      if (!$dialog(memo_rec)) { HALT }
+      else {
+        HALTDEF
+        did -a memo_rec 17 All current memos have been erased.
+      }
+    }
+    elseif (Memos for $me $+ . To read, isincs $1-) { HALT }
+    elseif (Syntax: $chr(02) $+ DEL isincs $1-) { HALT }
+    elseif (for more information isincs $1-) { HALT }
+    elseif (Memo sent to isincs $1-) { HALT }
+    else {
+      if (%autoloadmemo == on) {
+        $iif(!$dialog(memo_rec),memorecv,)
+        HALTDEF
+        write memotext.txt $1-
+        memoread
+      }
+      elseif (%autoloadmemo == off) {
+        HALTDEF
+        write memotext.txt $1-
+        memoread
+      }
+    }
+  }
+}
+
+alias -l memoread {
+  if (!$dialog(memo_rec)) { HALT }
+  else {
+    if ($scriptdir\memotext.txt) {
+      var %memolines = 1
+      while (%memolines <= $lines(memotext.txt)) {
+        did -a memo_rec 17 $replace($read(memotext.txt,%memolines),$chr(02),$chr(44) $+ $chr(09))
+        inc %memolines
+      }
+    }
+  }
+}
+
+alias -l memosend {
+  if (!$dialog(MemoServ_Dia)) { dialog -m MemoServ_Dia MemoServ_Dia }
+  else { noop $input(MemoServ Sending Dialog is already opened.,uwo,Error!) }
+}
+
+alias -l memorecv {
+  if (!$dialog(memo_rec)) { dialog -m memo_rec memo_rec | did -r memo_rec 17 }
+  elseif (!$dialog(memo_rec)) && ($;ines(memotext.txt != $null) { dialog -m memo_rec memo_rec | did -a memo_rec 17 You have unread memos. }
+  else { noop $input(MemoServ Recieve Dialog is already opened.,uwo,Error!) }
 }
