@@ -83,6 +83,7 @@ alias gs.cs.setvars {
   set %gs.hn.tflashregister If your are using the new flash client to access Geekshed, You can register your nick from the "Options" menu at the top of the window
   set %gs.hn.chanbanappeal if you need to appeal a ban on another channel please visit: http://www.geekshed.net/chanban/
   set %gs.hn.setbanappeal learn how to set a ban appeal procedure for your channel by visiting: http://www.geekshed.net/2010/04/setting-a-ban-appeal-procedure-for-your-channel/
+  set %gs.hn.chanredirect learn how to redirect your channel by visiting: http://www.geekshed.net/2010/05/redirecting-one-channel-to-another/
 }
 
 
@@ -142,6 +143,7 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Channel Ban Appeals, %gs.hn.chanbanappeal, $menu, $1))
   ...$submenu($menuitemgen(Channel List, %gs.hn.chanlist, $menu, $1))
   ...$submenu($menuitemgen(Channel Modes, %gs.hn.chanmodes, $menu, $1))
+  ...$submenu($menuitemgen(Channel Redirect, %gs.hn.chanredirect, $menu, $1))
   ...$submenu($menuitemgen(Extended Bans, %gs.hn.extendbans, $menu, $1))
   ...$submenu($menuitemgen(Flood Protection, %gs.hn.flood, $menu, $1))
   ...$submenu($menuitemgen(Multiple Founders, %gs.hn.founders, $menu, $1))
