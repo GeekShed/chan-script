@@ -84,6 +84,8 @@ alias gs.cs.setvars {
   set %gs.hn.chanbanappeal if you need to appeal a ban on another channel please visit: http://www.geekshed.net/chanban/
   set %gs.hn.setbanappeal learn how to set a ban appeal procedure for your channel by visiting: http://www.geekshed.net/2010/04/setting-a-ban-appeal-procedure-for-your-channel/
   set %gs.hn.chanredirect learn how to redirect your channel by visiting: http://www.geekshed.net/2010/05/redirecting-one-channel-to-another/
+  set %gs.hn.getssl get OpenSSL for Windows from http://www.slproweb.com/products/Win32OpenSSL.html - download the latest 'Win32 OpenSSL Light', install it and restart your IRC client
+  set %gs.hn.bnc find out about GeekShed's free BNC service at http://www.geekshed.net/bnc/
 }
 
 
@@ -137,6 +139,8 @@ menu channel,query,nicklist {
   -
   GeekShed Management Script
   .Help
+  ..BNC
+  ...$submenu($menuitemgen(Get a BNC, %gs.hn.bnc, $menu, $1))
   ..Channels
   ...$submenu($menuitemgen(Access System, %gs.hn.access, $menu, $1))
   ...$submenu($menuitemgen(Adding BotServ, %gs.hn.bots, $menu, $1))
@@ -150,8 +154,9 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Registration, %gs.hn.regchan, $menu, $1))
   ...$submenu($menuitemgen(Setting Ban Appeals, %gs.hn.setbanappeal, $menu, $1))
   ..IRC Clients
-  ...$submenu($menuitemgen(Setting up mIRC, %gs.hn.mircsetup, $menu, $1))
+  ...$submenu($menuitemgen(Get SSL, %gs.hn.getssl, $menu, $1))
   ...$submenu($menuitemgen(IRC Clients, %gs.hn.ircclients, $menu, $1))
+  ...$submenu($menuitemgen(Setting up mIRC, %gs.hn.mircsetup, $menu, $1))
   ..Donations
   ...$submenu($menuitemgen(Accounts, %gs.hn.accounts, $menu, $1))
   ...$submenu($menuitemgen(Donate, %gs.hn.donate, $menu, $1))
@@ -493,13 +498,13 @@ menu channel {
   ..Off:/hs off
   ..Group:/hs group
   .MemoServ
-  ..MemoServ Dialog
-  ...Send Memo:memosend
-  ...Receive Memo:memorecv
-  ...Receive Options
-  ....$iif(%autoloadmemo == on,$style(1)) Auto-Load
-  .....$iif(%autoloadmemo == on,$style(2)) On:set %autoloadmemo on | echo -at * Auto-Load of MemoServ Dialog enabled.
-  .....$iif(%autoloadmemo == off,$style(2)) Off:set %autoloadmemo off | echo -at * Auto-Load of MemoServ Dialog disabled.
+  ;..MemoServ Dialog
+  ;...Send Memo:memosend
+  ;...Receive Memo:memorecv
+  ;...Receive Options
+  ;....$iif(%autoloadmemo == on,$style(1)) Auto-Load
+  ;.....$iif(%autoloadmemo == on,$style(2)) On:set %autoloadmemo on | echo -at * Auto-Load of MemoServ Dialog enabled.
+  ;.....$iif(%autoloadmemo == off,$style(2)) Off:set %autoloadmemo off | echo -at * Auto-Load of MemoServ Dialog disabled.
   ..List Memos:/ms list
   ..Send
   ...No Read Receipt:/ms SEND $chan $$?="Enter the message for the Memo"
@@ -532,13 +537,13 @@ menu status {
   .ChanServ
   ..Unban:/cs unban $$?="Enter the channel (You must have op status in channel for this to work)"
   .MemoServ
-  ..MemoServ Dialog
-  ...Send Memo:memosend
-  ...Receive Memo:memorecv
-  ...Receive Options
-  ....$iif(%autoloadmemo == on,$style(1)) Auto-Load
-  .....$iif(%autoloadmemo == on,$style(2)) On:set %autoloadmemo on | echo -at * Auto-Load of MemoServ Dialog enabled.
-  .....$iif(%autoloadmemo == off,$style(2)) Off:set %autoloadmemo off | echo -at * Auto-Load of MemoServ Dialog disabled.
+  ;..MemoServ Dialog
+  ;...Send Memo:memosend
+  ;...Receive Memo:memorecv
+  ;...Receive Options
+  ;....$iif(%autoloadmemo == on,$style(1)) Auto-Load
+  ;.....$iif(%autoloadmemo == on,$style(2)) On:set %autoloadmemo on | echo -at * Auto-Load of MemoServ Dialog enabled.
+  ;.....$iif(%autoloadmemo == off,$style(2)) Off:set %autoloadmemo off | echo -at * Auto-Load of MemoServ Dialog disabled.
   ..List Memos:/ms list
   ..Send
   ...No Read Receipt:/ms SEND $$?="Enter the nick you wish to send a Memo" $$?="Enter the message for the Memo"
