@@ -10,7 +10,7 @@
 
 
 ;---------------------------Version Info CTCP-------------------
-ctcp 1:gscsver:ctcpreply $nick gscsver GeekShed.net management script version 2.0
+ctcp 1:gscsver:ctcpreply $nick gscsver GeekShed.net management script version 2.1
 
 
 ;---------------------------Variables---------------------------
