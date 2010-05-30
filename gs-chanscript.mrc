@@ -86,6 +86,7 @@ alias gs.cs.setvars {
   set %gs.hn.chanredirect learn how to redirect your channel by visiting: http://www.geekshed.net/2010/05/redirecting-one-channel-to-another/
   set %gs.hn.getssl get OpenSSL for Windows from http://www.slproweb.com/products/Win32OpenSSL.html - download the latest 'Win32 OpenSSL Light', install it and restart your IRC client
   set %gs.hn.bnc find out about GeekShed's free BNC service at http://www.geekshed.net/bnc/
+  set %gs.hn.youtube you can find GeekShed's YouTube channel at http://www.geekshed.net/2010/05/geeksheds-youtube-channel/
 }
 
 
@@ -171,6 +172,7 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Terms of Service, %gs.hn.tos, $menu, $1))
   ...$submenu($menuitemgen(vHosts, %gs.hn.vhost, $menu, $1))
   ...$submenu($menuitemgen(Who Owns GS?, %gs.hn.owner, $menu, $1))
+  ...$submenu($menuitemgen(YouTube Channel, %gs.hn.youtube, $menu, $1))
   ..General User Stuff
   ...$submenu($menuitemgen(Ask Question, %gs.hn.ask, $menu, $1))
   ...$submenu($menuitemgen(Computer Help, %gs.hn.help, $menu, $1))
