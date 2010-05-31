@@ -39,7 +39,7 @@ alias gs.cs.setvars {
 
   set %gs.hn.commands a list of GeekShed commands can be found at: http://www.geekshed.net/commands
   set %gs.hn.getchat get a chat for your website by visiting http://geekshed.net/getchat
-  set %gs.hn.help if you need help with your computer, please visit #247fixes, #atribune, #geekstogo, #livechat, #ethernet, #swiforum or #bleepingcomputer
+  set %gs.hn.help if you need help with your computer, please visit #247fixes, #atribune, #geekstogo or #bleepingcomputer
   set %gs.hn.limits view a list of all of the GeekShed network limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
   set %gs.hn.regchan registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
   set %gs.hn.regnick for instructions on registering your nick, see: http://www.geekshed.net/2009/11/why-should-i-register-my-nickname-and-how-do-i-do-it/
