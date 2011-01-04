@@ -87,6 +87,7 @@ alias gs.cs.setvars {
   set %gs.hn.getssl get OpenSSL for Windows from http://www.slproweb.com/products/Win32OpenSSL.html - download the latest 'Win32 OpenSSL Light', install it and restart your IRC client
   set %gs.hn.bnc find out about GeekShed's free BNC service at http://www.geekshed.net/bnc/
   set %gs.hn.youtube you can find GeekShed's YouTube channel at http://www.geekshed.net/2010/05/geeksheds-youtube-channel/
+  set %gs.hn.tblock learn how to block specific phrases in your channel by visiting: http://www.geekshed.net/2010/05/how-to-block-specific-phrases-from-your-channel/
 }
 
 
@@ -145,6 +146,7 @@ menu channel,query,nicklist {
   ..Channels
   ...$submenu($menuitemgen(Access System, %gs.hn.access, $menu, $1))
   ...$submenu($menuitemgen(Adding BotServ, %gs.hn.bots, $menu, $1))
+  ...$submenu($menuitemgen(Blocking Phrases, %gs.hn.tblock, $menu, $1))
   ...$submenu($menuitemgen(Channel Ban Appeals, %gs.hn.chanbanappeal, $menu, $1))
   ...$submenu($menuitemgen(Channel List, %gs.hn.chanlist, $menu, $1))
   ...$submenu($menuitemgen(Channel Modes, %gs.hn.chanmodes, $menu, $1))
