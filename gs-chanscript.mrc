@@ -89,6 +89,7 @@ alias gs.cs.setvars {
   set %gs.hn.youtube you can find GeekShed's YouTube channel at http://www.geekshed.net/2010/05/geeksheds-youtube-channel/
   set %gs.hn.tblock learn how to block specific phrases in your channel by visiting: http://www.geekshed.net/2010/05/how-to-block-specific-phrases-from-your-channel/
   set %gs.hn.wordpress obtain the GeekShed Embed plugin by visiting: http://www.geekshed.net/2010/08/introducing-geekshed-embed-a-wordpress-plugin/
+  set %gs.hn.usercount obtain information about channel usercounts by visiting: http://www.geekshed.net/2010/06/getting-information-about-channel-user-counts/
 }
 
 
@@ -157,6 +158,7 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Multiple Founders, %gs.hn.founders, $menu, $1))
   ...$submenu($menuitemgen(Registration, %gs.hn.regchan, $menu, $1))
   ...$submenu($menuitemgen(Setting Ban Appeals, %gs.hn.setbanappeal, $menu, $1))
+  ...$submenu($menuitemgen(Channel Usercounts, %gs.hn.usercount, $menu, $1))
   ..IRC Clients
   ...$submenu($menuitemgen(Get SSL, %gs.hn.getssl, $menu, $1))
   ...$submenu($menuitemgen(IRC Clients, %gs.hn.ircclients, $menu, $1))
