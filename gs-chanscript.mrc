@@ -88,6 +88,7 @@ alias gs.cs.setvars {
   set %gs.hn.bnc find out about GeekShed's free BNC service at http://www.geekshed.net/bnc/
   set %gs.hn.youtube you can find GeekShed's YouTube channel at http://www.geekshed.net/2010/05/geeksheds-youtube-channel/
   set %gs.hn.tblock learn how to block specific phrases in your channel by visiting: http://www.geekshed.net/2010/05/how-to-block-specific-phrases-from-your-channel/
+  set %gs.hn.wordpress obtain the GeekShed Embed plugin by visiting: http://www.geekshed.net/2010/08/introducing-geekshed-embed-a-wordpress-plugin/
 }
 
 
@@ -199,6 +200,7 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Topic RSS, %gs.hn.topicrss, $menu, $1))
   ...$submenu($menuitemgen(User List, %gs.hn.userlist, $menu, $1))
   ...$submenu($menuitemgen(Usercount Badge, %gs.hn.userbadge, $menu, $1))
+  ...$submenu($menuitemgen(Wordpress Plugin, %gs.hn.wordpress, $menu, $1))
   .Warn
   ..$submenu($menuitemgen(Amsg/Ame's, %gs.w.amsg, $menu, $1))
   ..$submenu($menuitemgen(Attitude, %gs.w.attitude, $menu, $1))
