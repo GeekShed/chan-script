@@ -90,6 +90,7 @@ alias gs.cs.setvars {
   set %gs.hn.tblock learn how to block specific phrases in your channel by visiting: http://www.geekshed.net/2010/05/how-to-block-specific-phrases-from-your-channel/
   set %gs.hn.wordpress obtain the GeekShed Embed plugin by visiting: http://www.geekshed.net/2010/08/introducing-geekshed-embed-a-wordpress-plugin/
   set %gs.hn.usercount obtain information about channel usercounts by visiting: http://www.geekshed.net/2010/06/getting-information-about-channel-user-counts/
+  set %gs.hn.twitterbot to get the Twitter bot for your channel, please visit: http://www.geekshed.net/2011/01/twitter-in-your-channel/
 }
 
 
@@ -153,12 +154,13 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Channel List, %gs.hn.chanlist, $menu, $1))
   ...$submenu($menuitemgen(Channel Modes, %gs.hn.chanmodes, $menu, $1))
   ...$submenu($menuitemgen(Channel Redirect, %gs.hn.chanredirect, $menu, $1))
+  ...$submenu($menuitemgen(Channel Usercounts, %gs.hn.usercount, $menu, $1))
   ...$submenu($menuitemgen(Extended Bans, %gs.hn.extendbans, $menu, $1))
   ...$submenu($menuitemgen(Flood Protection, %gs.hn.flood, $menu, $1))
   ...$submenu($menuitemgen(Multiple Founders, %gs.hn.founders, $menu, $1))
   ...$submenu($menuitemgen(Registration, %gs.hn.regchan, $menu, $1))
   ...$submenu($menuitemgen(Setting Ban Appeals, %gs.hn.setbanappeal, $menu, $1))
-  ...$submenu($menuitemgen(Channel Usercounts, %gs.hn.usercount, $menu, $1))
+  ...$submenu($menuitemgen(Twitter Bot, %gs.hn.twitterbot, $menu, $1))
   ..IRC Clients
   ...$submenu($menuitemgen(Get SSL, %gs.hn.getssl, $menu, $1))
   ...$submenu($menuitemgen(IRC Clients, %gs.hn.ircclients, $menu, $1))
