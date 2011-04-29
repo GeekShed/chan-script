@@ -91,6 +91,12 @@ alias gs.cs.setvars {
   set %gs.hn.wordpress obtain the GeekShed Embed plugin by visiting: http://www.geekshed.net/2010/08/introducing-geekshed-embed-a-wordpress-plugin/
   set %gs.hn.usercount obtain information about channel usercounts by visiting: http://www.geekshed.net/2010/06/getting-information-about-channel-user-counts/
   set %gs.hn.twitterbot to get the Twitter bot for your channel, please visit: http://www.geekshed.net/2011/01/twitter-in-your-channel/
+  set %gs.hn.netiquette if you’re new to IRC, you become familiar with netiquette. View some tips at: http://www.geekshed.net/2011/03/manners-and-polite-behavior-on-geekshed/
+  set %gs.hn.hatespeech Hate Speech is not tolerated on GeekShed. View more information by visiting: http://www.geekshed.net/2011/03/what-is-hate-speech/
+  set %gs.hn.lightirc information regarding the lightIRC client can be found here: http://www.geekshed.net/2011/03/using-the-lightirc-client-on-geekshed/
+  set %gs.hn.nonregpm learn how to PM non-registered users by visiting: http://www.geekshed.net/2011/04/private-messages-with-unregistered-users/
+  set %gs.hn.chanentry to set up a channel entry message, please visit: http://www.geekshed.net/2011/04/setting-a-channel-entry-message/
+  set %gs.hn.changreet to set up your own channel greeting, visit: http://www.geekshed.net/2011/04/setting-up-greeting-messages/
 }
 
 
@@ -151,6 +157,8 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Adding BotServ, %gs.hn.bots, $menu, $1))
   ...$submenu($menuitemgen(Blocking Phrases, %gs.hn.tblock, $menu, $1))
   ...$submenu($menuitemgen(Channel Ban Appeals, %gs.hn.chanbanappeal, $menu, $1))
+  ...$submenu($menuitemgen(Channel Entry Messages, %gs.hn.chanentry, $menu, $1))
+  ...$submenu($menuitemgen(Channel Greetings, %gs.hn.changreet, $menu, $1))
   ...$submenu($menuitemgen(Channel List, %gs.hn.chanlist, $menu, $1))
   ...$submenu($menuitemgen(Channel Modes, %gs.hn.chanmodes, $menu, $1))
   ...$submenu($menuitemgen(Channel Redirect, %gs.hn.chanredirect, $menu, $1))
@@ -164,6 +172,7 @@ menu channel,query,nicklist {
   ..IRC Clients
   ...$submenu($menuitemgen(Get SSL, %gs.hn.getssl, $menu, $1))
   ...$submenu($menuitemgen(IRC Clients, %gs.hn.ircclients, $menu, $1))
+  ...$submenu($menuitemgen(LightIRC, %gs.hn.lightirc, $menu, $1))
   ...$submenu($menuitemgen(Setting up mIRC, %gs.hn.mircsetup, $menu, $1))
   ..Donations
   ...$submenu($menuitemgen(Accounts, %gs.hn.accounts, $menu, $1))
@@ -174,10 +183,12 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Commands List, %gs.hn.commands, $menu, $1))
   ...$submenu($menuitemgen(#help Guidelines, %gs.hn.helpguidelines, $menu, $1))
   ...$submenu($menuitemgen(Management Script, %gs.hn.chanscript, $menu, $1))
+  ...$submenu($menuitemgen(Netiquette, %gs.hn.netiquette, $menu, $1))
   ...$submenu($menuitemgen(Nick Prefixes, %gs.hn.prefixes, $menu, $1))
   ...$submenu($menuitemgen(Quote Database, %gs.hn.qdb, $menu, $1))
   ...$submenu($menuitemgen(Terms of Service, %gs.hn.tos, $menu, $1))
   ...$submenu($menuitemgen(vHosts, %gs.hn.vhost, $menu, $1))
+  ...$submenu($menuitemgen(What is Hate Speech?, %gs.hn.hatespeech, $menu $1))
   ...$submenu($menuitemgen(Who Owns GS?, %gs.hn.owner, $menu, $1))
   ...$submenu($menuitemgen(YouTube Channel, %gs.hn.youtube, $menu, $1))
   ..General User Stuff
@@ -188,6 +199,7 @@ menu channel,query,nicklist {
   ..Nicknames
   ...$submenu($menuitemgen(Grouping, %gs.hn.groupnick, $menu, $1))
   ...$submenu($menuitemgen(Quit Messages, %gs.hn.quitmsgs, $menu, $1))
+  ...$submenu($menuitemgen(PMing Non-registered Nicks, %gs.hn.nonregpm, $menu, $1))
   ...$submenu($menuitemgen(Registration, %gs.hn.regnick, $menu, $1))
   ...$submenu($menuitemgen(TFlash Register, %gs.hn.tflashregister, $menu, $1))
   ..Servers
