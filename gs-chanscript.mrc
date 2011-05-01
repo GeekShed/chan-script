@@ -97,6 +97,7 @@ alias gs.cs.setvars {
   set %gs.hn.nonregpm learn how to PM non-registered users by visiting: http://www.geekshed.net/2011/04/private-messages-with-unregistered-users/
   set %gs.hn.chanentry to set up a channel entry message, please visit: http://www.geekshed.net/2011/04/setting-a-channel-entry-message/
   set %gs.hn.changreet to set up your own channel greeting, visit: http://www.geekshed.net/2011/04/setting-up-greeting-messages/
+  set %gs.hn.ignore learn how to use the ignore command with your IRC client by visiting: http://www.geekshed.net/2011/05/how-to-use-the-ignore-command/
 }
 
 
@@ -171,6 +172,7 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Twitter Bot, %gs.hn.twitterbot, $menu, $1))
   ..IRC Clients
   ...$submenu($menuitemgen(Get SSL, %gs.hn.getssl, $menu, $1))
+  ...$submenu($menuitemgen(Ignoring Users, %gs.hn.ignore, $menu, $1))
   ...$submenu($menuitemgen(IRC Clients, %gs.hn.ircclients, $menu, $1))
   ...$submenu($menuitemgen(LightIRC, %gs.hn.lightirc, $menu, $1))
   ...$submenu($menuitemgen(Setting up mIRC, %gs.hn.mircsetup, $menu, $1))
