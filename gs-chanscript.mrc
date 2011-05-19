@@ -20,6 +20,7 @@ on 1:START:{
 }
 
 alias gs.cs.setvars {
+  echo Setting up $script variables..
   set %gs.w.attitude Your attitude is not conducive to the desired environment.
   set %gs.w.hatespeech Hate Speech is not tolerated on GeekShed.
   set %gs.w.harassment Harassing Users is prohibited on GeekShed.
@@ -98,6 +99,7 @@ alias gs.cs.setvars {
   set %gs.hn.chanentry to set up a channel entry message, please visit: http://www.geekshed.net/2011/04/setting-a-channel-entry-message/
   set %gs.hn.changreet to set up your own channel greeting, visit: http://www.geekshed.net/2011/04/setting-up-greeting-messages/
   set %gs.hn.ignore learn how to use the ignore command with your IRC client by visiting: http://www.geekshed.net/2011/05/how-to-use-the-ignore-command/
+  echo All variables have now been set..
 }
 
 
