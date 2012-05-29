@@ -98,7 +98,25 @@ alias gs.cs.setvars {
   set %gs.hn.chanentry to set up a channel entry message, please visit: http://www.geekshed.net/2011/04/setting-a-channel-entry-message/
   set %gs.hn.changreet to set up your own channel greeting, visit: http://www.geekshed.net/2011/04/setting-up-greeting-messages/
   set %gs.hn.ignore learn how to use the ignore command with your IRC client by visiting: http://www.geekshed.net/2011/05/how-to-use-the-ignore-command/
-  set %gs.hn.ajoin learn how to configure the server-side ajoin feature by visiting: http://www.geekshed.net/2011/05/how-to-join-channels-automatically/
+  set %gs.hn.ajoin for instructions on configuring the server-side ajoin, see: http://www.geekshed.net/2011/05/how-to-join-channels-automatically/
+  set %gs.hn.freespeech the right to free speech does not exist on a private IRC network. For more information, visit: http://www.geekshed.net/2011/05/is-there-free-speech-on-geekshed/
+  set %gs.hn.identd learn how to enable identd on your machine by visiting: http://www.geekshed.net/2011/06/what-is-identd/
+  set %gs.hn.featuredchan apply to have your channel featured by visiting: http://www.geekshed.net/2011/06/apply-to-have-your-channel-featured/
+  set %gs.hn.forgotpsswrd if you forgot your password, you'll need to have it reset by the ops in #help. Afterwards, please visit: http://www.geekshed.net/2012/01/what-to-do-if-you-forget-your-password/
+  set %gs.hn.bannedfromchan if you have been banned from your channel, you can learn how to unban yourself by visiting: http://www.geekshed.net/2012/01/im-banned-from-my-own-channel/
+  set %gs.hn.reregchan learn how to reregister your lost channel by visiting: http://www.geekshed.net/2012/01/problems-with-lost-channels/
+  set %gs.hn.protectpass learn how to protect your GeekShed password by visiting: http://www.geekshed.net/2012/02/how-to-protect-your-geekshed-password/
+  set %gs.hn.aboutuser if you need to learn more about a user, visit: http://www.geekshed.net/2012/02/learning-more-about-a-user/
+  set %gs.hn.joinchanlist learn how to join a channel from the chat room list by visiting: http://www.geekshed.net/2012/02/getting-a-channel-in-the-list-of-chat-rooms/
+  set %gs.hn.hostmask for more information on hostmasks, please visit: http://www.geekshed.net/2012/03/what-is-a-hostmask/
+  set %gs.hn.chankeys learn how to configure channel keys by visiting: http://www.geekshed.net/2012/03/using-channel-keys/
+  set %gs.hn.hidechan to hide your channel from the public list, please visit: http://www.geekshed.net/2012/03/using-channel-modes-to-hide-your-channel/
+  set %gs.hn.choosenick learn how to choose a nickname by visiting: http://www.geekshed.net/2012/03/choosing-a-nickname/
+  set %gs.hn.choosestaff learn how to choose staff members for your channel by visiting: http://www.geekshed.net/2012/04/how-to-choose-staff-for-your-channel/
+  set %gs.hn.blockPMs for instructions on blocking PMs on GeekShed, visit: http://www.geekshed.net/2012/04/how-to-block-private-messages-pms/
+  set %gs.hn.netsplit for more information on netsplits and why they occur, please visit: http://www.geekshed.net/2012/04/whats-a-netsplit/
+  set %gs.hn.howlong find out how long you have been on GeekShed by visiting: http://www.geekshed.net/2012/05/how-long-have-you-been-on-geekshed/
+  set %gs.hn.spamfilter for an FAQ on GeekShed's spamfilter, please visit: http://www.geekshed.net/2012/05/faqs-about-geeksheds-spamfilter/ 
 }
 
 
@@ -161,17 +179,25 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Channel Ban Appeals, %gs.hn.chanbanappeal, $menu, $1))
   ...$submenu($menuitemgen(Channel Entry Messages, %gs.hn.chanentry, $menu, $1))
   ...$submenu($menuitemgen(Channel Greetings, %gs.hn.changreet, $menu, $1))
+  ...$submenu($menuitemgen(Channel Keys, %gs.hn.chankeys, $menu, $1))
   ...$submenu($menuitemgen(Channel List, %gs.hn.chanlist, $menu, $1))
   ...$submenu($menuitemgen(Channel Modes, %gs.hn.chanmodes, $menu, $1))
   ...$submenu($menuitemgen(Channel Redirect, %gs.hn.chanredirect, $menu, $1))
   ...$submenu($menuitemgen(Channel Usercounts, %gs.hn.usercount, $menu, $1))
+  ...$submenu($menuitemgen(Channel Unban Self, %gs.hn.bannedfromchan, $menu, $1))
+  ...$submenu($menuitemgen(Choosing Staff, %gs.hn.choosestaff, $menu, $1))
   ...$submenu($menuitemgen(Extended Bans, %gs.hn.extendbans, $menu, $1))
+  ...$submenu($menuitemgen(Featured Channel, %gs.hn.featuredchan, $menu, $1))
   ...$submenu($menuitemgen(Flood Protection, %gs.hn.flood, $menu, $1))
+  ...$submenu($menuitemgen(Hide Channel, %gs.hn.hidechan, $menu, $1))
+  ...$submenu($menuitemgen(Join Chan from List, %gs.hn.joinchanlist, $1))
   ...$submenu($menuitemgen(Multiple Founders, %gs.hn.founders, $menu, $1))
   ...$submenu($menuitemgen(Registration, %gs.hn.regchan, $menu, $1))
+  ...$submenu($menuitemgen(ReRegistration, %gs.hn.reregchan, $menu, $1))
   ...$submenu($menuitemgen(Setting Ban Appeals, %gs.hn.setbanappeal, $menu, $1))
   ...$submenu($menuitemgen(Twitter Bot, %gs.hn.twitterbot, $menu, $1))
   ..IRC Clients
+  ...$submenu($menuitemgen(Enabling Identd, %gs.hn.identd, $menu, $1))
   ...$submenu($menuitemgen(Get SSL, %gs.hn.getssl, $menu, $1))
   ...$submenu($menuitemgen(Ignoring Users, %gs.hn.ignore, $menu, $1))
   ...$submenu($menuitemgen(IRC Clients, %gs.hn.ircclients, $menu, $1))
@@ -184,10 +210,15 @@ menu channel,query,nicklist {
   ..General GeekShed
   ...$submenu($menuitemgen(Become IRCOp, %gs.hn.oper, $menu, $1))
   ...$submenu($menuitemgen(Commands List, %gs.hn.commands, $menu, $1))
+  ...$submenu($menuitemgen(Free Speech, %gs.hn.freespeech, $menu, $1))
   ...$submenu($menuitemgen(#help Guidelines, %gs.hn.helpguidelines, $menu, $1))
+  ...$submenu($menuitemgen(Hostmask Info, %gs.hn.hostmask, $menu, $1))
+  ...$submenu($menuitemgen(How Long?, %gs.hn.howlong, $menu, $1))
   ...$submenu($menuitemgen(Management Script, %gs.hn.chanscript, $menu, $1))
   ...$submenu($menuitemgen(Netiquette, %gs.hn.netiquette, $menu, $1))
+  ...$submenu($menuitemgen(Netsplits, %gs.hn.netsplit, $menu, $1))
   ...$submenu($menuitemgen(Nick Prefixes, %gs.hn.prefixes, $menu, $1))
+  ...$submenu($menuitemgen(Spam Filter, %gs.hn.spamfilter, $menu, $1))
   ...$submenu($menuitemgen(Quote Database, %gs.hn.qdb, $menu, $1))
   ...$submenu($menuitemgen(Terms of Service, %gs.hn.tos, $menu, $1))
   ...$submenu($menuitemgen(vHosts, %gs.hn.vhost, $menu, $1))
@@ -200,11 +231,17 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Unreal/Anope Tutorial Unix, %gs.hn.unrealanopeunix, $menu, $1))
   ...$submenu($menuitemgen(Unreal/Anope Tutorial Windows, %gs.hn.unrealanopewin, $menu, $1))
   ..Nicknames
+  ...$submenu($menuitemgen(AJoin, %gs.hn.ajoin, $menu, $1))
+  ...$submenu($menuitemgen(Blocking PMs, %gs.hn.blockPMs, $menu, $1))
+  ...$submenu($menuitemgen(Changing Password, %gs.hn.forgotpsswrd, $menu, $1))
+  ...$submenu($menuitemgen(Choosing a Nickname, %gs.hn.choosenick, $menu, $1))
   ...$submenu($menuitemgen(Grouping, %gs.hn.groupnick, $menu, $1))
   ...$submenu($menuitemgen(Quit Messages, %gs.hn.quitmsgs, $menu, $1))
   ...$submenu($menuitemgen(PMing Non-registered Nicks, %gs.hn.nonregpm, $menu, $1))
+  ...$submenu($menuitemgen(Protect Password, %gs.hn.protectpass, $menu, $1))
   ...$submenu($menuitemgen(Registration, %gs.hn.regnick, $menu, $1))
   ...$submenu($menuitemgen(TFlash Register, %gs.hn.tflashregister, $menu, $1))
+  ...$submenu($menuitemgen(Whois, %gs.hn.aboutuser, $menu, $1))
   ..Servers
   ...$submenu($menuitemgen(IPv6 Support, %gs.hn.ipv6, $menu, $1))
   ...$submenu($menuitemgen(Linking to GeekShed, %gs.hn.link, $menu, $1))
