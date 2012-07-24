@@ -76,7 +76,7 @@ alias gs.cs.setvars {
   set %gs.hn.groupnick to learn how to group your nicknames and preserve permissions between them visit: http://www.geekshed.net/2010/03/grouping-a-nick-why-and-how/
   set %gs.hn.donate GeekShed depends solely on financial support from users. You can donate to GeekShed at http://www.geekshed.net/donate/
   set %gs.hn.prefixes the signs before people's nicks mean: ~ for owners, & for admins, @ for full operators, % for half operators, + for voiced users.  For more info, see http://www.geekshed.net/2009/10/nick-prefixes-explained/
-  set %gs.hn.mircsetup to learn how to setup mIRC to automatically connect to GeekShed with performs, visit: http://www.tutorialnut.com/index.php/2009/01/02/setting-up-mirc-to-auto-perform-geekshed/
+  set %gs.hn.mircsetup to learn how to setup mIRC to automatically connect to GeekShed with performs, visit: http://phil.lavin.me.uk/2012/07/setting-up-mirc-to-auto-perform-geekshed/
   set %gs.hn.whatisssl to find out about SSL and how to use it with GeekShed, visit: http://www.geekshed.net/2010/03/what-is-ssl-what-benefits-does-it-offer-and-how-do-i-use-it/
   set %gs.hn.topicrss to find out about the channel topics RSS feed and using it to put your topic on your website, visit: http://www.geekshed.net/2009/10/topic-rss/
   set %gs.hn.userlist to find out about adding a list of your channel's users to your website, visit: http://www.geekshed.net/2010/04/how-to-add-a-list-of-users-in-your-geekshed-irc-channel-to-your-website/
