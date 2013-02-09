@@ -91,7 +91,7 @@ alias gs.cs.setvars {
   set %gs.hn.wordpress obtain the GeekShed Embed plugin by visiting: http://www.geekshed.net/2010/08/introducing-geekshed-embed-a-wordpress-plugin/
   set %gs.hn.usercount obtain information about channel usercounts by visiting: http://www.geekshed.net/2010/06/getting-information-about-channel-user-counts/
   set %gs.hn.twitterbot to get the Twitter bot for your channel, please visit: http://www.geekshed.net/2011/01/twitter-in-your-channel/
-  set %gs.hn.netiquette if you’re new to IRC, you become familiar with netiquette. View some tips at: http://www.geekshed.net/2011/03/manners-and-polite-behavior-on-geekshed/
+  set %gs.hn.netiquette if youÂ’re new to IRC, you become familiar with netiquette. View some tips at: http://www.geekshed.net/2011/03/manners-and-polite-behavior-on-geekshed/
   set %gs.hn.hatespeech Hate Speech is not tolerated on GeekShed. View more information by visiting: http://www.geekshed.net/2011/03/what-is-hate-speech/
   set %gs.hn.lightirc information regarding the lightIRC client can be found here: http://www.geekshed.net/2011/03/using-the-lightirc-client-on-geekshed/
   set %gs.hn.nonregpm learn how to PM non-registered users by visiting: http://www.geekshed.net/2011/04/private-messages-with-unregistered-users/
@@ -277,7 +277,7 @@ menu channel,query,nicklist {
   -
 }
 
-menu status,channel,query,nicklist {
+menu status,channel,query,menubar {
   GeekShed Management Script
   .My User Modes $+ $chr(58) $gettok($usermode,1,32)
   ...$iif(D isincs $gettok($usermode,1,32),$style(1)) PM Block:{ if (D isincs $gettok($usermode,1,32)) { umode2 -D } | else { umode2 +D } }
