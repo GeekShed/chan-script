@@ -6,7 +6,7 @@
 ;; All Rights Reserved                            ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; $Id$
+;; $Id: gs-chanscript.mrc 133 2013-02-09 12:50:16Z DanGeeksIRC@gmail.com $
 
 
 ;---------------------------Version Info CTCP-------------------
@@ -37,86 +37,87 @@ alias gs.cs.setvars {
   set %gs.w.nick Please change your nick.
   set %gs.w.illegal Illegal activities are not discussed here.
 
-  set %gs.hn.commands a list of GeekShed commands can be found at: http://www.geekshed.net/commands
-  set %gs.hn.getchat get a chat for your website by visiting http://geekshed.net/getchat
-  set %gs.hn.help if you need help with your computer, please visit #247fixes, #atribune, #geekstogo, #livechat, #ethernet, #swiforum or #bleepingcomputer
-  set %gs.hn.limits view a list of all of the GeekShed network limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
-  set %gs.hn.regchan registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
-  set %gs.hn.regnick for instructions on registering your nick, see: http://www.geekshed.net/2009/11/why-should-i-register-my-nickname-and-how-do-i-do-it/
-  set %gs.hn.extendbans to learn how to use extended ban types, please see the following tutorial: http://www.geekshed.net/2009/11/extended-bans-tutorial/
-  set %gs.hn.ask please ask your question so we may try and help you.
-  set %gs.hn.helpguidelines please read the #Help Guidelines: http://www.geekshed.net/2009/11/guidelines-for-help-channel/
-  set %gs.hn.founders learn how to set more than one channel founder by visiting: http://www.geekshed.net/2009/11/can-my-geekshed-channel-have-more-than-one-founder/
-  set %gs.hn.sslcertficate learn about the GeekShed certificate authority through this link: http://www.geekshed.net/2009/10/geekshed-certificate-authority/
-  set %gs.hn.userbadge generate user count badges for your site at: http://www.geekshed.net/2009/10/user-count-badges/
-  set %gs.hn.tos please read the GeekShed Terms of Service: http://www.geekshed.net/tos/
-  set %gs.hn.ports to see the ports you can use to connect to GeekShed, see: http://www.geekshed.net/2010/01/what-ports-can-i-use-to-connect-to-geekshed/
-  set %gs.hn.owner you can see who owns GeekShed at: http://www.geekshed.net/2009/12/who-owns-geekshed-irc/
-  set %gs.hn.clients a list of IRC clients can be found at: http://www.geekshed.net/2009/12/irc-clients/
-  set %gs.hn.qdb the GeekShed quote database can be found at: http://www.geekshed.net/qdb/
-  set %gs.hn.access a tutorial for using the access system can be found at http://www.geekshed.net/2009/12/access-system-tutorial/
-  set %gs.hn.bots for instructions adding a botserv bot to your channel and for a list of bots see: http://www.geekshed.net/2009/11/how-do-i-add-a-botserv-bot-to-my-channel/ and http://www.geekshed.net/2009/11/can-i-make-my-own-botserv-bot/
+  set %gs.hn.commands A list of GeekShed commands can be found at: http://www.geekshed.net/commands
+  set %gs.hn.getchat Get a chat for your website by visiting http://geekshed.net/getchat
+  set %gs.hn.help If you need help with your computer, please visit #247fixes, #atribune, #geekstogo, #livechat, #ethernet, #swiforum or #bleepingcomputer
+  set %gs.hn.limits View a list of all of the GeekShed network limitations at http://www.geekshed.net/2009/10/what-are-the-limits-on-geekshed
+  set %gs.hn.regchan Registering a channel on GeekShed is easy! Please see the following link to learn how: http://www.geekshed.net/2009/10/how-to-register-a-channel-on-geekshed/
+  set %gs.hn.regnick For instructions on registering your nick, see: http://www.geekshed.net/2009/11/why-should-i-register-my-nickname-and-how-do-i-do-it/
+  set %gs.hn.extendbans To learn how to use extended ban types, please see the following tutorial: http://www.geekshed.net/2009/11/extended-bans-tutorial/
+  set %gs.hn.ask Please ask your question so we may try and help you.
+  set %gs.hn.helpguidelines Please read the #Help Guidelines: http://www.geekshed.net/2009/11/guidelines-for-help-channel/
+  set %gs.hn.founders Learn how to set more than one channel founder by visiting: http://www.geekshed.net/2009/11/can-my-geekshed-channel-have-more-than-one-founder/
+  set %gs.hn.sslcertficate Learn about the GeekShed certificate authority through this link: http://www.geekshed.net/2009/10/geekshed-certificate-authority/
+  set %gs.hn.userbadge Generate user count badges for your site at: http://www.geekshed.net/2009/10/user-count-badges/
+  set %gs.hn.tos Please read the GeekShed Terms of Service: http://www.geekshed.net/tos/
+  set %gs.hn.ports To see the ports you can use to connect to GeekShed, see: http://www.geekshed.net/2010/01/what-ports-can-i-use-to-connect-to-geekshed/
+  set %gs.hn.owner You can see who owns GeekShed at: http://www.geekshed.net/2009/12/who-owns-geekshed-irc/
+  set %gs.hn.clients A list of IRC clients can be found at: http://www.geekshed.net/2009/12/irc-clients/
+  set %gs.hn.qdb The GeekShed quote database can be found at: http://www.geekshed.net/qdb/
+  set %gs.hn.access A tutorial for using the access system can be found at http://www.geekshed.net/2009/12/access-system-tutorial/
+  set %gs.hn.bots For instructions adding a botserv bot to your channel and for a list of bots see: http://www.geekshed.net/2009/11/how-do-i-add-a-botserv-bot-to-my-channel/ and http://www.geekshed.net/2009/11/can-i-make-my-own-botserv-bot/
   set %gs.hn.ipv6 GeekShed does have IPv6 support. See http://www.geekshed.net/2009/11/does-geekshed-have-ipv6-support/ for info
-  set %gs.hn.flood for instructions on setting flood protection in your channel see: http://www.geekshed.net/2009/11/channel-flood-protection-tutorial/
-  set %gs.hn.oper if you're interested in becoming an IRCOp on GeekShed see: http://www.geekshed.net/2009/11/can-i-be-an-oper-on-geekshed/
-  set %gs.hn.link if you want to link a server to GeekShed see http://www.geekshed.net/2009/11/can-i-link-a-server-to-geekshed/ for information.
-  set %gs.hn.vhost if you would like a GeekShed vhost, please read http://www.geekshed.net/2009/11/can-i-have-a-vhost-on-geekshed/
-  set %gs.hn.unrealanopeunix see http://www.tutorialnut.com/index.php/2009/01/01/creating-an-unrealircd-and-anope-irc-server-on-a-unix-based-system/ for help setting up UnrealIRCD and Anope on a UNIX based system.
-  set %gs.hn.unrealanopewin see http://www.tutorialnut.com/index.php/2009/01/02/creating-an-unrealircd-and-anope-irc-server-on-a-windows-system/ for help setting up UnrealIRCD and Anope on a Windows based system.
-  set %gs.hn.ircclients see http://www.geekshed.net/2009/12/irc-clients/ for a list of the IRC clients you can use to connect to GeekShed.
-  set %gs.hn.quitmsgs view a list of quit messages and what they mean by visiting: http://www.geekshed.net/2010/01/quit-messages-and-what-they-mean/
-  set %gs.hn.chanscript obtain the latest version of the GeekShed Management Script by visiting: http://www.geekshed.net/2010/01/geekshed-management-script/
-  set %gs.hn.chanlist a channel list can be found at: http://www.geekshed.net/chat/chat-rooms/
+  set %gs.hn.flood For instructions on setting flood protection in your channel see: http://www.geekshed.net/2009/11/channel-flood-protection-tutorial/
+  set %gs.hn.oper If you're interested in becoming an IRCOp on GeekShed see: http://www.geekshed.net/2009/11/can-i-be-an-oper-on-geekshed/
+  set %gs.hn.link If you want to link a server to GeekShed see http://www.geekshed.net/2009/11/can-i-link-a-server-to-geekshed/ for information.
+  set %gs.hn.vhost If you would like a GeekShed vhost, please read http://www.geekshed.net/2009/11/can-i-have-a-vhost-on-geekshed/
+  set %gs.hn.unrealanopeunix See http://www.tutorialnut.com/index.php/2009/01/01/creating-an-unrealircd-and-anope-irc-server-on-a-unix-based-system/ for help setting up UnrealIRCD and Anope on a UNIX based system.
+  set %gs.hn.unrealanopewin See http://www.tutorialnut.com/index.php/2009/01/02/creating-an-unrealircd-and-anope-irc-server-on-a-windows-system/ for help setting up UnrealIRCD and Anope on a Windows based system.
+  set %gs.hn.ircclients See http://www.geekshed.net/2009/12/irc-clients/ for a list of the IRC clients you can use to connect to GeekShed.
+  set %gs.hn.quitmsgs View a list of quit messages and what they mean by visiting: http://www.geekshed.net/2010/01/quit-messages-and-what-they-mean/
+  set %gs.hn.chanscript Obtain the latest version of the GeekShed Management Script by visiting: http://www.geekshed.net/2010/01/geekshed-management-script/
+  set %gs.hn.chanlist A channel list can be found at: http://www.geekshed.net/chat/chat-rooms/
   set %gs.hn.accounts GeekShed has a policy of absolute transparency. You can view the financial accounts by visiting: http://www.geekshed.net/donate/accounts/
-  set %gs.hn.supporters view a list of GeekShed's supporters by visiting: http://www.geekshed.net/donate/supporters/
-  set %gs.hn.serverlist to obtain the best connection, you should generally use the server closest to you. A list of servers can be found at http://www.geekshed.net/servers/
-  set %gs.hn.ipaddress you cannot see users' IP addresses on GeekShed. For more information, visit: http://www.geekshed.net/2010/02/can-people-on-geekshed-see-my-ip-address/
-  set %gs.hn.linkchannels to learn how to link two channels together, please read: http://www.geekshed.net/2010/03/can-i-link-two-channels/
-  set %gs.hn.chanmodes a list of channel modes can be found here: http://www.geekshed.net/commands/channel-modes/
-  set %gs.hn.groupnick to learn how to group your nicknames and preserve permissions between them visit: http://www.geekshed.net/2010/03/grouping-a-nick-why-and-how/
+  set %gs.hn.supporters View a list of GeekShed's supporters by visiting: http://www.geekshed.net/donate/supporters/
+  set %gs.hn.serverlist To obtain the best connection, you should generally use the server closest to you. A list of servers can be found at http://www.geekshed.net/servers/
+  set %gs.hn.ipaddress You cannot see users' IP addresses on GeekShed. For more information, visit: http://www.geekshed.net/2010/02/can-people-on-geekshed-see-my-ip-address/
+  set %gs.hn.linkchannels To learn how to link two channels together, please read: http://www.geekshed.net/2010/03/can-i-link-two-channels/
+  set %gs.hn.chanmodes A list of channel modes can be found here: http://www.geekshed.net/commands/channel-modes/
+  set %gs.hn.groupnick To learn how to group your nicknames and preserve permissions between them visit: http://www.geekshed.net/2010/03/grouping-a-nick-why-and-how/
   set %gs.hn.donate GeekShed depends solely on financial support from users. You can donate to GeekShed at http://www.geekshed.net/donate/
-  set %gs.hn.prefixes the signs before people's nicks mean: ~ for owners, & for admins, @ for full operators, % for half operators, + for voiced users.  For more info, see http://www.geekshed.net/2009/10/nick-prefixes-explained/
-  set %gs.hn.mircsetup to learn how to setup mIRC to automatically connect to GeekShed with performs, visit: http://phil.lavin.me.uk/2012/07/setting-up-mirc-to-auto-perform-geekshed/
-  set %gs.hn.whatisssl to find out about SSL and how to use it with GeekShed, visit: http://www.geekshed.net/2010/03/what-is-ssl-what-benefits-does-it-offer-and-how-do-i-use-it/
-  set %gs.hn.topicrss to find out about the channel topics RSS feed and using it to put your topic on your website, visit: http://www.geekshed.net/2009/10/topic-rss/
-  set %gs.hn.userlist to find out about adding a list of your channel's users to your website, visit: http://www.geekshed.net/2010/04/how-to-add-a-list-of-users-in-your-geekshed-irc-channel-to-your-website/
+  set %gs.hn.prefixes The signs before people's nicks mean: ~ for owners, & for admins, @ for full operators, % for half operators, + for voiced users.  For more info, see http://www.geekshed.net/2009/10/nick-prefixes-explained/
+  set %gs.hn.mircsetup To learn how to setup mIRC to automatically connect to GeekShed with performs, visit: http://phil.lavin.me.uk/2012/07/setting-up-mirc-to-auto-perform-geekshed/
+  set %gs.hn.whatisssl To find out about SSL and how to use it with GeekShed, visit: http://www.geekshed.net/2010/03/what-is-ssl-what-benefits-does-it-offer-and-how-do-i-use-it/
+  set %gs.hn.topicrss To find out about the channel topics RSS feed and using it to put your topic on your website, visit: http://www.geekshed.net/2009/10/topic-rss/
+  set %gs.hn.userlist To find out about adding a list of your channel's users to your website, visit: http://www.geekshed.net/2010/04/how-to-add-a-list-of-users-in-your-geekshed-irc-channel-to-your-website/
   set %gs.hn.tflashregister If your are using the new flash client to access Geekshed, You can register your nick from the "Options" menu at the top of the window
-  set %gs.hn.chanbanappeal if you need to appeal a ban on another channel please visit: http://www.geekshed.net/chanban/
-  set %gs.hn.setbanappeal learn how to set a ban appeal procedure for your channel by visiting: http://www.geekshed.net/2010/04/setting-a-ban-appeal-procedure-for-your-channel/
-  set %gs.hn.chanredirect learn how to redirect your channel by visiting: http://www.geekshed.net/2010/05/redirecting-one-channel-to-another/
-  set %gs.hn.getssl get OpenSSL for Windows from http://www.slproweb.com/products/Win32OpenSSL.html - download the latest 'Win32 OpenSSL Light', install it and restart your IRC client
-  set %gs.hn.bnc find out about GeekShed's free BNC service at http://www.geekshed.net/bnc/
-  set %gs.hn.youtube you can find GeekShed's YouTube channel at http://www.geekshed.net/2010/05/geeksheds-youtube-channel/
-  set %gs.hn.tblock learn how to block specific phrases in your channel by visiting: http://www.geekshed.net/2010/05/how-to-block-specific-phrases-from-your-channel/
-  set %gs.hn.wordpress obtain the GeekShed Embed plugin by visiting: http://www.geekshed.net/2010/08/introducing-geekshed-embed-a-wordpress-plugin/
-  set %gs.hn.usercount obtain information about channel usercounts by visiting: http://www.geekshed.net/2010/06/getting-information-about-channel-user-counts/
-  set %gs.hn.twitterbot to get the Twitter bot for your channel, please visit: http://www.geekshed.net/2011/01/twitter-in-your-channel/
-  set %gs.hn.netiquette if youre new to IRC, you become familiar with netiquette. View some tips at: http://www.geekshed.net/2011/03/manners-and-polite-behavior-on-geekshed/
+  set %gs.hn.chanbanappeal If you need to appeal a ban on another channel please visit: http://www.geekshed.net/chanban/
+  set %gs.hn.setbanappeal Learn how to set a ban appeal procedure for your channel by visiting: http://www.geekshed.net/2010/04/setting-a-ban-appeal-procedure-for-your-channel/
+  set %gs.hn.chanredirect Learn how to redirect your channel by visiting: http://www.geekshed.net/2010/05/redirecting-one-channel-to-another/
+  set %gs.hn.getssl Get OpenSSL for Windows from http://www.slproweb.com/products/Win32OpenSSL.html - download the latest 'Win32 OpenSSL Light', install it and restart your IRC client
+  set %gs.hn.bnc Find out about GeekShed's free BNC service at http://www.geekshed.net/bnc/
+  set %gs.hn.youtube You can find GeekShed's YouTube channel at http://www.geekshed.net/2010/05/geeksheds-youtube-channel/
+  set %gs.hn.tblock Learn how to block specific phrases in your channel by visiting: http://www.geekshed.net/2010/05/how-to-block-specific-phrases-from-your-channel/
+  set %gs.hn.wordpress Obtain the GeekShed Embed plugin by visiting: http://www.geekshed.net/2010/08/introducing-geekshed-embed-a-wordpress-plugin/
+  set %gs.hn.usercount Obtain information about channel usercounts by visiting: http://www.geekshed.net/2010/06/getting-information-about-channel-user-counts/
+  set %gs.hn.twitterbot To get the Twitter bot for your channel, please visit: http://www.geekshed.net/2011/01/twitter-in-your-channel/
+  set %gs.hn.netiquette If youre new to IRC, you become familiar with netiquette. View some tips at: http://www.geekshed.net/2011/03/manners-and-polite-behavior-on-geekshed/
   set %gs.hn.hatespeech Hate Speech is not tolerated on GeekShed. View more information by visiting: http://www.geekshed.net/2011/03/what-is-hate-speech/
-  set %gs.hn.lightirc information regarding the lightIRC client can be found here: http://www.geekshed.net/2011/03/using-the-lightirc-client-on-geekshed/
-  set %gs.hn.nonregpm learn how to PM non-registered users by visiting: http://www.geekshed.net/2011/04/private-messages-with-unregistered-users/
-  set %gs.hn.chanentry to set up a channel entry message, please visit: http://www.geekshed.net/2011/04/setting-a-channel-entry-message/
-  set %gs.hn.changreet to set up your own channel greeting, visit: http://www.geekshed.net/2011/04/setting-up-greeting-messages/
-  set %gs.hn.ignore learn how to use the ignore command with your IRC client by visiting: http://www.geekshed.net/2011/05/how-to-use-the-ignore-command/
-  set %gs.hn.ajoin for instructions on configuring the server-side ajoin, see: http://www.geekshed.net/2011/05/how-to-join-channels-automatically/
-  set %gs.hn.freespeech the right to free speech does not exist on a private IRC network. For more information, visit: http://www.geekshed.net/2011/05/is-there-free-speech-on-geekshed/
-  set %gs.hn.identd learn how to enable identd on your machine by visiting: http://www.geekshed.net/2011/06/what-is-identd/
-  set %gs.hn.featuredchan apply to have your channel featured by visiting: http://www.geekshed.net/2011/06/apply-to-have-your-channel-featured/
-  set %gs.hn.forgotpsswrd if you forgot your password, you'll need to have it reset by the ops in #help. Afterwards, please visit: http://www.geekshed.net/2012/01/what-to-do-if-you-forget-your-password/
-  set %gs.hn.bannedfromchan if you have been banned from your channel, you can learn how to unban yourself by visiting: http://www.geekshed.net/2012/01/im-banned-from-my-own-channel/
-  set %gs.hn.reregchan learn how to reregister your lost channel by visiting: http://www.geekshed.net/2012/01/problems-with-lost-channels/
-  set %gs.hn.protectpass learn how to protect your GeekShed password by visiting: http://www.geekshed.net/2012/02/how-to-protect-your-geekshed-password/
-  set %gs.hn.aboutuser if you need to learn more about a user, visit: http://www.geekshed.net/2012/02/learning-more-about-a-user/
-  set %gs.hn.joinchanlist learn how to join a channel from the chat room list by visiting: http://www.geekshed.net/2012/02/getting-a-channel-in-the-list-of-chat-rooms/
-  set %gs.hn.hostmask for more information on hostmasks, please visit: http://www.geekshed.net/2012/03/what-is-a-hostmask/
-  set %gs.hn.chankeys learn how to configure channel keys by visiting: http://www.geekshed.net/2012/03/using-channel-keys/
-  set %gs.hn.hidechan to hide your channel from the public list, please visit: http://www.geekshed.net/2012/03/using-channel-modes-to-hide-your-channel/
-  set %gs.hn.choosenick learn how to choose a nickname by visiting: http://www.geekshed.net/2012/03/choosing-a-nickname/
-  set %gs.hn.choosestaff learn how to choose staff members for your channel by visiting: http://www.geekshed.net/2012/04/how-to-choose-staff-for-your-channel/
-  set %gs.hn.blockPMs for instructions on blocking PMs on GeekShed, visit: http://www.geekshed.net/2012/04/how-to-block-private-messages-pms/
-  set %gs.hn.netsplit for more information on netsplits and why they occur, please visit: http://www.geekshed.net/2012/04/whats-a-netsplit/
-  set %gs.hn.howlong find out how long you have been on GeekShed by visiting: http://www.geekshed.net/2012/05/how-long-have-you-been-on-geekshed/
-  set %gs.hn.spamfilter for an FAQ on GeekShed's spamfilter, please visit: http://www.geekshed.net/2012/05/faqs-about-geeksheds-spamfilter/ 
+  set %gs.hn.lightirc Information regarding the lightIRC client can be found here: http://www.geekshed.net/2011/03/using-the-lightirc-client-on-geekshed/
+  set %gs.hn.nonregpm Learn how to PM non-registered users by visiting: http://www.geekshed.net/2011/04/private-messages-with-unregistered-users/
+  set %gs.hn.chanentry To set up a channel entry message, please visit: http://www.geekshed.net/2011/04/setting-a-channel-entry-message/
+  set %gs.hn.changreet To set up your own channel greeting, visit: http://www.geekshed.net/2011/04/setting-up-greeting-messages/
+  set %gs.hn.ignore Learn how to use the ignore command with your IRC client by visiting: http://www.geekshed.net/2011/05/how-to-use-the-ignore-command/
+  set %gs.hn.ajoin For instructions on configuring the server-side ajoin, see: http://www.geekshed.net/2011/05/how-to-join-channels-automatically/
+  set %gs.hn.freespeech The right to free speech does not exist on a private IRC network. For more information, visit: http://www.geekshed.net/2011/05/is-there-free-speech-on-geekshed/
+  set %gs.hn.identd Learn how to enable identd on your machine by visiting: http://www.geekshed.net/2011/06/what-is-identd/
+  set %gs.hn.featuredchan Apply to have your channel featured by visiting: http://www.geekshed.net/2011/06/apply-to-have-your-channel-featured/
+  set %gs.hn.forgotpsswrd If you forgot your password, you'll need to have it reset by the ops in #help. Afterwards, please visit: http://www.geekshed.net/2012/01/what-to-do-if-you-forget-your-password/
+  set %gs.hn.bannedfromchan If you have been banned from your channel, you can learn how to unban yourself by visiting: http://www.geekshed.net/2012/01/im-banned-from-my-own-channel/
+  set %gs.hn.reregchan Learn how to reregister your lost channel by visiting: http://www.geekshed.net/2012/01/problems-with-lost-channels/
+  set %gs.hn.protectpass Learn how to protect your GeekShed password by visiting: http://www.geekshed.net/2012/02/how-to-protect-your-geekshed-password/
+  set %gs.hn.aboutuser If you need to learn more about a user, visit: http://www.geekshed.net/2012/02/learning-more-about-a-user/
+  set %gs.hn.joinchanlist Learn how to join a channel from the chat room list by visiting: http://www.geekshed.net/2012/02/getting-a-channel-in-the-list-of-chat-rooms/
+  set %gs.hn.hostmask For more information on hostmasks, please visit: http://www.geekshed.net/2012/03/what-is-a-hostmask/
+  set %gs.hn.chankeys Learn how to configure channel keys by visiting: http://www.geekshed.net/2012/03/using-channel-keys/
+  set %gs.hn.hidechan To hide your channel from the public list, please visit: http://www.geekshed.net/2012/03/using-channel-modes-to-hide-your-channel/
+  set %gs.hn.choosenick Learn how to choose a nickname by visiting: http://www.geekshed.net/2012/03/choosing-a-nickname/
+  set %gs.hn.choosestaff Learn how to choose staff members for your channel by visiting: http://www.geekshed.net/2012/04/how-to-choose-staff-for-your-channel/
+  set %gs.hn.blockPMs For instructions on blocking PMs on GeekShed, visit: http://www.geekshed.net/2012/04/how-to-block-private-messages-pms/
+  set %gs.hn.netsplit For more information on netsplits and why they occur, please visit: http://www.geekshed.net/2012/04/whats-a-netsplit/
+  set %gs.hn.howlong Find out how long you have been on GeekShed by visiting: http://www.geekshed.net/2012/05/how-long-have-you-been-on-geekshed/
+  set %gs.hn.spamfilter For an FAQ on GeekShed's spamfilter, please visit: http://www.geekshed.net/2012/05/faqs-about-geeksheds-spamfilter/ 
+  set %gs.hn.lostchans For information regarding a lost channel on GeekShed, please visit: http://www.geekshed.net/2012/01/problems-with-lost-channels/
 }
 
 
@@ -183,6 +184,7 @@ menu channel,query,nicklist {
   ...$submenu($menuitemgen(Channel List, %gs.hn.chanlist, $menu, $1))
   ...$submenu($menuitemgen(Channel Modes, %gs.hn.chanmodes, $menu, $1))
   ...$submenu($menuitemgen(Channel Redirect, %gs.hn.chanredirect, $menu, $1))
+  ...$submenu($menuitemgen(Channel Recovery, %gs.hn.lostchans, $menu, $1))
   ...$submenu($menuitemgen(Channel Usercounts, %gs.hn.usercount, $menu, $1))
   ...$submenu($menuitemgen(Channel Unban Self, %gs.hn.bannedfromchan, $menu, $1))
   ...$submenu($menuitemgen(Choosing Staff, %gs.hn.choosestaff, $menu, $1))
